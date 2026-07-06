@@ -1,0 +1,36 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="gmtk_2026"
+run/main_scene="uid://ww0nyh5ebnd0"
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "yellow",
+"res://autoloads/": "orange",
+"res://resources/": "red",
+"res://scenes/": "pink",
+"res://scenes/ui/": "green",
+"res://scenes/ui/menus/": "blue",
+"res://scenes/ui/menus/main/": "green"
+}
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"

@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://ww0nyh5ebnd0"]
+
+[ext_resource type="Script" uid="uid://cdrltrqm5qim7" path="res://scenes/ui/menus/main/main_menu.gd" id="1_m7rg8"]
+[ext_resource type="PackedScene" uid="uid://dywnjkpljckd7" path="res://scenes/ui/button/custom_button.tscn" id="1_vfyya"]
+
+[node name="MenuScene" type="Node2D" unique_id=246167340]
+
+[node name="MenuLayer" type="CanvasLayer" parent="." unique_id=157432013]
+
+[node name="MainMenu" type="CenterContainer" parent="MenuLayer" unique_id=1007049416]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m7rg8")
+
+[node name="Main" type="VBoxContainer" parent="MenuLayer/MainMenu" unique_id=1097241475]
+layout_mode = 2
+alignment = 1
+
+[node name="Start" parent="MenuLayer/MainMenu/Main" unique_id=1195260148 instance=ExtResource("1_vfyya")]
+layout_mode = 2
+text = "Start"
+
+[node name="Settings" parent="MenuLayer/MainMenu/Main" unique_id=500928866 instance=ExtResource("1_vfyya")]
+layout_mode = 2
+text = "Settings"
+
+[node name="Credits" parent="MenuLayer/MainMenu/Main" unique_id=908543537 instance=ExtResource("1_vfyya")]
+layout_mode = 2
+text = "Credits"
+
+[node name="Quit" parent="MenuLayer/MainMenu/Main" unique_id=26401400 instance=ExtResource("1_vfyya")]
+layout_mode = 2
+text = "Quit"
+
+[node name="Credits" type="VBoxContainer" parent="MenuLayer/MainMenu" unique_id=1521468102]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MenuLayer/MainMenu/Credits" unique_id=520215884]
+layout_mode = 2
+text = "Whatever Vee does: Vee
+
+Programming i guess: Ashton
+
+Art, probably: Cj
+
+Hopefully super smart ideas: Kyla
+
+SFX I think: Alex
+"
+horizontal_alignment = 1
+
+[node name="Back" parent="MenuLayer/MainMenu/Credits" unique_id=1684089308 groups=["Back_Button"] instance=ExtResource("1_vfyya")]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"

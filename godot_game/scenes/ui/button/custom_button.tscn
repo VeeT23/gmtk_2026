@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dywnjkpljckd7"]
+
+[ext_resource type="Script" uid="uid://bkkafy70e4lfx" path="res://scenes/ui/button/custom_button.gd" id="1_uqfsv"]
+
+[node name="CustomButton" type="Button" unique_id=1195260148]
+custom_minimum_size = Vector2(128, 16)
+script = ExtResource("1_uqfsv")
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=1774811490]
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="." unique_id=1876006255]
