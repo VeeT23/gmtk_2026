@@ -2,44 +2,56 @@
 
 [ext_resource type="Script" uid="uid://cdrltrqm5qim7" path="res://scenes/ui/menus/main/main_menu.gd" id="1_m7rg8"]
 [ext_resource type="PackedScene" uid="uid://dywnjkpljckd7" path="res://scenes/ui/button/custom_button.tscn" id="1_vfyya"]
+[ext_resource type="Texture2D" uid="uid://tdpr8qjufa2k" path="res://scenes/ui/menus/main/GMTK Game Jam 2026 Full Logo.png" id="3_3ryvj"]
 
 [node name="MenuScene" type="Node2D" unique_id=246167340]
 
 [node name="MenuLayer" type="CanvasLayer" parent="." unique_id=157432013]
 
-[node name="MainMenu" type="CenterContainer" parent="MenuLayer" unique_id=1007049416]
+[node name="Control" type="Control" parent="MenuLayer" unique_id=965504917]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MainMenu" type="CenterContainer" parent="MenuLayer/Control" unique_id=1007049416]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 88.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_m7rg8")
 
-[node name="Main" type="VBoxContainer" parent="MenuLayer/MainMenu" unique_id=1097241475]
+[node name="Main" type="VBoxContainer" parent="MenuLayer/Control/MainMenu" unique_id=1097241475]
 layout_mode = 2
 alignment = 1
 
-[node name="Start" parent="MenuLayer/MainMenu/Main" unique_id=1195260148 instance=ExtResource("1_vfyya")]
+[node name="Start" parent="MenuLayer/Control/MainMenu/Main" unique_id=1195260148 instance=ExtResource("1_vfyya")]
 layout_mode = 2
 text = "Start"
 
-[node name="Settings" parent="MenuLayer/MainMenu/Main" unique_id=500928866 instance=ExtResource("1_vfyya")]
+[node name="Settings" parent="MenuLayer/Control/MainMenu/Main" unique_id=500928866 instance=ExtResource("1_vfyya")]
 layout_mode = 2
 text = "Settings"
 
-[node name="Credits" parent="MenuLayer/MainMenu/Main" unique_id=908543537 instance=ExtResource("1_vfyya")]
+[node name="Credits" parent="MenuLayer/Control/MainMenu/Main" unique_id=908543537 instance=ExtResource("1_vfyya")]
 layout_mode = 2
 text = "Credits"
 
-[node name="Quit" parent="MenuLayer/MainMenu/Main" unique_id=26401400 instance=ExtResource("1_vfyya")]
+[node name="Quit" parent="MenuLayer/Control/MainMenu/Main" unique_id=26401400 instance=ExtResource("1_vfyya")]
 layout_mode = 2
 text = "Quit"
 
-[node name="Credits" type="VBoxContainer" parent="MenuLayer/MainMenu" unique_id=1521468102]
+[node name="Credits" type="VBoxContainer" parent="MenuLayer/Control/MainMenu" unique_id=1521468102]
 visible = false
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MenuLayer/MainMenu/Credits" unique_id=520215884]
+[node name="Label" type="Label" parent="MenuLayer/Control/MainMenu/Credits" unique_id=520215884]
 layout_mode = 2
 text = "Whatever Vee does: Vee
 
@@ -53,7 +65,21 @@ SFX I think: Alex
 "
 horizontal_alignment = 1
 
-[node name="Back" parent="MenuLayer/MainMenu/Credits" unique_id=1684089308 groups=["Back_Button"] instance=ExtResource("1_vfyya")]
+[node name="Back" parent="MenuLayer/Control/MainMenu/Credits" unique_id=1684089308 groups=["Back_Button"] instance=ExtResource("1_vfyya")]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Back"
+
+[node name="TextureRect" type="TextureRect" parent="MenuLayer/Control" unique_id=1072748814]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 14.000008
+offset_top = -216.0
+offset_right = 3004.0
+offset_bottom = 1852.0
+grow_vertical = 0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_3ryvj")
+stretch_mode = 4

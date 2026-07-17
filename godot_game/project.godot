@@ -13,13 +13,14 @@ config_version=5
 config/name="gmtk_2026"
 run/main_scene="uid://ww0nyh5ebnd0"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://olstm8nbohcr"
 
 [file_customization]
 
 folder_colors={
 "res://assets/": "yellow",
 "res://autoloads/": "orange",
+"res://exports/": "orange",
 "res://resources/": "red",
 "res://scenes/": "pink",
 "res://scenes/ui/": "green",
