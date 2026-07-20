@@ -28,6 +28,7 @@ grow_vertical = 2
 script = ExtResource("1_m7rg8")
 
 [node name="Main" type="VBoxContainer" parent="MenuLayer/Control/MainMenu" unique_id=1097241475]
+visible = false
 layout_mode = 2
 alignment = 1
 
@@ -48,20 +49,19 @@ layout_mode = 2
 text = "Quit"
 
 [node name="Credits" type="VBoxContainer" parent="MenuLayer/Control/MainMenu" unique_id=1521468102]
-visible = false
 layout_mode = 2
 
 [node name="Label" type="Label" parent="MenuLayer/Control/MainMenu/Credits" unique_id=520215884]
 layout_mode = 2
-text = "Whatever Vee does: Vee
+text = "Lead Designer: Vee
 
-Programming i guess: Ashton
+Programming : Ashton
 
-Art, probably: Cj
+Art: Cj
 
-Hopefully super smart ideas: Kyla
+ super smart ideas: Kyla
 
-SFX I think: Alex
+SFX : Alex
 "
 horizontal_alignment = 1
 

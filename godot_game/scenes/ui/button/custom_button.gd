@@ -4,7 +4,7 @@ extends Button
 @onready var click_stream = $ClickSound
 
 var base_text := ""
-var has_mouse := false
+var has_mouse : bool = false
 
 signal press_finished()
 
