@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://db782dmvgvrem" path="res://assets/terrain/Ground073_1K-PNG_NormalGL.png" id="6_dlabj"]
 [ext_resource type="PackedScene" uid="uid://bpoiftcsfcla4" path="res://scenes/player/player.tscn" id="7_srmg5"]
 [ext_resource type="PackedScene" uid="uid://cbbrayd30bk2w" path="res://scenes/dinosaur/Dinosaur.tscn" id="8_j2gmx"]
+[ext_resource type="PackedScene" uid="uid://dublvtedr2epm" path="res://assets/structure/fence/fence.glb" id="9_dublvtedr2epm"]
 
 [sub_resource type="Gradient" id="Gradient_umvgx"]
 offsets = PackedFloat32Array(0.2, 1)
@@ -89,8 +90,6 @@ normal_texture = ExtResource("6_dlabj")
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_wbwoo")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_tytul"), SubResource("Terrain3DTextureAsset_t634p"), SubResource("Terrain3DTextureAsset_6hctx")])
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_46os7"]
-
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hfra2"]
 
 [sub_resource type="Sky" id="Sky_p4mrb"]
@@ -111,11 +110,6 @@ metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=602185274 instance=ExtResource("7_srmg5")]
 
-[node name="WorldBounds" type="StaticBody3D" parent="." unique_id=1928970470]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WorldBounds" unique_id=1249417396]
-shape = SubResource("WorldBoundaryShape3D_46os7")
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1515843267]
 environment = SubResource("Environment_46os7")
 
@@ -125,3 +119,5 @@ shadow_enabled = true
 
 [node name="Dinosaur" parent="." unique_id=1442933148 instance=ExtResource("8_j2gmx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -11)
+[node name="fence" parent="." unique_id=1004567228 instance=ExtResource("9_dublvtedr2epm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.887354, 0, 8.239223)
