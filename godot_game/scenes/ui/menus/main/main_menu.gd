@@ -22,6 +22,8 @@ func _ready() -> void:
 	
 	quit_button.press_finished.connect(func(): get_tree().quit())
 	credits_button.press_finished.connect(select_page.bind(credits_page))
+	start_button.press_finished.connect(func(): get_tree().change_scene_to_file("res://scenes/world/world.tscn"))
+	
 	
 	for back_button in get_tree().get_nodes_in_group("Back_Button"):
 		back_button.press_finished.connect(select_page.bind(main_page))

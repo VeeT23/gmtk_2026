@@ -1,0 +1,55 @@
+extends CharacterBody3D
+
+const BASE_SPEED = 5.0
+const SPRINT_SPEED = 8.0
+
+const BASE_FOV = 75.0
+const SPRINT_FOV = 90.0
+const FOV_CHANGE_SPEED = 8.0
+const JUMP_VELOCITY = 4.5
+const MOUSE_SENSITIVITY = 0.002
+
+@onready var camera = $Camera3D
+
+var camera_pitch := 0.0
+
+func _ready():
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+func _input(event):
+	if event is InputEventMouseMotion:
+		# Left/right rotates the player
+		rotate_y(-event.relative.x * MOUSE_SENSITIVITY)
+		
+		# Up/down rotates the camera
+		camera_pitch -= event.relative.y * MOUSE_SENSITIVITY
+		camera_pitch = clamp(camera_pitch, deg_to_rad(-89), deg_to_rad(89))
+		camera.rotation.x = camera_pitch
+
+func _physics_process(delta: float) -> void:
+	# Gravity
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+	
+	# Jump
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+	
+	# Movement relative to where the player is facing
+	var input_dir := Input.get_vector("left", "right", "forward", "backward")
+	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
+	var is_sprinting := Input.is_action_pressed("sprint")
+	var speed := SPRINT_SPEED if is_sprinting else BASE_SPEED
+	
+	var target_fov := SPRINT_FOV if is_sprinting else BASE_FOV
+	camera.fov = lerp(camera.fov, target_fov, FOV_CHANGE_SPEED * delta)
+	
+	if direction:
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
+	else:
+		velocity.x = move_toward(velocity.x, 0, speed)
+		velocity.z = move_toward(velocity.z, 0, speed)
+	
+	move_and_slide()
