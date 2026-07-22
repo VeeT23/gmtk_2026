@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cbbrayd30bk2w" path="res://scenes/dinosaur/Dinosaur.tscn" id="8_j2gmx"]
 [ext_resource type="Texture2D" uid="uid://dq7ncma0ecic" path="res://assets/skybox/skybox_emx_11.png" id="10_dlabj"]
 [ext_resource type="PackedScene" uid="uid://2xgjn8ac5pn7" path="res://scenes/world/fence/fence.tscn" id="11_5qq27"]
+[ext_resource type="PackedScene" uid="uid://cl1ybj4mgw7hk" path="res://scenes/world/radio_tower/radio_tower.tscn" id="13_srmg5"]
 
 [sub_resource type="Gradient" id="Gradient_umvgx"]
 offsets = PackedFloat32Array(0.2, 1)
@@ -138,3 +139,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.473244, 0, -57.555676)
 
 [node name="Fence" parent="." unique_id=72705172 instance=ExtResource("11_5qq27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.173168, 0, 0)
+
+[node name="RadioTower" parent="." unique_id=649037755 instance=ExtResource("13_srmg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6335437, -0.14465725, -11.687325)

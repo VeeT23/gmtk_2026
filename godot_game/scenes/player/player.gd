@@ -20,7 +20,6 @@ const MOUSE_SENSITIVITY = 0.002
 var camera_pitch := 0.0
 
 func _ready():
-	print_tree_pretty()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _input(event):
