@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://bqbb21bhhtugk" path="res://assets/terrain/Ground070_1K-PNG_NormalGL.png" id="4_gb53w"]
 [ext_resource type="Texture2D" uid="uid://d3fl21p3id6qp" path="res://assets/terrain/Ground073_1K-PNG_Color.png" id="5_5qq27"]
 [ext_resource type="Texture2D" uid="uid://db782dmvgvrem" path="res://assets/terrain/Ground073_1K-PNG_NormalGL.png" id="6_dlabj"]
+[ext_resource type="Texture2D" uid="uid://bksugaql25afb" path="res://assets/terrain/Bricks102_1K-PNG_Color.png" id="7_5qq27"]
 [ext_resource type="PackedScene" uid="uid://bpoiftcsfcla4" path="res://scenes/player/player.tscn" id="7_srmg5"]
+[ext_resource type="Texture2D" uid="uid://dmpdtwmps1vp" path="res://assets/terrain/Bricks102_1K-PNG_NormalGL.png" id="8_dlabj"]
 [ext_resource type="PackedScene" uid="uid://cbbrayd30bk2w" path="res://scenes/dinosaur/Dinosaur.tscn" id="8_j2gmx"]
 [ext_resource type="PackedScene" uid="uid://dublvtedr2epm" path="res://assets/structure/fence/fence.glb" id="9_dublvtedr2epm"]
 
@@ -86,9 +88,16 @@ id = 2
 albedo_texture = ExtResource("5_5qq27")
 normal_texture = ExtResource("6_dlabj")
 
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_srmg5"]
+name = "Bricks102_1K-PNG_Color"
+id = 3
+albedo_texture = ExtResource("7_5qq27")
+normal_texture = ExtResource("8_dlabj")
+uv_scale = 0.738
+
 [sub_resource type="Terrain3DAssets" id="Terrain3DAssets_ues17"]
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_wbwoo")])
-texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_tytul"), SubResource("Terrain3DTextureAsset_t634p"), SubResource("Terrain3DTextureAsset_6hctx")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_tytul"), SubResource("Terrain3DTextureAsset_t634p"), SubResource("Terrain3DTextureAsset_6hctx"), SubResource("Terrain3DTextureAsset_srmg5")])
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hfra2"]
 
@@ -105,6 +114,8 @@ sky = SubResource("Sky_p4mrb")
 data_directory = "res://scenes/world/terrain_data"
 material = SubResource("Terrain3DMaterial_71ii3")
 assets = SubResource("Terrain3DAssets_ues17")
+collision_mask = 6
+mesh_lods = 8
 top_level = true
 metadata/_edit_lock_ = true
 
@@ -119,5 +130,6 @@ shadow_enabled = true
 
 [node name="Dinosaur" parent="." unique_id=1442933148 instance=ExtResource("8_j2gmx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -11)
+
 [node name="fence" parent="." unique_id=1004567228 instance=ExtResource("9_dublvtedr2epm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.887354, 0, 8.239223)

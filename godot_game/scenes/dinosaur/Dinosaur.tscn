@@ -1438,12 +1438,14 @@ radius = 0.2680664
 height = 0.8249512
 
 [node name="Dinosaur" type="CharacterBody3D" unique_id=1442933148]
+collision_layer = 4
+collision_mask = 7
 script = ExtResource("1_6coim")
 
 [node name="dino" parent="." unique_id=416791075 instance=ExtResource("1_7g3hw")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
-[node name="Skeleton3D" parent="dino/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_0/Maip_fbx_1/Object_2_2/RootNode_3/maip_idling_4/MAIP_setup_maip_grp_5/MAIP_setup_BakeSystem_6/Object_7_7/GLTF_created_0" parent_id_path=PackedInt32Array(416791075, 618801442) index="0" unique_id=583452519]
+[node name="Skeleton3D" parent="dino/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_0/Maip_fbx_1/Object_2_2/RootNode_3/maip_idling_4/MAIP_setup_maip_grp_5/MAIP_setup_BakeSystem_6/Object_7_7/GLTF_created_0" parent_id_path=PackedInt32Array(416791075, 1752268975) index="0" unique_id=1004976527]
 bones/2/rotation = Quaternion(-0.5820462, 0.022425942, -0.001203981, 0.8128455)
 bones/6/rotation = Quaternion(-0.016050657, -0.061262704, 0.29976204, 0.95190966)
 bones/8/rotation = Quaternion(-0.084413074, -0.100217, 0.21738607, 0.9672509)
@@ -1552,7 +1554,7 @@ bones/190/rotation = Quaternion(-0.062479544, 0.00040891854, 0.0025972687, 0.998
 bones/191/rotation = Quaternion(-0.10096383, 0.00025402775, 0.0015553876, 0.99488884)
 bones/192/rotation = Quaternion(-0.101627804, 0.000175892, 0.0008148711, 0.99482214)
 
-[node name="AnimationPlayer" parent="dino" index="1" unique_id=2105320404]
+[node name="AnimationPlayer" parent="dino" index="1" unique_id=619544474]
 libraries/ = SubResource("AnimationLibrary_e6n8e")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=152925321]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpoiftcsfcla4"]
 
 [ext_resource type="Script" uid="uid://cupshsa4n25ew" path="res://scenes/player/player.gd" id="1_8afob"]
+[ext_resource type="Script" uid="uid://dqk3an8tgvfj0" path="res://scenes/player/interact_ray.gd" id="2_dovo2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_46os7"]
 radius = 0.35058594
@@ -14,3 +15,7 @@ shape = SubResource("CapsuleShape3D_46os7")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1444907476]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7846713, 0)
+
+[node name="InteractRay" type="RayCast3D" parent="Camera3D" unique_id=811370200]
+collision_mask = 8
+script = ExtResource("2_dovo2")
