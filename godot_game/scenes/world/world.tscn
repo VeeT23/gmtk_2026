@@ -134,7 +134,7 @@ visible = false
 shadow_enabled = true
 
 [node name="Dinosaur" parent="." unique_id=1442933148 instance=ExtResource("8_j2gmx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -111.40701)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.473244, 0, -57.555676)
 
 [node name="Fence" parent="." unique_id=72705172 instance=ExtResource("11_5qq27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.173168, 0, 0)
