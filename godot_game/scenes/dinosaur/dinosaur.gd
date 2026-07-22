@@ -4,11 +4,12 @@ extends CharacterBody3D
 @export var speed: float = 5.0
 @export var rotation_speed: float = 10.0
 
+
 var player: Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$dino/AnimationPlayer.play("MAIP_setup_BakeSystem|Skin_MAIP_setup_Root_M_bake_MAIP_setup_BakeSystem")
+	$dino/AnimationPlayer.play("walk")
 	
 	player = get_tree().current_scene.find_child("Player", true, false) as Node3D
 	
