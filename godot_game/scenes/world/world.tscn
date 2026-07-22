@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bpoiftcsfcla4" path="res://scenes/player/player.tscn" id="7_srmg5"]
 [ext_resource type="Texture2D" uid="uid://dmpdtwmps1vp" path="res://assets/terrain/Bricks102_1K-PNG_NormalGL.png" id="8_dlabj"]
 [ext_resource type="PackedScene" uid="uid://cbbrayd30bk2w" path="res://scenes/dinosaur/Dinosaur.tscn" id="8_j2gmx"]
+[ext_resource type="Texture2D" uid="uid://dq7ncma0ecic" path="res://assets/skybox/skybox_emx_11.png" id="10_dlabj"]
 [ext_resource type="PackedScene" uid="uid://2xgjn8ac5pn7" path="res://scenes/world/fence/fence.tscn" id="11_5qq27"]
 
 [sub_resource type="Gradient" id="Gradient_umvgx"]
@@ -100,13 +101,12 @@ uv_scale = 0.738
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_wbwoo")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_tytul"), SubResource("Terrain3DTextureAsset_t634p"), SubResource("Terrain3DTextureAsset_6hctx"), SubResource("Terrain3DTextureAsset_srmg5")])
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hfra2"]
-sky_energy_multiplier = 0.0
-ground_energy_multiplier = 0.0
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_5eryc"]
+panorama = ExtResource("10_dlabj")
 energy_multiplier = 0.0
 
 [sub_resource type="Sky" id="Sky_p4mrb"]
-sky_material = SubResource("ProceduralSkyMaterial_hfra2")
+sky_material = SubResource("PanoramaSkyMaterial_5eryc")
 
 [sub_resource type="Environment" id="Environment_46os7"]
 background_mode = 2

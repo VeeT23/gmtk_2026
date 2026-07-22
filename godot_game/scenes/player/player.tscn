@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cupshsa4n25ew" path="res://scenes/player/player.gd" id="1_8afob"]
 [ext_resource type="Script" uid="uid://dqk3an8tgvfj0" path="res://scenes/player/interact_ray.gd" id="2_dovo2"]
 [ext_resource type="Script" uid="uid://boqtrrdmvn2id" path="res://scenes/player/flashlight.gd" id="3_gmlin"]
+[ext_resource type="Shader" uid="uid://dad1lnch6dg1h" path="res://scenes/player/player.gdshader" id="4_lvxji"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_46os7"]
 radius = 0.35058594
@@ -11,6 +12,10 @@ height = 1.8417969
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gmlin"]
 radius = 0.35058594
 height = 1.1403809
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_46os7"]
+shader = ExtResource("4_lvxji")
+shader_parameter/pixel_size = 4.0
 
 [node name="Player" type="CharacterBody3D" unique_id=602185274]
 script = ExtResource("1_8afob")
@@ -31,9 +36,28 @@ script = ExtResource("2_dovo2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.74541855, -0.8263882)
 shadow_enabled = true
 spot_range = 27.314196
-spot_angle = 26.134302
+spot_angle = 36.598763
 script = ExtResource("3_gmlin")
 
 [node name="Crouching" type="CollisionShape3D" parent="." unique_id=432339962]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5701904, 0)
 shape = SubResource("CapsuleShape3D_gmlin")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1762023764]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=244370278]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PixelationFilter" type="ColorRect" parent="CanvasLayer/Control" unique_id=74894024]
+material = SubResource("ShaderMaterial_46os7")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

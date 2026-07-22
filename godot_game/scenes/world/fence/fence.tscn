@@ -6,7 +6,7 @@
 size = Vector3(1.5982666, 7.150879, 0.8565674)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p4mrb"]
-size = Vector3(0.40234375, 5.1328735, 8.586151)
+size = Vector3(0.23925781, 5.4546204, 8.586151)
 
 [node name="Fence" type="StaticBody3D" unique_id=72705172]
 collision_mask = 6
@@ -23,5 +23,5 @@ shape = SubResource("BoxShape3D_46os7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.315878, -0.019441605, 4.3693557)
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=937532782]
-transform = Transform3D(0.9936009, -0.11294842, 0, 0.11294842, 0.9936009, 0, 0, 0, 1, -0.6279279, 4.421987, -0.075656414)
+transform = Transform3D(0.9936009, -0.11294842, 0, 0.11294842, 0.9936009, 0, 0, 0, 1, -0.6907787, 4.252933, -0.075656414)
 shape = SubResource("BoxShape3D_p4mrb")
