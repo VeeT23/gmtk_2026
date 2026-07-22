@@ -11,6 +11,11 @@ const MOUSE_SENSITIVITY = 0.002
 
 @onready var camera : Camera3D = $Camera3D
 @onready var flashlight: SpotLight3D = $Camera3D/Flashlight
+@onready var crouch_collider = $Crouching
+@onready var standing_collider = $Standing
+
+@export var camera_crouch_position = Vector3(0,0.9,0)
+@export var camera_stand_position = Vector3(0,1.7,0)
 
 var camera_pitch := 0.0
 
@@ -28,6 +33,19 @@ func _input(event):
 		camera_pitch = clamp(camera_pitch, deg_to_rad(-89), deg_to_rad(89))
 		camera.rotation.x = camera_pitch
 		flashlight.add_mouse_motion(event.relative)
+	if event.is_action_pressed("crouch"):
+		var tween = create_tween()
+		tween.tween_property(camera, "position", camera_crouch_position, 0.2)
+		
+		standing_collider.disabled = true
+		crouch_collider.disabled = false
+		
+	if event.is_action_released("crouch"):
+		var tween = create_tween()
+		tween.tween_property(camera, "position", camera_stand_position, 0.2)
+		
+		standing_collider.disabled = false
+		crouch_collider.disabled = true
 
 func _physics_process(delta: float) -> void:
 	# Gravity
