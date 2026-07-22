@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cupshsa4n25ew" path="res://scenes/player/player.gd" id="1_8afob"]
 [ext_resource type="Script" uid="uid://dqk3an8tgvfj0" path="res://scenes/player/interact_ray.gd" id="2_dovo2"]
+[ext_resource type="Script" uid="uid://boqtrrdmvn2id" path="res://scenes/player/flashlight.gd" id="3_gmlin"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_46os7"]
 radius = 0.35058594
@@ -19,3 +20,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7846713, 0)
 [node name="InteractRay" type="RayCast3D" parent="Camera3D" unique_id=811370200]
 collision_mask = 8
 script = ExtResource("2_dovo2")
+
+[node name="Flashlight" type="SpotLight3D" parent="Camera3D" unique_id=1834371492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.74541855, -0.8263882)
+shadow_enabled = true
+spot_range = 27.314196
+spot_angle = 26.134302
+script = ExtResource("3_gmlin")

@@ -9,11 +9,13 @@ const FOV_CHANGE_SPEED = 8.0
 const JUMP_VELOCITY = 4.5
 const MOUSE_SENSITIVITY = 0.002
 
-@onready var camera = $Camera3D
+@onready var camera : Camera3D = $Camera3D
+@onready var flashlight: SpotLight3D = $Camera3D/Flashlight
 
 var camera_pitch := 0.0
 
 func _ready():
+	print_tree_pretty()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _input(event):
@@ -25,6 +27,7 @@ func _input(event):
 		camera_pitch -= event.relative.y * MOUSE_SENSITIVITY
 		camera_pitch = clamp(camera_pitch, deg_to_rad(-89), deg_to_rad(89))
 		camera.rotation.x = camera_pitch
+		flashlight.add_mouse_motion(event.relative)
 
 func _physics_process(delta: float) -> void:
 	# Gravity

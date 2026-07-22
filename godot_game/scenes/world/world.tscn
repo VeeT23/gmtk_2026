@@ -93,6 +93,7 @@ name = "Bricks102_1K-PNG_Color"
 id = 3
 albedo_texture = ExtResource("7_5qq27")
 normal_texture = ExtResource("8_dlabj")
+normal_depth = 0.164
 uv_scale = 0.738
 
 [sub_resource type="Terrain3DAssets" id="Terrain3DAssets_ues17"]
@@ -100,6 +101,9 @@ mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_wbwoo")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_tytul"), SubResource("Terrain3DTextureAsset_t634p"), SubResource("Terrain3DTextureAsset_6hctx"), SubResource("Terrain3DTextureAsset_srmg5")])
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hfra2"]
+sky_energy_multiplier = 0.0
+ground_energy_multiplier = 0.0
+energy_multiplier = 0.0
 
 [sub_resource type="Sky" id="Sky_p4mrb"]
 sky_material = SubResource("ProceduralSkyMaterial_hfra2")
@@ -126,10 +130,11 @@ environment = SubResource("Environment_46os7")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2059617183]
 transform = Transform3D(1, 0, 0, 0, 0.6148564, 0.78863907, 0, -0.78863907, 0.6148564, 0, 0, 0)
+visible = false
 shadow_enabled = true
 
 [node name="Dinosaur" parent="." unique_id=1442933148 instance=ExtResource("8_j2gmx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -11)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -111.40701)
 
 [node name="Fence" parent="." unique_id=72705172 instance=ExtResource("11_5qq27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.173168, 0, 0)
