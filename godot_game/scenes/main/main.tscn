@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cope45m8cccp2"]
 
 [ext_resource type="Texture2D" uid="uid://birstvplc8s0y" path="res://assets/terrain/Ground037_1K-PNG_Color.png" id="1_bq33v"]
+[ext_resource type="Script" uid="uid://dj47vjwaui53c" path="res://scenes/main/main.gd" id="1_ou6is"]
 [ext_resource type="Texture2D" uid="uid://vy0vbxc8edr2" path="res://assets/terrain/Ground037_1K-PNG_NormalGL.png" id="2_j2gmx"]
 [ext_resource type="Texture2D" uid="uid://be03xrjuxxkkk" path="res://assets/terrain/Ground070_1K-PNG_Color.png" id="3_1yooq"]
 [ext_resource type="Texture2D" uid="uid://bqbb21bhhtugk" path="res://assets/terrain/Ground070_1K-PNG_NormalGL.png" id="4_gb53w"]
@@ -127,26 +128,31 @@ shader_parameter/rect_size = Vector2(32, 32)
 shader_parameter/radius = 0.004
 
 [node name="Main" type="Node" unique_id=1002250926]
+script = ExtResource("1_ou6is")
 
 [node name="World" type="Node3D" parent="." unique_id=1153480210]
 
-[node name="Terrain3D" type="Terrain3D" parent="World" unique_id=995700105]
+[node name="Environment" type="Node3D" parent="World" unique_id=2142947513]
+
+[node name="Terrain3D" type="Terrain3D" parent="World/Environment" unique_id=995700105]
 data_directory = "res://scenes/main/world/terrain_data"
 material = SubResource("Terrain3DMaterial_71ii3")
 assets = SubResource("Terrain3DAssets_ues17")
 collision_mask = 6
 mesh_lods = 8
+free_editor_textures = false
 top_level = true
 metadata/_edit_lock_ = true
 
-[node name="Player" parent="World" unique_id=602185274 instance=ExtResource("7_srmg5")]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=1515843267]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World/Environment" unique_id=1515843267]
 environment = SubResource("Environment_46os7")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World" unique_id=2059617183]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World/Environment" unique_id=2059617183]
 transform = Transform3D(1, 0, 0, 0, 0.6148564, 0.78863907, 0, -0.78863907, 0.6148564, 0, 0, 0)
+visible = false
 shadow_enabled = true
+
+[node name="Player" parent="World" unique_id=602185274 instance=ExtResource("7_srmg5")]
 
 [node name="Dinosaur" parent="World" unique_id=1442933148 instance=ExtResource("8_j2gmx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.473244, 0, -110.09863)
@@ -182,5 +188,6 @@ grow_vertical = 2
 script = ExtResource("17_nvumn")
 
 [node name="UI" type="CanvasLayer" parent="Canvas" unique_id=1631238164]
+layer = 2
 
 [connection signal="resized" from="Canvas/Postprocessing/Crosshair" to="Canvas/Postprocessing/Crosshair" method="_on_resized"]
