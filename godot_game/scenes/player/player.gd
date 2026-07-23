@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
-const BASE_SPEED = 5.0
-const SPRINT_SPEED = 8.0
+const BASE_SPEED = 3.0
+const SPRINT_SPEED = 6.0
 
 const BASE_FOV = 75.0
 const SPRINT_FOV = 90.0
@@ -32,19 +32,21 @@ func _input(event):
 		camera_pitch = clamp(camera_pitch, deg_to_rad(-89), deg_to_rad(89))
 		camera.rotation.x = camera_pitch
 		flashlight.add_mouse_motion(event.relative)
-	if event.is_action_pressed("crouch"):
+	elif event.is_action_pressed("crouch"):
 		var tween = create_tween()
 		tween.tween_property(camera, "position", camera_crouch_position, 0.2)
 		
 		standing_collider.disabled = true
 		crouch_collider.disabled = false
 		
-	if event.is_action_released("crouch"):
+	elif event.is_action_released("crouch"):
 		var tween = create_tween()
 		tween.tween_property(camera, "position", camera_stand_position, 0.2)
 		
 		standing_collider.disabled = false
 		crouch_collider.disabled = true
+	elif event.is_action_released("flashlight"):
+		flashlight.visible = !flashlight.visible
 
 func _physics_process(delta: float) -> void:
 	# Gravity

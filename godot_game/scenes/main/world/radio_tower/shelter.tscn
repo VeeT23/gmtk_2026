@@ -209,6 +209,7 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, -8.351872e-23, 0, -8.351872e-23, 1, 0, 0, 0.25138187)
 light_color = Color(0.99999994, 0.7564368, 0.3774153, 1)
 light_energy = 1.4
+light_bake_mode = 1
 
 [node name="lamp_off" parent="Lights/Light1" index="1" unique_id=1698061251 instance=ExtResource("5_8oh03")]
 transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
@@ -224,6 +225,7 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, -8.351872e-23, 0, -8.351872e-23, 1, 0, 0, 0.25138187)
 light_color = Color(0.99999994, 0.7564368, 0.3774153, 1)
 light_energy = 1.4
+light_bake_mode = 1
 
 [node name="lamp_off" parent="Lights/Light2" index="1" unique_id=1555096351 instance=ExtResource("5_8oh03")]
 transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
@@ -239,6 +241,7 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, -8.351872e-23, 0, -8.351872e-23, 1, 0, 0, 0.25138187)
 light_color = Color(0.99999994, 0.7564368, 0.3774153, 1)
 light_energy = 1.4
+light_bake_mode = 1
 
 [node name="lamp_off" parent="Lights/Light3" index="1" unique_id=1966122427 instance=ExtResource("5_8oh03")]
 transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
@@ -296,26 +299,26 @@ transform = Transform3D(0.8297589, 0, -0.558122, 0, 1, 0, 0.558122, 0, 0.8297589
 [node name="wooden_crate_52" parent="Props" index="13" unique_id=503647578 instance=ExtResource("20_3i4nm")]
 transform = Transform3D(0.9984039, 0, 0.056477293, 0, 1, 0, -0.056477293, 0, 0.9984039, 2.6963005, 0.015503113, 1.4367992)
 
-[node name="old_mattress_mp_1_12" parent="." index="7" unique_id=532833278 instance=ExtResource("18_1b7sf")]
+[node name="old_mattress_mp_1_12" parent="Props" index="14" unique_id=532833278 instance=ExtResource("18_1b7sf")]
 transform = Transform3D(-0.0006898714, -0.99950397, -0.0314848, -0.021893706, 0.031492364, -0.9992641, 0.99976003, -4.465837e-08, -0.021904573, 3.2774904, 0.6276888, 4.2260637)
 
-[node name="sofa_5_32" parent="." index="8" unique_id=299086567 instance=ExtResource("19_rrtto")]
+[node name="sofa_5_32" parent="Props" index="15" unique_id=299086567 instance=ExtResource("19_rrtto")]
 transform = Transform3D(-0.053604454, 0, -0.9985623, 0, 1, 0, 0.9985623, 0, -0.053604454, 3.0496242, 0.015503168, 4.2999134)
 
-[node name="wooden_crate_52" parent="." index="9" unique_id=293316814 instance=ExtResource("20_3i4nm")]
+[node name="wooden_crate_53" parent="Props" index="16" unique_id=293316814 instance=ExtResource("20_3i4nm")]
 transform = Transform3D(0.9984039, 0, 0.056477293, 0, 1, 0, -0.056477293, 0, 0.9984039, -2.4109223, 0.015502994, 4.886923)
 
-[node name="wooden_crate_62" parent="." index="10" unique_id=1970064784 instance=ExtResource("21_c7d4v")]
+[node name="wooden_crate_63" parent="Props" index="17" unique_id=1970064784 instance=ExtResource("21_c7d4v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5507827, 0.0155028105, 2.6413453)
 
-[node name="cigs_packet_12" parent="." index="11" unique_id=1123654089 instance=ExtResource("22_umm1a")]
+[node name="cigs_packet_12" parent="Props" index="18" unique_id=1123654089 instance=ExtResource("22_umm1a")]
 transform = Transform3D(0.8946527, 0, 0.4467622, 0, 1, 0, -0.4467622, 0, 0.8946527, 2.547479, 0.76093733, 2.7318034)
 
-[node name="glass_bottle_mx_22" parent="." index="12" unique_id=1568661383 instance=ExtResource("23_v2wob")]
+[node name="glass_bottle_mx_22" parent="Props" index="19" unique_id=1568661383 instance=ExtResource("23_v2wob")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3911428, 0.7455667, 2.6566656)
 
-[node name="carpet_mp_12" parent="." index="13" unique_id=484329116 instance=ExtResource("24_1b7sf")]
+[node name="carpet_mp_12" parent="Props" index="20" unique_id=484329116 instance=ExtResource("24_1b7sf")]
 transform = Transform3D(0.02449144, 0, 0.99970007, 0, 1, 0, -0.99970007, 0, 0.02449144, 1.7913086, 0.01550293, 3.8273673)
 
-[node name="vending_machine_12" parent="." index="14" unique_id=656249538 instance=ExtResource("25_rrtto")]
+[node name="vending_machine_12" parent="Props" index="21" unique_id=656249538 instance=ExtResource("25_rrtto")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.74867, 0.015503168, 0.53460705)
