@@ -147,9 +147,8 @@ free_editor_textures = false
 top_level = true
 metadata/_edit_lock_ = true
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World/Environment" unique_id=2059617183]
+[node name="Sun" type="DirectionalLight3D" parent="World/Environment" unique_id=2059617183]
 transform = Transform3D(1, 0, 0, 0, 0.6148564, 0.78863907, 0, -0.78863907, 0.6148564, 0, 0, 0)
-visible = false
 shadow_enabled = true
 metadata/_edit_lock_ = true
 
@@ -177,16 +176,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.173168, 0, -40.070168)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.341753, 0, -2.9205453)
 
 [node name="Dinosaur" parent="World" unique_id=1442933148 instance=ExtResource("8_j2gmx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.473244, 0, -110.09863)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.075485, -3.8146973e-06, -44.051636)
 
 [node name="RadioTower" parent="World" unique_id=649037755 instance=ExtResource("13_srmg5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6335437, -0.14465725, -11.687325)
 
 [node name="GasCan" parent="World" unique_id=567736678 instance=ExtResource("14_umvgx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.949091, -0.13017523, -9.746269)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6715431, 0.0268462, -9.5868)
 
 [node name="BoltCutters" parent="World" unique_id=795448338 instance=ExtResource("18_m4h2d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3479986, 0.14801317, -9.43884)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3479986, 0.028224468, -9.43884)
 
 [node name="Canvas" type="Node" parent="." unique_id=1795057792]
 
