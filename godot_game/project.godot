@@ -35,7 +35,8 @@ folder_colors={
 "res://scenes/": "pink",
 "res://scenes/ui/": "green",
 "res://scenes/ui/menus/": "blue",
-"res://scenes/ui/menus/main/": "green"
+"res://scenes/ui/menus/main/": "green",
+"res://scenes/ui/menus/pause/": "green"
 }
 
 [input]

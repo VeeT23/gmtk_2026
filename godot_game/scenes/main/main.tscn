@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cope45m8cccp2"]
 
 [ext_resource type="Texture2D" uid="uid://birstvplc8s0y" path="res://assets/terrain/Ground037_1K-PNG_Color.png" id="1_bq33v"]
-[ext_resource type="Script" uid="uid://dj47vjwaui53c" path="res://scenes/main/main.gd" id="1_ou6is"]
 [ext_resource type="Texture2D" uid="uid://vy0vbxc8edr2" path="res://assets/terrain/Ground037_1K-PNG_NormalGL.png" id="2_j2gmx"]
 [ext_resource type="Texture2D" uid="uid://be03xrjuxxkkk" path="res://assets/terrain/Ground070_1K-PNG_Color.png" id="3_1yooq"]
 [ext_resource type="Texture2D" uid="uid://bqbb21bhhtugk" path="res://assets/terrain/Ground070_1K-PNG_NormalGL.png" id="4_gb53w"]
@@ -131,7 +130,6 @@ shader_parameter/rect_size = Vector2(32, 32)
 shader_parameter/radius = 0.004
 
 [node name="Main" type="Node" unique_id=1002250926]
-script = ExtResource("1_ou6is")
 
 [node name="World" type="Node3D" parent="." unique_id=1153480210]
 

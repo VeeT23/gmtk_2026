@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dh6aniibjucg6"
-path="res://.godot/imported/gas_can.glb-29ebcbe7c2539355accdde61e94c1d8b.scn"
+uid="uid://d14drlc13h21x"
+path="res://.godot/imported/cardboard_box_1.glb-43a4ce8cb34247d5978eebabce1b0b70.scn"
 
 [deps]
 
-source_file="res://assets/items/gas_can.glb"
-dest_files=["res://.godot/imported/gas_can.glb-29ebcbe7c2539355accdde61e94c1d8b.scn"]
+source_file="res://assets/structure/props/cardboard_box_1.glb"
+dest_files=["res://.godot/imported/cardboard_box_1.glb-43a4ce8cb34247d5978eebabce1b0b70.scn"]
 
 [params]
 
