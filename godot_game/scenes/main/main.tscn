@@ -19,6 +19,7 @@
 [ext_resource type="Shader" uid="uid://dprwvg05f0ku4" path="res://resources/shaders/cross_hair.gdshader" id="16_hxu8e"]
 [ext_resource type="Script" uid="uid://b5isp358jxkw0" path="res://resources/scripts/cross_hair.gd" id="17_nvumn"]
 [ext_resource type="Script" uid="uid://dkhar1ecncbcw" path="res://resources/scripts/countdown_label.gd" id="19_necax"]
+[ext_resource type="PackedScene" uid="uid://qomadj25g0o5" path="res://scenes/main/world/radio_tower/generator/generator.tscn" id="20_r4lks"]
 
 [sub_resource type="Gradient" id="Gradient_umvgx"]
 offsets = PackedFloat32Array(0.2, 1)
@@ -121,7 +122,7 @@ sky = SubResource("Sky_p4mrb")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m114p"]
 shader = ExtResource("15_mxkvs")
-shader_parameter/pixel_size = 4.0
+shader_parameter/pixel_size = 3.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_46os7"]
 shader = ExtResource("16_hxu8e")
@@ -145,13 +146,14 @@ free_editor_textures = false
 top_level = true
 metadata/_edit_lock_ = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="World/Environment" unique_id=1515843267]
-environment = SubResource("Environment_46os7")
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="World/Environment" unique_id=2059617183]
 transform = Transform3D(1, 0, 0, 0, 0.6148564, 0.78863907, 0, -0.78863907, 0.6148564, 0, 0, 0)
 visible = false
 shadow_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World/Environment" unique_id=1515843267]
+environment = SubResource("Environment_46os7")
 
 [node name="Enclosure" type="Node3D" parent="World/Environment" unique_id=1382586615]
 
@@ -171,6 +173,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.173168, 0, -30.169735)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.173168, 0, -40.070168)
 
 [node name="Player" parent="World" unique_id=602185274 instance=ExtResource("7_srmg5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.341753, 0, -2.9205453)
 
 [node name="Dinosaur" parent="World" unique_id=1442933148 instance=ExtResource("8_j2gmx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.473244, 0, -110.09863)
@@ -179,7 +182,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.473244, 0, -110.09863)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6335437, -0.14465725, -11.687325)
 
 [node name="GasCan" parent="World" unique_id=567736678 instance=ExtResource("14_umvgx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.033334)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.949091, -0.13017523, -9.746269)
 
 [node name="Canvas" type="Node" parent="." unique_id=1795057792]
 
@@ -238,5 +241,8 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_font_sizes/font_size = 14
 horizontal_alignment = 1
+
+[node name="Generator" parent="." unique_id=833096749 instance=ExtResource("20_r4lks")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5530238, 0, -11.079465)
 
 [connection signal="resized" from="Canvas/Postprocessing/Crosshair" to="Canvas/Postprocessing/Crosshair" method="_on_resized"]

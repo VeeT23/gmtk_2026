@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://qomadj25g0o5"]
+
+[ext_resource type="PackedScene" uid="uid://dju76r6mi5knw" path="res://assets/structure/radio_tower/generator/generator_1.glb" id="1_fde2k"]
+[ext_resource type="Material" uid="uid://x24gqmqc3luj" path="res://resources/shaders/outline_material.tres" id="2_vo4af"]
+[ext_resource type="Script" uid="uid://dhtryvai2ldet" path="res://resources/scripts/interactable.gd" id="2_ywgq0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_46os7"]
+size = Vector3(3.4053345, 1.7810364, 1)
+
+[node name="Generator" unique_id=833096749 instance=ExtResource("1_fde2k")]
+
+[node name="generator_1" parent="." index="0" unique_id=1337584068]
+material_overlay = ExtResource("2_vo4af")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1821025089]
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=35071876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007232666, 0.89378357, 0)
+shape = SubResource("BoxShape3D_46os7")
+
+[node name="Interactable" type="Area3D" parent="." index="2" unique_id=343820392 node_paths=PackedStringArray("outlined_meshes")]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("2_ywgq0")
+outlined_meshes = [NodePath("../generator_1")]
+tooltip = "Generator"
+action = "[Needs fuel]"
+metadata/_custom_type_script = "uid://dhtryvai2ldet"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable" index="0" unique_id=1484071358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007232666, 0.89378357, 0)
+shape = SubResource("BoxShape3D_46os7")
