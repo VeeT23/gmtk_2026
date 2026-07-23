@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cl1ybj4mgw7hk"]
 
 [ext_resource type="PackedScene" uid="uid://c0kwt82ktjxfa" path="res://assets/structure/radio_tower/radio_tower.glb" id="1_5r2qh"]
-[ext_resource type="Script" uid="uid://b7ml3hswx31uk" path="res://scenes/world/radio_tower/radio_tower.gd" id="1_bsr0c"]
+[ext_resource type="Script" uid="uid://b7ml3hswx31uk" path="res://scenes/main/world/radio_tower/radio_tower.gd" id="1_bsr0c"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_46os7"]
 height = 1.8515625

@@ -30,12 +30,10 @@ func _set_shaders(toggle : bool) -> void:
 
 func hover_enter() -> void:
 	hover_entered.emit()
-	
 	_set_shaders(true)
 
 func hover_exit() -> void:
 	hover_exited.emit()
-	
 	_set_shaders(false)
 
 func interact() -> void:
