@@ -1,0 +1,10 @@
+extends Node3D
+
+@onready var interactable : Interactable = $GasCanInteractable
+
+func _ready() -> void:
+	interactable.interacted.connect(_on_collect)
+
+func _on_collect():
+	GameState.change_state("collected_fuel", true)
+	queue_free()

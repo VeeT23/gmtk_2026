@@ -1,34 +1,55 @@
 class_name InteractRay
 extends RayCast3D
 
-var last_target_body = null
-var target_body : Interactable = null
+var current_target: Interactable = null
 
 func _physics_process(_delta: float) -> void:
-	var collider = get_collider()
+	var collider := get_collider()
 	
 	if collider != null and !(collider is Interactable):
-		push_error("[InteractRay] Hit '%s' but it isn't an Interactable." % collider.name)
-		collider = null 
+		collider = null
 	
-	target_body = collider
-	if target_body != last_target_body:
-		if last_target_body:
-			last_target_body.hover_exit()
-			_update_interact_label("", "")
-		if target_body:
-			target_body.hover_enter()
-			_update_interact_label(target_body.tooltip, target_body.action)
+	if collider != current_target:
+		_set_target(collider)
+
+
+func _set_target(new_target: Interactable) -> void:
+	if current_target == new_target:
+		return
+	
+	if is_instance_valid(current_target):
+		if current_target.tree_exiting.is_connected(_on_target_removed):
+			current_target.tree_exiting.disconnect(_on_target_removed)
 		
-		last_target_body = target_body
+		current_target.hover_exit()
+		
+	current_target = new_target
+	
+	if is_instance_valid(current_target):
+		current_target.tree_exiting.connect(_on_target_removed)
+		current_target.hover_enter()
+		_update_interact_label(current_target.tooltip, current_target.action)
+	else:
+		_update_interact_label("", "")
+
+
+func _on_target_removed() -> void:
+	if is_instance_valid(current_target) and current_target.tree_exiting.is_connected(_on_target_removed):
+		current_target.tree_exiting.disconnect(_on_target_removed)
+	
+	current_target = null
+	_update_interact_label("", "")
+
+
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_released("interact"):
-		if target_body != null:
-			target_body.interact()
+	if event.is_action_released("interact") and is_instance_valid(current_target):
+		current_target.interact()
 
-func _update_interact_label(tooltip : String, action : String):
-	var label = get_tree().get_first_node_in_group("InteractLabel")
+
+func _update_interact_label(tooltip: String, action: String) -> void:
+	var label := get_tree().get_first_node_in_group("InteractLabel")
+
 	if label:
 		label.get_node("Tooltip").text = tooltip
 		label.get_node("Action").text = action

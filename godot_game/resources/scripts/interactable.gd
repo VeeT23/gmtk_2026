@@ -39,7 +39,6 @@ func hover_exit() -> void:
 	_set_shaders(false)
 
 func interact() -> void:
+	if !interacted.has_connections():
+		push_error("[Interactable:%s] interacted has no listeners." % name)
 	interacted.emit()
-	
-	if !hover_entered.has_connections():
-		push_error("[Interactable:%s] hover_entered has no listeners." % name)

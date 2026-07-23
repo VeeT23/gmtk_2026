@@ -18,8 +18,9 @@
 [ext_resource type="Shader" uid="uid://dad1lnch6dg1h" path="res://scenes/player/player.gdshader" id="15_mxkvs"]
 [ext_resource type="Shader" uid="uid://dprwvg05f0ku4" path="res://resources/shaders/cross_hair.gdshader" id="16_hxu8e"]
 [ext_resource type="Script" uid="uid://b5isp358jxkw0" path="res://resources/scripts/cross_hair.gd" id="17_nvumn"]
+[ext_resource type="PackedScene" uid="uid://dudjoec521u7f" path="res://scenes/interactable/bolt_cutters/bolt_cutters.tscn" id="18_m4h2d"]
 [ext_resource type="Script" uid="uid://dkhar1ecncbcw" path="res://resources/scripts/countdown_label.gd" id="19_necax"]
-[ext_resource type="PackedScene" uid="uid://qomadj25g0o5" path="res://scenes/main/world/radio_tower/generator/generator.tscn" id="20_r4lks"]
+[ext_resource type="PackedScene" uid="uid://b8ta73uw2otfg" path="res://scenes/main/world/radio_tower/shelter.tscn" id="23_p8abn"]
 
 [sub_resource type="Gradient" id="Gradient_umvgx"]
 offsets = PackedFloat32Array(0.2, 1)
@@ -184,6 +185,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6335437, -0.14465725, -11.6
 [node name="GasCan" parent="World" unique_id=567736678 instance=ExtResource("14_umvgx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.949091, -0.13017523, -9.746269)
 
+[node name="BoltCutters" parent="World" unique_id=795448338 instance=ExtResource("18_m4h2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3479986, 0.14801317, -9.43884)
+
 [node name="Canvas" type="Node" parent="." unique_id=1795057792]
 
 [node name="Postprocessing" type="CanvasLayer" parent="Canvas" unique_id=1115108708]
@@ -242,7 +246,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 14
 horizontal_alignment = 1
 
-[node name="Generator" parent="." unique_id=833096749 instance=ExtResource("20_r4lks")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5530238, 0, -11.079465)
+[node name="shelter" parent="." unique_id=1865450455 instance=ExtResource("23_p8abn")]
+transform = Transform3D(-0.9911998, 0, 0.13237457, 0, 1, 0, -0.13237457, 0, -0.9911998, 9.255466, 0.41339397, -20.042078)
 
 [connection signal="resized" from="Canvas/Postprocessing/Crosshair" to="Canvas/Postprocessing/Crosshair" method="_on_resized"]

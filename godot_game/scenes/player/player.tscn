@@ -26,13 +26,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 
 [node name="InteractRay" type="RayCast3D" parent="Camera3D" unique_id=811370200]
 target_position = Vector3(0, 0, -2)
-collision_mask = 8
+collision_mask = 9
 hit_from_inside = true
 collide_with_areas = true
 script = ExtResource("2_dovo2")
 
 [node name="Flashlight" type="SpotLight3D" parent="Camera3D" unique_id=1834371492]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.56078315, -0.22576791)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.29600775, -0.22576791)
 shadow_enabled = true
 spot_range = 27.314196
 spot_angle = 36.598763
