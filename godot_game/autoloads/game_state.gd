@@ -1,11 +1,18 @@
 extends Node
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+const TIME_SECONDS = 600
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+var timer : Timer = null
+var time_remaining : float = 0.0
+
+
+func begin_countdown():
+	timer = Timer.new()
+	add_child(timer)
+	timer.one_shot = true
+	timer.start(TIME_SECONDS)
+
 func _process(delta: float) -> void:
-	pass
+	if timer:
+		time_remaining = timer.time_left

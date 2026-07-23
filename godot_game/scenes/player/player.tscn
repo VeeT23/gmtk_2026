@@ -32,7 +32,7 @@ collide_with_areas = true
 script = ExtResource("2_dovo2")
 
 [node name="Flashlight" type="SpotLight3D" parent="Camera3D" unique_id=1834371492]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.74541855, -0.8263882)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.56078315, -0.22576791)
 shadow_enabled = true
 spot_range = 27.314196
 spot_angle = 36.598763

@@ -18,6 +18,7 @@
 [ext_resource type="Shader" uid="uid://dad1lnch6dg1h" path="res://scenes/player/player.gdshader" id="15_mxkvs"]
 [ext_resource type="Shader" uid="uid://dprwvg05f0ku4" path="res://resources/shaders/cross_hair.gdshader" id="16_hxu8e"]
 [ext_resource type="Script" uid="uid://b5isp358jxkw0" path="res://resources/scripts/cross_hair.gd" id="17_nvumn"]
+[ext_resource type="Script" uid="uid://dkhar1ecncbcw" path="res://resources/scripts/countdown_label.gd" id="19_necax"]
 
 [sub_resource type="Gradient" id="Gradient_umvgx"]
 offsets = PackedFloat32Array(0.2, 1)
@@ -189,5 +190,39 @@ script = ExtResource("17_nvumn")
 
 [node name="UI" type="CanvasLayer" parent="Canvas" unique_id=1631238164]
 layer = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Canvas/UI" unique_id=445898896]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Countdown" type="Label" parent="Canvas/UI/MarginContainer" unique_id=1279893962]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "00:00"
+horizontal_alignment = 1
+script = ExtResource("19_necax")
+
+[node name="InteractLabel" type="VBoxContainer" parent="Canvas/UI/MarginContainer" unique_id=1568334188 groups=["InteractLabel"]]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Tooltip" type="Label" parent="Canvas/UI/MarginContainer/InteractLabel" unique_id=1504323451]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+
+[node name="Action" type="Label" parent="Canvas/UI/MarginContainer/InteractLabel" unique_id=1948645889]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
 
 [connection signal="resized" from="Canvas/Postprocessing/Crosshair" to="Canvas/Postprocessing/Crosshair" method="_on_resized"]

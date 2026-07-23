@@ -2,6 +2,8 @@ class_name Interactable
 extends Area3D
 
 @export var outlined_meshes: Array[MeshInstance3D]
+@export var tooltip : String
+@export var action : String
 
 signal hover_entered
 signal hover_exited
