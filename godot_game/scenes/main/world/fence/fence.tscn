@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://2xgjn8ac5pn7"]
 
 [ext_resource type="PackedScene" uid="uid://dublvtedr2epm" path="res://assets/structure/fence/fence.glb" id="1_5eryc"]
+[ext_resource type="Script" uid="uid://b247srku6llvo" path="res://resources/scripts/grass_spawner.gd" id="2_cwxma"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_46os7"]
 size = Vector3(1.5982666, 7.150879, 0.8565674)
@@ -25,3 +26,84 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.315878, -0.019441605, 4.36
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=937532782]
 transform = Transform3D(0.9936009, -0.11294842, 0, 0.11294842, 0.9936009, 0, 0, 0, 1, -0.6907787, 4.252933, -0.075656414)
 shape = SubResource("BoxShape3D_p4mrb")
+
+[node name="GrassNodes" type="Node3D" parent="." unique_id=1167687694]
+script = ExtResource("2_cwxma")
+grass_spawn_chance = 0.818
+min_scale = 1.2
+max_scale = 1.6
+
+[node name="Node1" type="Node3D" parent="GrassNodes" unique_id=337589563]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.060408592, 0, 3.8546088)
+
+[node name="Node2" type="Node3D" parent="GrassNodes" unique_id=1439517159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.60336494, 0, -0.68190336)
+
+[node name="Node3" type="Node3D" parent="GrassNodes" unique_id=1605547483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11672902, 0, 4.77003)
+
+[node name="Node4" type="Node3D" parent="GrassNodes" unique_id=291318005]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.60227776, 0, 3.8157623)
+
+[node name="Node5" type="Node3D" parent="GrassNodes" unique_id=2146832323]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1953657, 0, -2.7805097)
+
+[node name="Node6" type="Node3D" parent="GrassNodes" unique_id=1797051529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4978807, 0, 4.074898)
+
+[node name="Node7" type="Node3D" parent="GrassNodes" unique_id=578873316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5010576, -2.3841858e-07, 4.411663)
+
+[node name="Node8" type="Node3D" parent="GrassNodes" unique_id=570198848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8477759, 0, -1.7092395)
+
+[node name="Node9" type="Node3D" parent="GrassNodes" unique_id=347696165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.515617, 0, 5.101146)
+
+[node name="Node10" type="Node3D" parent="GrassNodes" unique_id=1033525627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41423893, 0, 3.3464744)
+
+[node name="Node11" type="Node3D" parent="GrassNodes" unique_id=1915571478]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.96817505, 0, 3.375292)
+
+[node name="Node12" type="Node3D" parent="GrassNodes" unique_id=681841127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0968415, 0, -3.891094)
+
+[node name="Node13" type="Node3D" parent="GrassNodes" unique_id=149278905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.262387, -4.7683716e-07, 3.389141)
+
+[node name="Node14" type="Node3D" parent="GrassNodes" unique_id=827174573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3421006, -4.7683716e-07, -0.74428654)
+
+[node name="Node15" type="Node3D" parent="GrassNodes" unique_id=493875435]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20632923, 0, -2.3485842)
+
+[node name="Node16" type="Node3D" parent="GrassNodes" unique_id=1275048257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34032953, 4.7683716e-07, -3.8963864)
+
+[node name="Node17" type="Node3D" parent="GrassNodes" unique_id=96419125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23370397, 0, -5.298279)
+
+[node name="Node18" type="Node3D" parent="GrassNodes" unique_id=1248191911]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5885048, -4.7683716e-07, -5.0912724)
+
+[node name="Node19" type="Node3D" parent="GrassNodes" unique_id=1493885512]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6231031, 0, -3.223535)
+
+[node name="Node20" type="Node3D" parent="GrassNodes" unique_id=87264491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30959737, 0, -3.9604442)
+
+[node name="Node21" type="Node3D" parent="GrassNodes" unique_id=80283439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2094963, 0, 3.0954916)
+
+[node name="Node22" type="Node3D" parent="GrassNodes" unique_id=435541053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1487745, 0, -2.6365774)
+
+[node name="Node23" type="Node3D" parent="GrassNodes" unique_id=2040865174]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1294123, 4.7683716e-07, -1.3996618)
+
+[node name="Node24" type="Node3D" parent="GrassNodes" unique_id=775464997]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8724264, 0, 0.6590636)
+
+[node name="Node25" type="Node3D" parent="GrassNodes" unique_id=320519177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32693374, -4.7683716e-07, 1.7262466)

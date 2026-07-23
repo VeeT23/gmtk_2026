@@ -153,13 +153,27 @@ transform = Transform3D(1, 0, 0, 0, 0.6148564, 0.78863907, 0, -0.78863907, 0.614
 visible = false
 shadow_enabled = true
 
+[node name="Enclosure" type="Node3D" parent="World/Environment" unique_id=1382586615]
+
+[node name="Fence" parent="World/Environment/Enclosure" unique_id=72705172 instance=ExtResource("11_5qq27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.173168, 0, 0)
+
+[node name="Fence2" parent="World/Environment/Enclosure" unique_id=1695128187 instance=ExtResource("11_5qq27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.173168, 0, -10.145129)
+
+[node name="Fence3" parent="World/Environment/Enclosure" unique_id=626445931 instance=ExtResource("11_5qq27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.173168, 0, -20.258816)
+
+[node name="Fence4" parent="World/Environment/Enclosure" unique_id=45536178 instance=ExtResource("11_5qq27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.173168, 0, -30.169735)
+
+[node name="Fence5" parent="World/Environment/Enclosure" unique_id=1217375836 instance=ExtResource("11_5qq27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.173168, 0, -40.070168)
+
 [node name="Player" parent="World" unique_id=602185274 instance=ExtResource("7_srmg5")]
 
 [node name="Dinosaur" parent="World" unique_id=1442933148 instance=ExtResource("8_j2gmx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.473244, 0, -110.09863)
-
-[node name="Fence" parent="World" unique_id=72705172 instance=ExtResource("11_5qq27")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.173168, 0, 0)
 
 [node name="RadioTower" parent="World" unique_id=649037755 instance=ExtResource("13_srmg5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6335437, -0.14465725, -11.687325)
