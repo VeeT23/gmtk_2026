@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dx1k23d862ha0" path="res://assets/structure/props/ashtray_1.glb" id="10_wh3je"]
 [ext_resource type="Script" uid="uid://dhtryvai2ldet" path="res://resources/scripts/interactable.gd" id="12_88f27"]
 [ext_resource type="AudioStream" uid="uid://bxg4qwr7rpb65" path="res://assets/sfx/interaction/WindowsSounds.wav" id="14_8u1s8"]
+[ext_resource type="AudioStream" uid="uid://cj7ceslpvciwl" path="res://assets/sfx/interaction/Morse Radio.mp3" id="15_yhkx1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0cbo"]
 resource_name = "pc_accessories_mp_1"
@@ -143,6 +144,7 @@ script = ExtResource("12_88f27")
 outlined_meshes = [NodePath("../military_radio_22/military_radio_2"), NodePath("../military_radio_12/military_radio_1"), NodePath("../signal_receiver_etx_12/signal_receiver_etx_1")]
 tooltip = "Radio"
 action = "(Needs power)"
+interact_sfx = ExtResource("15_yhkx1")
 metadata/_custom_type_script = "uid://dhtryvai2ldet"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RadioInteractable" unique_id=1393942366]
