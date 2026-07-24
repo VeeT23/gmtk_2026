@@ -23,10 +23,6 @@ shape = SubResource("BoxShape3D_46os7")
 [node name="fence" parent="." unique_id=294346827 instance=ExtResource("1_5eryc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.315878, -0.019441605, 4.3693557)
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=937532782]
-transform = Transform3D(0.9936009, -0.11294842, 0, 0.11294842, 0.9936009, 0, 0, 0, 1, -0.6907787, 4.252933, -0.075656414)
-shape = SubResource("BoxShape3D_p4mrb")
-
 [node name="GrassNodes" type="Node3D" parent="." unique_id=1167687694]
 script = ExtResource("2_cwxma")
 grass_spawn_chance = 0.818
@@ -107,3 +103,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8724264, 0, 0.6590636)
 
 [node name="Node25" type="Node3D" parent="GrassNodes" unique_id=320519177]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32693374, -4.7683716e-07, 1.7262466)
+
+[node name="PlayerOnly" type="StaticBody3D" parent="." unique_id=1222725817]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="PlayerOnly" unique_id=937532782]
+transform = Transform3D(0.9936009, -0.11294842, 0, 0.11294842, 0.9936009, 0, 0, 0, 1, -0.6907787, 4.252933, -0.075656414)
+shape = SubResource("BoxShape3D_p4mrb")

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bxvc285dj63oe"]
+
+[ext_resource type="PackedScene" uid="uid://boyqvqeyfhcxy" path="res://assets/structure/buildings/outhouse/outhouse.glb" id="1_v0pt4"]
+[ext_resource type="PackedScene" uid="uid://ccyxrmo53iegi" path="res://assets/structure/buildings/outhouse/stool_mx_1.glb" id="3_x0c13"]
+[ext_resource type="PackedScene" uid="uid://2eboq3h7eo7w" path="res://assets/structure/buildings/outhouse/bucket_mx_2.glb" id="4_gkwnj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_46os7"]
+size = Vector3(0.5905762, 2.6135254, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p4mrb"]
+size = Vector3(1.440918, 2.470581, 0.21643066)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x0c13"]
+size = Vector3(1.440918, 0.7872009, 0.6790161)
+
+[node name="Outhouse" unique_id=1957924061 instance=ExtResource("1_v0pt4")]
+
+[node name="door_hr_7" parent="shed_ax_1" parent_id_path=PackedInt32Array(333398645) index="0" unique_id=1697812470]
+transform = Transform3D(-0.35020742, 0, 0.93667215, 0, 1, 0, -0.93667215, 0, -0.35020742, 0.43433273, 0, 0.8699999)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=8322074]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=269678205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8687744, 1.291626, 0)
+shape = SubResource("BoxShape3D_46os7")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=2076848238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8266083, 1.291626, 0)
+shape = SubResource("BoxShape3D_46os7")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=2120878679]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017822266, 1.2255249, -0.897522)
+shape = SubResource("BoxShape3D_p4mrb")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" index="3" unique_id=1815064892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017822266, 0.38383484, -0.43478823)
+shape = SubResource("BoxShape3D_x0c13")
+
+[node name="stool_mx_12" parent="." index="2" unique_id=1054354293 instance=ExtResource("3_x0c13")]
+transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 0.031496346, 0.0008087158, -0.44654858)
+
+[node name="bucket_mx_22" parent="." index="3" unique_id=1140637582 instance=ExtResource("4_gkwnj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04966764, 0, -0.47908658)
+
+[node name="Node3D" type="Node3D" parent="." index="4" unique_id=651483954 groups=["Respawn"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3100884)

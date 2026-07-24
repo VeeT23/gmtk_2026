@@ -105,6 +105,7 @@ debug={
 3d_physics/layer_2="Player"
 3d_physics/layer_3="Enemy"
 3d_physics/layer_4="Interactable"
+3d_physics/layer_5="PlayerOnly"
 
 [physics]
 
