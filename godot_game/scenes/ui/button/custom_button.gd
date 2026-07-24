@@ -31,7 +31,3 @@ func _ready() -> void:
 			
 			press_finished.emit()
 		)
-
-func _input(event):
-	if event.is_action_pressed("ui_cancel"):
-		get_tree().quit()

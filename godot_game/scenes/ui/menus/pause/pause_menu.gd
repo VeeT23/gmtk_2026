@@ -9,8 +9,8 @@ var paused = false
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	ui.visible = false
-	resume_button.pressed.connect(_on_resume_pressed)
-	quit_button.pressed.connect(_on_quit_pressed)
+	resume_button.press_finished.connect(_on_resume_pressed)
+	quit_button.press_finished.connect(_on_quit_pressed)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):

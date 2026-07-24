@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c26gw2igxbgiq"]
 
 [ext_resource type="Script" uid="uid://c26aqjg41d777" path="res://scenes/ui/menus/pause/pause_menu.gd" id="1_hdmo1"]
+[ext_resource type="PackedScene" uid="uid://dywnjkpljckd7" path="res://scenes/ui/button/custom_button.tscn" id="2_pipjn"]
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=448159540]
 layer = 3
@@ -34,10 +35,10 @@ offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ResumeButton" type="Button" parent="UI/VBoxContainer" unique_id=931911999]
+[node name="ResumeButton" parent="UI/VBoxContainer" unique_id=1195260148 instance=ExtResource("2_pipjn")]
 layout_mode = 2
 text = "Resume"
 
-[node name="QuitButton" type="Button" parent="UI/VBoxContainer" unique_id=1586918440]
+[node name="QuitButton" parent="UI/VBoxContainer" unique_id=1308314053 instance=ExtResource("2_pipjn")]
 layout_mode = 2
 text = "Quit"
