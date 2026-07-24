@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://dywnjkpljckd7"]
 
 [ext_resource type="Script" uid="uid://bkkafy70e4lfx" path="res://scenes/ui/button/custom_button.gd" id="1_uqfsv"]
+[ext_resource type="AudioStream" uid="uid://m7f0p0t3f1q2" path="res://scenes/ui/menus/707042__vilkas_sound__vs-button-click-05.mp3" id="2_cgswk"]
+[ext_resource type="AudioStream" uid="uid://cco7ky1jyfpbx" path="res://scenes/ui/menus/702168__foxfire__click-tick-menu-navigation.wav" id="3_0np4s"]
 
 [node name="CustomButton" type="Button" unique_id=1195260148]
 custom_minimum_size = Vector2(128, 16)
 script = ExtResource("1_uqfsv")
 
 [node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=1774811490]
+stream = ExtResource("2_cgswk")
 
 [node name="HoverSound" type="AudioStreamPlayer" parent="." unique_id=1876006255]
+stream = ExtResource("3_0np4s")

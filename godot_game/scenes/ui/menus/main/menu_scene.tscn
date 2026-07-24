@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cdrltrqm5qim7" path="res://scenes/ui/menus/main/main_menu.gd" id="1_m7rg8"]
 [ext_resource type="PackedScene" uid="uid://dywnjkpljckd7" path="res://scenes/ui/button/custom_button.tscn" id="1_vfyya"]
 [ext_resource type="Texture2D" uid="uid://tdpr8qjufa2k" path="res://scenes/ui/menus/main/GMTK Game Jam 2026 Full Logo.png" id="3_3ryvj"]
+[ext_resource type="AudioStream" uid="uid://cypr1d71xfmp0" path="res://scenes/ui/menus/main/Title track jungle%3F.mp3" id="4_dbcc7"]
 
 [node name="MenuScene" type="Node2D" unique_id=246167340]
 
@@ -56,7 +57,7 @@ text = "Lead Designer: Vee
 
 Programming : Ashton, Alex, Vee
 
-Art: Cj, Tifini
+Art: Tifini
 
  super smart ideas: Kyla
 
@@ -82,3 +83,8 @@ grow_vertical = 0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_3ryvj")
 stretch_mode = 4
+
+[node name="TitleScreen" type="AudioStreamPlayer" parent="." unique_id=1628533151]
+stream = ExtResource("4_dbcc7")
+autoplay = true
+parameters/looping = true

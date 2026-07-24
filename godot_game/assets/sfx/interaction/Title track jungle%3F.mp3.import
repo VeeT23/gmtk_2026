@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmma06xsrvdy0"
+path="res://.godot/imported/Title track jungle%3F.mp3-06089225fba184d3db00372c6c6d14f7.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/interaction/Title track jungle%3F.mp3"
+dest_files=["res://.godot/imported/Title track jungle%3F.mp3-06089225fba184d3db00372c6c6d14f7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
