@@ -66,6 +66,7 @@ SFX : Alex
 horizontal_alignment = 1
 
 [node name="Back" parent="MenuLayer/Control/MainMenu/Credits" unique_id=1684089308 groups=["Back_Button"] instance=ExtResource("1_vfyya")]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Back"

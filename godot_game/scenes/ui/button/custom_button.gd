@@ -28,10 +28,10 @@ func _ready() -> void:
 	
 	click_stream.finished.connect(func():
 		if has_mouse:
+			
 			press_finished.emit()
 		)
+
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
-		
-		
