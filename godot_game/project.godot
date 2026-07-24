@@ -17,7 +17,6 @@ config/icon="uid://olstm8nbohcr"
 
 [autoload]
 
-PauseMenu="*uid://c26gw2igxbgiq"
 GameState="*uid://bxyeyr4wnlaii"
 
 [editor_plugins]
