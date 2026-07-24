@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dkcjtbek61bvg"
+path="res://.godot/imported/click pt2.mp3-5e247c5c49ad057d9c24836d6fd33aec.mp3str"
+
+[deps]
+
+source_file="res://scenes/ui/menus/main/click pt2.mp3"
+dest_files=["res://.godot/imported/click pt2.mp3-5e247c5c49ad057d9c24836d6fd33aec.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
