@@ -1,0 +1,299 @@
+[gd_scene format=3 uid="uid://dbckjgmx6peh2"]
+
+[ext_resource type="PackedScene" uid="uid://cydrmdrnbubo5" path="res://assets/structure/buildings/maintenance_garage/maintenance_garage.glb" id="1_7fn1g"]
+[ext_resource type="Script" uid="uid://d2xj6qcun76mf" path="res://scenes/main/world/maintenance_garage/maintenance_garage.gd" id="2_717sx"]
+[ext_resource type="Material" uid="uid://x24gqmqc3luj" path="res://resources/shaders/outline_material.tres" id="3_k4ctd"]
+[ext_resource type="Script" uid="uid://dhtryvai2ldet" path="res://resources/scripts/interactable.gd" id="3_rmji0"]
+[ext_resource type="PackedScene" uid="uid://oa821clq3i5x" path="res://scenes/interactable/gas_can/gas_can.tscn" id="5_e10an"]
+
+[sub_resource type="Animation" id="Animation_k4ctd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("door_hm_1_a_piece_1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("door_hm_1_a_piece_2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_e10an"]
+resource_name = "open_door"
+length = 1.45
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("door_hm_1_a_piece_1:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.33333337, 1.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5707964, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("door_hm_1_a_piece_2:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.13333334, 0.8666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -1.5707964, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j5hu7"]
+_data = {
+&"RESET": SubResource("Animation_k4ctd"),
+&"open_door": SubResource("Animation_e10an")
+}
+
+[sub_resource type="Animation" id="Animation_h1xkg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("garage_door_hr_4_a_piece_2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("garage_door_hr_4_a_piece_1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rmwlw"]
+resource_name = "open_door"
+length = 2.1666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("garage_door_hr_4_a_piece_1:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.19999999, 2.1333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -1.6580628, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("garage_door_hr_4_a_piece_2:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.19999999, 2.1333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.6580628, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7ohcc"]
+_data = {
+&"RESET": SubResource("Animation_h1xkg"),
+&"open_door": SubResource("Animation_rmwlw")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_46os7"]
+size = Vector3(8.607788, 1.5209961, 24.64685)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7fn1g"]
+size = Vector3(1.4190674, 1.5209961, 1.9356918)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_717sx"]
+size = Vector3(1.4190674, 0.92993164, 2.7922726)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rmji0"]
+size = Vector3(4.5791626, 0.92993164, 4.696237)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p4mrb"]
+size = Vector3(0.6281738, 6.649292, 24.632813)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k4ctd"]
+size = Vector3(7.381256, 6.194275, 0.597229)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hfra2"]
+size = Vector3(0.6008606, 6.341797, 2.5167542)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e10an"]
+size = Vector3(0.6008606, 3.3774414, 1.6021271)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j5hu7"]
+size = Vector3(0.6008606, 6.341797, 15.197952)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h1xkg"]
+size = Vector3(0.6008606, 6.341797, 1.485817)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_700ex"]
+size = Vector3(0.6779785, 6.038086, 0.6724243)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ejnqi"]
+size = Vector3(0.3729248, 2.993042, 1.7363281)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rmwlw"]
+size = Vector3(0.3729248, 4.097107, 3.9980469)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7ohcc"]
+size = Vector3(0.8095398, 2.993042, 1.7363281)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ssrr3"]
+size = Vector3(0.6727905, 4.097107, 3.9980469)
+
+[node name="MaintenanceGarage" unique_id=497981931 instance=ExtResource("1_7fn1g")]
+script = ExtResource("2_717sx")
+
+[node name="warehouse_mx_4" parent="." index="0" unique_id=400604946]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="door_hm_1_a_piece_1" parent="warehouse_mx_4" index="0" unique_id=635716386]
+transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1.0072507, -9.793058)
+material_overlay = ExtResource("3_k4ctd")
+
+[node name="door_hm_1_a_piece_2" parent="warehouse_mx_4" index="1" unique_id=1999941062]
+transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1, -8.204749)
+material_overlay = ExtResource("3_k4ctd")
+
+[node name="garage_door_hr_4_a_piece_1" parent="warehouse_mx_4" index="2" unique_id=1964572913]
+transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1.0172331, 7.023925)
+material_overlay = ExtResource("3_k4ctd")
+
+[node name="garage_door_hr_4_a_piece_2" parent="warehouse_mx_4" index="3" unique_id=269756434]
+transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1.0195621, 10.949997)
+material_overlay = ExtResource("3_k4ctd")
+
+[node name="DoorAnimator" type="AnimationPlayer" parent="warehouse_mx_4" index="4" unique_id=227359992]
+libraries/ = SubResource("AnimationLibrary_j5hu7")
+
+[node name="GarageDoorAnimator" type="AnimationPlayer" parent="warehouse_mx_4" index="5" unique_id=1238096892]
+libraries/ = SubResource("AnimationLibrary_7ohcc")
+
+[node name="Collider" type="StaticBody3D" parent="." index="1" unique_id=986722212]
+collision_mask = 7
+metadata/_edit_lock_ = true
+
+[node name="Floor" type="CollisionShape3D" parent="Collider" index="0" unique_id=1223089842]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0037231445, 0.26049805, -0.0076293945)
+shape = SubResource("BoxShape3D_46os7")
+
+[node name="Patio" type="CollisionShape3D" parent="Collider" index="1" unique_id=1455741398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.011902, 0.26049805, -9.025135)
+shape = SubResource("BoxShape3D_7fn1g")
+
+[node name="PatioRamp" type="CollisionShape3D" parent="Collider" index="2" unique_id=1343767574]
+transform = Transform3D(1, 0, 0, 0, 0.9022804, -0.43115, 0, 0.43115, 0.9022804, -5.011902, -0.010135144, -7.00101)
+shape = SubResource("BoxShape3D_717sx")
+
+[node name="GarageRamp" type="CollisionShape3D" parent="Collider" index="3" unique_id=258712823]
+transform = Transform3D(0.9659258, -0.25881907, 0, 0.25881904, 0.96592593, 0, 0, 0, 1.0000001, -6.3338313, -0.03881499, 8.965877)
+shape = SubResource("BoxShape3D_rmji0")
+
+[node name="RearWall" type="CollisionShape3D" parent="Collider" index="4" unique_id=947074404]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9847865, 3.8904507, -0.0036621094)
+shape = SubResource("BoxShape3D_p4mrb")
+
+[node name="SideWall1" type="CollisionShape3D" parent="Collider" index="5" unique_id=926447013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013641834, 4.117959, 12.01413)
+shape = SubResource("BoxShape3D_k4ctd")
+
+[node name="SideWall2" type="CollisionShape3D" parent="Collider" index="6" unique_id=408515796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013641834, 4.117959, -12.035835)
+shape = SubResource("BoxShape3D_k4ctd")
+
+[node name="FrontWall1" type="CollisionShape3D" parent="Collider" index="7" unique_id=652203770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9923735, 3.8191364, -11.042077)
+shape = SubResource("BoxShape3D_hfra2")
+
+[node name="FrontWall2" type="CollisionShape3D" parent="Collider" index="8" unique_id=382986105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9923735, 5.3013144, -9.005582)
+shape = SubResource("BoxShape3D_e10an")
+
+[node name="FrontWall3" type="CollisionShape3D" parent="Collider" index="9" unique_id=382239104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9923735, 3.8191364, -0.6117153)
+shape = SubResource("BoxShape3D_j5hu7")
+
+[node name="FrontWall4" type="CollisionShape3D" parent="Collider" index="10" unique_id=1869869739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9923735, 3.8191364, 11.496651)
+shape = SubResource("BoxShape3D_h1xkg")
+
+[node name="Pillar" type="CollisionShape3D" parent="Collider" index="11" unique_id=1835454016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016235352, 4.1601143, -0.009918213)
+shape = SubResource("BoxShape3D_700ex")
+
+[node name="Door" type="StaticBody3D" parent="." index="2" unique_id=604983148]
+collision_mask = 7
+metadata/_edit_lock_ = true
+
+[node name="Collider" type="CollisionShape3D" parent="Door" index="0" unique_id=1605935813]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9227815, 2.291081, -8.999671)
+shape = SubResource("BoxShape3D_ejnqi")
+
+[node name="GarageDoor" type="StaticBody3D" parent="." index="3" unique_id=909163802]
+metadata/_edit_lock_ = true
+
+[node name="Collider" type="CollisionShape3D" parent="GarageDoor" index="0" unique_id=1451612154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9227815, 2.8431134, 9.005329)
+shape = SubResource("BoxShape3D_rmwlw")
+
+[node name="DoorInteractable" type="Area3D" parent="." index="4" unique_id=1449880962 node_paths=PackedStringArray("outlined_meshes")]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("3_rmji0")
+outlined_meshes = [NodePath("../warehouse_mx_4/door_hm_1_a_piece_1"), NodePath("../warehouse_mx_4/door_hm_1_a_piece_2")]
+one_shot = true
+metadata/_custom_type_script = "uid://dhtryvai2ldet"
+metadata/_edit_lock_ = true
+
+[node name="Collider" type="CollisionShape3D" parent="DoorInteractable" index="0" unique_id=317563669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9851232, 2.291081, -8.999671)
+shape = SubResource("BoxShape3D_7ohcc")
+
+[node name="GarageDoorInteractable" type="Area3D" parent="." index="5" unique_id=302618153 node_paths=PackedStringArray("outlined_meshes")]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("3_rmji0")
+outlined_meshes = [NodePath("../warehouse_mx_4/garage_door_hr_4_a_piece_1"), NodePath("../warehouse_mx_4/garage_door_hr_4_a_piece_2")]
+one_shot = true
+metadata/_custom_type_script = "uid://dhtryvai2ldet"
+metadata/_edit_lock_ = true
+
+[node name="Collider" type="CollisionShape3D" parent="GarageDoorInteractable" index="0" unique_id=198722508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0712013, 2.8431134, 9.005329)
+shape = SubResource("BoxShape3D_ssrr3")
+
+[node name="GasCan" parent="." index="6" unique_id=567736678 instance=ExtResource("5_e10an")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0007777, -2.3339477)
