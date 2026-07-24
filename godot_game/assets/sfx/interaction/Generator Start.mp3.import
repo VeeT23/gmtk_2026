@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dspk0gnlywg4v"
+path="res://.godot/imported/Generator Start.mp3-8568c63dea6a5d7bb7914083879e84ac.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/interaction/Generator Start.mp3"
+dest_files=["res://.godot/imported/Generator Start.mp3-8568c63dea6a5d7bb7914083879e84ac.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

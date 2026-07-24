@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://bqof5kt2454jp" path="res://scenes/main/world/radio_tower/generator/generator.gd" id="2_lqych"]
 [ext_resource type="Material" uid="uid://x24gqmqc3luj" path="res://resources/shaders/outline_material.tres" id="2_vo4af"]
 [ext_resource type="Script" uid="uid://dhtryvai2ldet" path="res://resources/scripts/interactable.gd" id="2_ywgq0"]
+[ext_resource type="AudioStream" uid="uid://dxlwmanw8i1y5" path="res://assets/Generator Start.mp3" id="3_mlfuu"]
+[ext_resource type="AudioStream" uid="uid://7e2yl1cpaa2x" path="res://assets/sfx/interaction/Generator Hummm.mp3" id="4_eunlb"]
 [ext_resource type="AudioStream" uid="uid://cnk4wyh76fb88" path="res://assets/sfx/interaction/jug_clank.wav" id="5_f3hdk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lqych"]
@@ -14,10 +16,10 @@ size = Vector3(3.5457916, 1.8348541, 1.1314087)
 
 [node name="Generator" unique_id=833096749 instance=ExtResource("1_fde2k")]
 script = ExtResource("2_lqych")
-hum_begin = ExtResource("5_f3hdk")
-hum_loop = ExtResource("5_f3hdk")
+hum_begin = ExtResource("3_mlfuu")
+hum_loop = ExtResource("4_eunlb")
 
-[node name="generator_1" parent="." index="0" unique_id=1337584068]
+[node name="generator_1" parent="." index="0" unique_id=1612353344]
 material_overlay = ExtResource("2_vo4af")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1821025089]
