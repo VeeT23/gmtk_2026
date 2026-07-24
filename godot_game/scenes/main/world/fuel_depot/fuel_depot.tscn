@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://b08xyamua3ida"]
+
+[ext_resource type="PackedScene" uid="uid://rnejo03arlr" path="res://assets/structure/buildings/fuel_depot/roof_mh_4_a_4.glb" id="1_25y25"]
+[ext_resource type="PackedScene" uid="uid://dcy1lteosu61g" path="res://assets/structure/buildings/fuel_depot/pillar_hs_7.glb" id="2_0j51i"]
+[ext_resource type="PackedScene" uid="uid://odi5243cc1iw" path="res://assets/structure/buildings/fuel_depot/garage_hm_2.glb" id="3_qsv21"]
+[ext_resource type="PackedScene" uid="uid://oa821clq3i5x" path="res://scenes/interactable/gas_can/gas_can.tscn" id="4_50axg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_46os7"]
+size = Vector3(1, 5.4002686, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p4mrb"]
+size = Vector3(4.9987793, 3.9717407, 6.100403)
+
+[node name="FuelDepot" type="Node3D" unique_id=1319942395]
+
+[node name="roof1" parent="." unique_id=1391083542 instance=ExtResource("1_25y25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.8408046, 0)
+
+[node name="pillar1" parent="roof1" unique_id=1321820270 instance=ExtResource("2_0j51i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8408046, -7.4159775)
+
+[node name="pillar2" parent="roof1" unique_id=1982704355 instance=ExtResource("2_0j51i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8408046, 0)
+
+[node name="pillar3" parent="roof1" unique_id=1959388983 instance=ExtResource("2_0j51i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8408046, 7.416)
+
+[node name="roof2" parent="." unique_id=1300193570 instance=ExtResource("1_25y25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9288745, 4.8408046, 0)
+
+[node name="pillar1" parent="roof2" unique_id=105477451 instance=ExtResource("2_0j51i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8408046, -7.4159775)
+
+[node name="pillar2" parent="roof2" unique_id=941226744 instance=ExtResource("2_0j51i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8408046, 0)
+
+[node name="pillar3" parent="roof2" unique_id=1769960539 instance=ExtResource("2_0j51i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8408046, 7.416)
+
+[node name="garage" parent="." unique_id=671131416 instance=ExtResource("3_qsv21")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.22988, 0, -5.244935)
+
+[node name="GasCan" parent="." unique_id=567736678 instance=ExtResource("4_50axg")]
+transform = Transform3D(-0.47896615, 0, 0.87783337, 0, 1, 0, -0.87783337, 0, -0.47896615, -16.495453, -2.3841858e-07, -6.2558846)
+
+[node name="Collider" type="StaticBody3D" parent="." unique_id=1802262826]
+collision_mask = 7
+
+[node name="Pillar1" type="CollisionShape3D" parent="Collider" unique_id=743332318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.931737, 2.718567, 7.410681)
+shape = SubResource("BoxShape3D_46os7")
+
+[node name="Pillar2" type="CollisionShape3D" parent="Collider" unique_id=1665413257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.931737, 2.718567, 0)
+shape = SubResource("BoxShape3D_46os7")
+
+[node name="Pillar3" type="CollisionShape3D" parent="Collider" unique_id=1920691424]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.931737, 2.718567, -7.4253273)
+shape = SubResource("BoxShape3D_46os7")
+
+[node name="Pillar4" type="CollisionShape3D" parent="Collider" unique_id=694327084]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.718567, 7.410681)
+shape = SubResource("BoxShape3D_46os7")
+
+[node name="Pillar5" type="CollisionShape3D" parent="Collider" unique_id=1615388490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.718567, 0)
+shape = SubResource("BoxShape3D_46os7")
+
+[node name="Pillar6" type="CollisionShape3D" parent="Collider" unique_id=131600738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.718567, -7.4253273)
+shape = SubResource("BoxShape3D_46os7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collider" unique_id=1851172570]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.223303, 2.0018175, -5.2831917)
+shape = SubResource("BoxShape3D_p4mrb")
+
+[editable path="garage"]

@@ -18,7 +18,7 @@
 [ext_resource type="Shader" uid="uid://dprwvg05f0ku4" path="res://resources/shaders/cross_hair.gdshader" id="16_hxu8e"]
 [ext_resource type="Script" uid="uid://b5isp358jxkw0" path="res://resources/scripts/cross_hair.gd" id="17_nvumn"]
 [ext_resource type="PackedScene" uid="uid://dbckjgmx6peh2" path="res://scenes/main/world/maintenance_garage/maintenance_garage.tscn" id="17_p8abn"]
-[ext_resource type="PackedScene" uid="uid://dudjoec521u7f" path="res://scenes/interactable/bolt_cutters/bolt_cutters.tscn" id="18_m4h2d"]
+[ext_resource type="PackedScene" uid="uid://b08xyamua3ida" path="res://scenes/main/world/fuel_depot/fuel_depot.tscn" id="17_s17dp"]
 [ext_resource type="PackedScene" uid="uid://dn4hd5vmthonv" path="res://scenes/interactable/computer_parts/computer_parts.tscn" id="18_p8abn"]
 [ext_resource type="Script" uid="uid://dkhar1ecncbcw" path="res://resources/scripts/countdown_label.gd" id="19_necax"]
 [ext_resource type="PackedScene" uid="uid://b8ta73uw2otfg" path="res://scenes/main/world/radio_tower/shelter.tscn" id="23_p8abn"]
@@ -151,7 +151,6 @@ metadata/_edit_lock_ = true
 
 [node name="Sun" type="DirectionalLight3D" parent="World/Environment" unique_id=2059617183]
 transform = Transform3D(1, 0, 0, 0, 0.6148564, 0.78863907, 0, -0.78863907, 0.6148564, 0, 0, 0)
-visible = false
 shadow_enabled = true
 metadata/_edit_lock_ = true
 
@@ -184,9 +183,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7381084, -0.1446563, -0.23
 [node name="shelter" parent="World/Environment/RadioStation" unique_id=1865450455 instance=ExtResource("23_p8abn")]
 transform = Transform3D(-0.9911998, 0, 0.13237457, 0, 1, 0, -0.13237457, 0, -0.9911998, 5.6736946, 0.41339493, -3.0269327)
 
-[node name="BoltCutters" parent="World/Environment/RadioStation" unique_id=795448338 instance=ExtResource("18_m4h2d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.473889, 0.45569605, 4.6133404)
-
 [node name="ComputerParts" parent="World/Environment/RadioStation" unique_id=1118510295 instance=ExtResource("18_p8abn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3491418, 0.42747158, 3.4865322)
 
@@ -194,6 +190,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3491418, 0.42747158, 3.4865
 
 [node name="MaintenanceGarage" parent="World/Environment" unique_id=497981931 instance=ExtResource("17_p8abn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.599985, 0, 5.788227)
+
+[node name="FuelDepot" parent="World/Environment" unique_id=1319942395 instance=ExtResource("17_s17dp")]
+transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25881904, 10.02767, 0, 49.795822)
 
 [node name="Player" parent="World" unique_id=602185274 instance=ExtResource("7_srmg5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.341753, 0, -2.9205453)
