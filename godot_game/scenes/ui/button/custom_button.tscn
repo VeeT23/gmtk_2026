@@ -10,7 +10,7 @@ script = ExtResource("1_uqfsv")
 
 [node name="HoverSound" type="AudioStreamPlayer" parent="." unique_id=575582597]
 stream = ExtResource("2_cgswk")
-volume_db = -9.123
+volume_db = 0.608
 pitch_scale = 0.95
 
 [node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=1601482506]
