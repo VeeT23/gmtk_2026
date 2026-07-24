@@ -4,7 +4,7 @@
 [ext_resource type="Material" uid="uid://x24gqmqc3luj" path="res://resources/shaders/outline_material.tres" id="2_5wsfb"]
 [ext_resource type="Texture2D" uid="uid://coggq8ujjdod2" path="res://assets/items/padlock_padlock_1.png" id="2_w4dpj"]
 [ext_resource type="Script" uid="uid://dhtryvai2ldet" path="res://resources/scripts/interactable.gd" id="3_w4dpj"]
-[ext_resource type="AudioStream" uid="uid://cnk4wyh76fb88" path="res://assets/sfx/interaction/jug_clank.wav" id="5_y5qsb"]
+[ext_resource type="AudioStream" uid="uid://dg411sce82a3g" path="res://assets/sfx/interaction/Bolt door(Locked).mp3" id="5_y5qsb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_va1lb"]
 resource_name = "padlock_1"

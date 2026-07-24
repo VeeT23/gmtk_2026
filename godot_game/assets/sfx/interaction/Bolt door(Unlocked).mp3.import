@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0qvrka2rkka"
+path="res://.godot/imported/Bolt door(Unlocked).mp3-fbd6786dbdefda88f5ffd18e67d31339.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/interaction/Bolt door(Unlocked).mp3"
+dest_files=["res://.godot/imported/Bolt door(Unlocked).mp3-fbd6786dbdefda88f5ffd18e67d31339.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
