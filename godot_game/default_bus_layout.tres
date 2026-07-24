@@ -10,7 +10,6 @@ resource_name = "Filter"
 resource_name = "EQ"
 
 [resource]
-bus/0/send = &"New Bus"
 bus/0/effect/0/effect = SubResource("AudioEffectCompressor_j3pel")
 bus/0/effect/0/enabled = true
 bus/0/effect/1/effect = SubResource("AudioEffectFilter_j3pel")
