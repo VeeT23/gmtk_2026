@@ -142,7 +142,8 @@ script = ExtResource("1_pg34l")
 data_directory = "res://scenes/main/world/terrain_data"
 material = SubResource("Terrain3DMaterial_71ii3")
 assets = SubResource("Terrain3DAssets_ues17")
-collision_mask = 6
+collision_mode = 3
+collision_mask = 7
 mesh_lods = 8
 free_editor_textures = false
 top_level = true
@@ -150,6 +151,7 @@ metadata/_edit_lock_ = true
 
 [node name="Sun" type="DirectionalLight3D" parent="World/Environment" unique_id=2059617183]
 transform = Transform3D(1, 0, 0, 0, 0.6148564, 0.78863907, 0, -0.78863907, 0.6148564, 0, 0, 0)
+visible = false
 shadow_enabled = true
 metadata/_edit_lock_ = true
 
@@ -177,7 +179,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.173168, 0, -40.070168)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.341753, 0, -2.9205453)
 
 [node name="Dinosaur" parent="World" unique_id=1442933148 instance=ExtResource("8_j2gmx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.075485, -3.8146973e-06, -44.051636)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.41904, 0.9999962, -116.376785)
 
 [node name="RadioTower" parent="World" unique_id=649037755 instance=ExtResource("13_srmg5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6335437, -0.14465725, -11.687325)
