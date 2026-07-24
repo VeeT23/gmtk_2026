@@ -10,24 +10,20 @@ var current_state: State = State.IDLE
 
 var player: Node3D
 var nav_agent: NavigationAgent3D
+var anim_player: AnimationPlayer
 var path_timer: float = 0.0
 
 func _ready() -> void:
-	$dino/AnimationPlayer.play("newwalk")
+	anim_player = $dino/AnimationPlayer
+	anim_player.play("idle")
 
 	player = get_tree().current_scene.find_child("Player", true, false) as Node3D
 	if player == null:
 		push_error("Dinosaur Error: Could not find a node named 'Player' in the scene!")
-	else:
-		print("Dinosaur: player found -> ", player.name)
 
 	nav_agent = $NavigationAgent3D
 	nav_agent.path_desired_distance = 0.5
 	nav_agent.target_desired_distance = 1.0
-
-	# Wait a frame so the NavigationServer has synced the baked navmesh
-	await get_tree().physics_frame
-	print("Dinosaur: nav map = ", nav_agent.get_navigation_map())
 
 
 func _physics_process(delta: float) -> void:
@@ -58,20 +54,25 @@ func _process_idle(delta: float) -> void:
 	velocity.x = move_toward(velocity.x, 0, speed)
 	velocity.z = move_toward(velocity.z, 0, speed)
 
+	if anim_player.current_animation != "idle":
+		anim_player.play("idle")
+
 
 func _process_hunt(delta: float) -> void:
 	path_timer -= delta
 	if path_timer <= 0.0:
 		nav_agent.target_position = player.global_transform.origin
 		path_timer = path_update_interval
-		# DEBUG - remove once working
-		print("Dinosaur: target set, path finished? ", nav_agent.is_navigation_finished(),
-			" path len: ", nav_agent.get_current_navigation_path().size())
 
 	if nav_agent.is_navigation_finished():
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
+		if anim_player.current_animation != "idle":
+			anim_player.play("idle")
 		return
+
+	if anim_player.current_animation != "newwalk":
+		anim_player.play("newwalk")
 
 	var next_point = nav_agent.get_next_path_position()
 	var direction = (next_point - global_transform.origin)
