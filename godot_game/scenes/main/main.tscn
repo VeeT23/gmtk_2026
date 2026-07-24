@@ -20,7 +20,6 @@
 [ext_resource type="Script" uid="uid://b5isp358jxkw0" path="res://resources/scripts/cross_hair.gd" id="17_nvumn"]
 [ext_resource type="PackedScene" uid="uid://dbckjgmx6peh2" path="res://scenes/main/world/maintenance_garage/maintenance_garage.tscn" id="17_p8abn"]
 [ext_resource type="PackedScene" uid="uid://b08xyamua3ida" path="res://scenes/main/world/fuel_depot/fuel_depot.tscn" id="17_s17dp"]
-[ext_resource type="PackedScene" uid="uid://dn4hd5vmthonv" path="res://scenes/interactable/computer_parts/computer_parts.tscn" id="18_p8abn"]
 [ext_resource type="Script" uid="uid://dkhar1ecncbcw" path="res://resources/scripts/countdown_label.gd" id="19_necax"]
 [ext_resource type="PackedScene" uid="uid://b8ta73uw2otfg" path="res://scenes/main/world/radio_tower/shelter.tscn" id="23_p8abn"]
 [ext_resource type="PackedScene" uid="uid://c26gw2igxbgiq" path="res://scenes/ui/menus/pause/pause_menu.tscn" id="24_s17dp"]
@@ -201,9 +200,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7381084, -0.1446563, -0.23
 
 [node name="shelter" parent="World/NavigationRegion3D/Environment/RadioStation" unique_id=1865450455 instance=ExtResource("23_p8abn")]
 transform = Transform3D(-0.9911998, 0, 0.13237457, 0, 1, 0, -0.13237457, 0, -0.9911998, 5.6736946, 0.41339493, -3.0269327)
-
-[node name="ComputerParts" parent="World/NavigationRegion3D/Environment/RadioStation" unique_id=1118510295 instance=ExtResource("18_p8abn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3491418, 0.42747158, 3.4865322)
 
 [node name="MaintenanceStation" type="Node3D" parent="World/NavigationRegion3D/Environment" unique_id=1321889685]
 
