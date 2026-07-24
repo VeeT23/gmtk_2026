@@ -198,7 +198,7 @@ transform = Transform3D(-0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.25
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.341753, 0, -2.9205453)
 
 [node name="Dinosaur" parent="World" unique_id=1442933148 instance=ExtResource("8_j2gmx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.41904, 0.9999962, -116.376785)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.589401, 0.9999924, -45.07673)
 
 [node name="Canvas" type="Node" parent="." unique_id=1795057792]
 

@@ -8,7 +8,7 @@ var player: Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$dino/AnimationPlayer.play("walk")
+	$dino/AnimationPlayer.play("newwalk")
 	
 	player = get_tree().current_scene.find_child("Player", true, false) as Node3D
 	
