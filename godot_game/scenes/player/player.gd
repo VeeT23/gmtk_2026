@@ -18,6 +18,7 @@ const MOUSE_SENSITIVITY = 0.002
 @export var camera_stand_position = Vector3(0,1.7,0)
 
 var camera_pitch := 0.0
+var is_crouching := false 
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -35,14 +36,14 @@ func _input(event):
 	elif event.is_action_pressed("crouch"):
 		var tween = create_tween()
 		tween.tween_property(camera, "position", camera_crouch_position, 0.2)
-		
+		is_crouching = true
 		standing_collider.disabled = true
 		crouch_collider.disabled = false
 		
 	elif event.is_action_released("crouch"):
 		var tween = create_tween()
 		tween.tween_property(camera, "position", camera_stand_position, 0.2)
-		
+		is_crouching = false
 		standing_collider.disabled = false
 		crouch_collider.disabled = true
 	elif event.is_action_released("flashlight"):
@@ -62,7 +63,7 @@ func _physics_process(delta: float) -> void:
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	var is_sprinting := Input.is_action_pressed("sprint")
-	var speed := SPRINT_SPEED if is_sprinting else BASE_SPEED
+	var speed := (SPRINT_SPEED if is_sprinting else BASE_SPEED) * (0.5 if is_crouching else 1.0)
 	
 	var target_fov := SPRINT_FOV if is_sprinting else BASE_FOV
 	camera.fov = lerp(camera.fov, target_fov, FOV_CHANGE_SPEED * delta)
