@@ -1,14 +1,13 @@
-extends CanvasLayer
+extends Control
 
-@onready var ui: Control = $UI
-@onready var resume_button: Button = $UI/VBoxContainer/ResumeButton
-@onready var quit_button: Button = $UI/VBoxContainer/QuitButton
+@onready var resume_button: Button = $VBoxContainer/ResumeButton
+@onready var quit_button: Button = $VBoxContainer/QuitButton
 
 var paused = false
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	ui.visible = false
+	visible = false
 	resume_button.press_finished.connect(_on_resume_pressed)
 	quit_button.press_finished.connect(_on_quit_pressed)
 
@@ -20,11 +19,11 @@ func toggle_pause() -> void:
 	paused = !paused
 	if paused:
 		get_tree().paused = true
-		ui.visible = true
+		visible = true
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	else:
 		get_tree().paused = false
-		ui.visible = false
+		visible = false
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _on_resume_pressed() -> void:

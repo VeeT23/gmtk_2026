@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://dn4hd5vmthonv" path="res://scenes/interactable/computer_parts/computer_parts.tscn" id="18_p8abn"]
 [ext_resource type="Script" uid="uid://dkhar1ecncbcw" path="res://resources/scripts/countdown_label.gd" id="19_necax"]
 [ext_resource type="PackedScene" uid="uid://b8ta73uw2otfg" path="res://scenes/main/world/radio_tower/shelter.tscn" id="23_p8abn"]
+[ext_resource type="PackedScene" uid="uid://c26gw2igxbgiq" path="res://scenes/ui/menus/pause/pause_menu.tscn" id="24_s17dp"]
 
 [sub_resource type="Gradient" id="Gradient_umvgx"]
 offsets = PackedFloat32Array(0.2, 1)
@@ -245,7 +246,7 @@ script = ExtResource("17_nvumn")
 [node name="UI" type="CanvasLayer" parent="Canvas" unique_id=1631238164]
 layer = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Canvas/UI" unique_id=445898896]
+[node name="HUD" type="MarginContainer" parent="Canvas/UI" unique_id=445898896]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -256,7 +257,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Countdown" type="Label" parent="Canvas/UI/MarginContainer" unique_id=1279893962]
+[node name="Countdown" type="Label" parent="Canvas/UI/HUD" unique_id=1279893962]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
@@ -265,18 +266,21 @@ text = "00:00"
 horizontal_alignment = 1
 script = ExtResource("19_necax")
 
-[node name="InteractLabel" type="VBoxContainer" parent="Canvas/UI/MarginContainer" unique_id=1568334188 groups=["InteractLabel"]]
+[node name="InteractLabel" type="VBoxContainer" parent="Canvas/UI/HUD" unique_id=1568334188 groups=["InteractLabel"]]
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="Tooltip" type="Label" parent="Canvas/UI/MarginContainer/InteractLabel" unique_id=1504323451]
+[node name="Tooltip" type="Label" parent="Canvas/UI/HUD/InteractLabel" unique_id=1504323451]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 horizontal_alignment = 1
 
-[node name="Action" type="Label" parent="Canvas/UI/MarginContainer/InteractLabel" unique_id=1948645889]
+[node name="Action" type="Label" parent="Canvas/UI/HUD/InteractLabel" unique_id=1948645889]
 layout_mode = 2
 theme_override_font_sizes/font_size = 14
 horizontal_alignment = 1
+
+[node name="PauseMenu" parent="Canvas/UI" unique_id=1671520023 instance=ExtResource("24_s17dp")]
+visible = true
 
 [connection signal="resized" from="Canvas/Postprocessing/Crosshair" to="Canvas/Postprocessing/Crosshair" method="_on_resized"]
