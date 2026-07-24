@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://csyp6u1lg7g18" path="res://assets/structure/radio_tower/radio/signal_receiver_etx_1.glb" id="9_iisc2"]
 [ext_resource type="PackedScene" uid="uid://dx1k23d862ha0" path="res://assets/structure/props/ashtray_1.glb" id="10_wh3je"]
 [ext_resource type="Script" uid="uid://dhtryvai2ldet" path="res://resources/scripts/interactable.gd" id="12_88f27"]
+[ext_resource type="AudioStream" uid="uid://bxg4qwr7rpb65" path="res://assets/sfx/interaction/WindowsSounds.wav" id="14_8u1s8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0cbo"]
 resource_name = "pc_accessories_mp_1"
@@ -68,7 +69,7 @@ script = ExtResource("1_iisc2")
 [node name="monitor" parent="." unique_id=907716283 instance=ExtResource("1_3i144")]
 transform = Transform3D(0.123296976, 0, -0.9923697, 0, 1, 0, 0.9923697, 0, 0.123296976, 0.48140383, 1.1804179, -0.30105805)
 
-[node name="pc_monitor_mp_1" parent="monitor" index="0" unique_id=287909180]
+[node name="pc_monitor_mp_1" parent="monitor" index="0" unique_id=1350307541]
 material_overlay = ExtResource("3_0is37")
 
 [node name="pc_keyboard_mp_12" type="Node3D" parent="." unique_id=391247322]
@@ -81,7 +82,7 @@ mesh = SubResource("ArrayMesh_pivhs")
 [node name="pc_mp_12" parent="." unique_id=735290711 instance=ExtResource("3_xy7et")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.23111153, 0.06696835, 0.512898)
 
-[node name="pc_mp_1" parent="pc_mp_12" index="0" unique_id=1677282052]
+[node name="pc_mp_1" parent="pc_mp_12" index="0" unique_id=2081793017]
 material_overlay = ExtResource("3_0is37")
 
 [node name="chair_mp_5_42" parent="." unique_id=1781376758 instance=ExtResource("4_kaidd")]
@@ -90,7 +91,7 @@ transform = Transform3D(-0.5874423, 0, 0.809266, 0, 1, 0, -0.809266, 0, -0.58744
 [node name="pc_mouse_mp_12" parent="." unique_id=545980822 instance=ExtResource("5_wh3je")]
 transform = Transform3D(0.082835704, 0, -0.99656326, 0, 1, 0, 0.99656326, 0, 0.082835704, 0.11484742, 0.9294548, 0.19218995)
 
-[node name="pc_mouse_mp_1" parent="pc_mouse_mp_12" index="0" unique_id=1002232511]
+[node name="pc_mouse_mp_1" parent="pc_mouse_mp_12" index="0" unique_id=83045002]
 material_overlay = ExtResource("3_0is37")
 
 [node name="table" parent="." unique_id=1545812060 instance=ExtResource("6_iisc2")]
@@ -99,19 +100,19 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.26
 [node name="military_radio_22" parent="." unique_id=799785272 instance=ExtResource("7_kaidd")]
 transform = Transform3D(-0.3105804, 0, -0.9505471, 0, 1, 0, 0.9505471, 0, -0.3105804, 0.35957575, 0.9382323, 0.51095515)
 
-[node name="military_radio_2" parent="military_radio_22" index="0" unique_id=1803256018]
+[node name="military_radio_2" parent="military_radio_22" index="0" unique_id=386707927]
 material_overlay = ExtResource("3_0is37")
 
 [node name="military_radio_12" parent="." unique_id=244385715 instance=ExtResource("8_wh3je")]
 transform = Transform3D(-0.5439206, 0, -0.83913666, 0, 1, 0, 0.83913666, 0, -0.5439206, 0.3707831, 1.1134217, 0.55644965)
 
-[node name="military_radio_1" parent="military_radio_12" index="0" unique_id=1164550750]
+[node name="military_radio_1" parent="military_radio_12" index="0" unique_id=163181358]
 material_overlay = ExtResource("3_0is37")
 
 [node name="signal_receiver_etx_12" parent="." unique_id=343882471 instance=ExtResource("9_iisc2")]
 transform = Transform3D(-0.45651925, 0, -0.8897135, 0, 1, 0, 0.8897135, 0, -0.45651925, 0.34539986, 1.2888769, 0.5397084)
 
-[node name="signal_receiver_etx_1" parent="signal_receiver_etx_12" index="0" unique_id=810874737]
+[node name="signal_receiver_etx_1" parent="signal_receiver_etx_12" index="0" unique_id=2096953056]
 material_overlay = ExtResource("3_0is37")
 
 [node name="ashtray_12" parent="." unique_id=585866871 instance=ExtResource("10_wh3je")]
@@ -128,6 +129,7 @@ script = ExtResource("12_88f27")
 outlined_meshes = [NodePath("../monitor/pc_monitor_mp_1"), NodePath("../pc_keyboard_mp_12/pc_keyboard_mp_1"), NodePath("../pc_mp_12/pc_mp_1"), NodePath("../pc_mouse_mp_12/pc_mouse_mp_1")]
 tooltip = "Computer"
 action = "(Needs power)"
+interact_sfx = ExtResource("14_8u1s8")
 metadata/_custom_type_script = "uid://dhtryvai2ldet"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ComputerInteractable" unique_id=519900128]
