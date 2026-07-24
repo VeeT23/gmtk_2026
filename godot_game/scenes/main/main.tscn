@@ -190,139 +190,139 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06136322, 0, 55.23626)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.236298, 0, 0)
 collision_mask = 6
 
-[node name="@StaticBody3D@20230" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=424865926 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21822" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=2022952671 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.9839296, 0, -0.17855696, 0, 1, 0, 0.17855696, 0, 0.9839296, 54.348625, 0, 9.86282)
 collision_mask = 6
 
-[node name="@StaticBody3D@20231" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1598028836 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21823" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1826834425 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.9362349, 0, -0.35137483, 0, 1, 0, 0.35137483, 0, 0.9362349, 51.71414, 0, 19.408644)
 collision_mask = 6
 
-[node name="@StaticBody3D@20232" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1838345146 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21824" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=757795870 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.85844874, 0, -0.5128994, 0, 1, 0, 0.5128994, 0, 0.85844874, 47.417526, 0, 28.330656)
 collision_mask = 6
 
-[node name="@StaticBody3D@20233" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1178082880 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21825" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=2047995734 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.7530715, 0, -0.6579388, 0, 1, 0, 0.6579388, 0, 0.7530715, 41.596878, 0, 36.3421)
 collision_mask = 6
 
-[node name="@StaticBody3D@20234" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=819818359 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21826" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=453507938 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.6234898, 0, -0.78183144, 0, 1, 0, 0.78183144, 0, 0.6234898, 34.43927, 0, 43.185474)
 collision_mask = 6
 
-[node name="@StaticBody3D@20235" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=597925042 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21827" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1847439667 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.47386864, 0, -0.8805955, 0, 1, 0, 0.8805955, 0, 0.47386864, 26.174751, 0, 48.640835)
 collision_mask = 6
 
-[node name="@StaticBody3D@20236" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1209139884 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21828" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=946372410 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.30901697, 0, -0.95105654, 0, 1, 0, 0.95105654, 0, 0.30901697, 17.068954, 0, 52.532837)
 collision_mask = 6
 
-[node name="@StaticBody3D@20237" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1557451159 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21829" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1388624950 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.13423322, 0, -0.99094975, 0, 1, 0, 0.99094975, 0, 0.13423322, 7.414547, 0, 54.736393)
 collision_mask = 6
 
-[node name="@StaticBody3D@20238" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1780352667 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21830" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=37642673 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.044864904, 0, -0.99899304, 0, 1, 0, 0.99899304, 0, -0.044864904, -2.4781685, 0, 55.180676)
 collision_mask = 6
 
-[node name="@StaticBody3D@20239" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1744988308 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21831" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1126157061 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.22252099, 0, -0.9749279, 0, 1, 0, 0.9749279, 0, -0.22252099, -12.291233, 0, 53.851406)
 collision_mask = 6
 
-[node name="@StaticBody3D@20240" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1066255642 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21832" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1952949084 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.39302504, 0, -0.91952777, 0, 1, 0, 0.91952777, 0, -0.39302504, -21.709246, 0, 50.791306)
 collision_mask = 6
 
-[node name="@StaticBody3D@20241" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=340477874 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21833" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=2070477019 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.55089706, 0, -0.8345732, 0, 1, 0, 0.8345732, 0, -0.55089706, -30.429508, 0, 46.098732)
 collision_mask = 6
 
-[node name="@StaticBody3D@20242" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=405401942 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21834" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1601875510 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.6910627, 0, -0.72279483, 0, 1, 0, 0.72279483, 0, -0.6910627, -38.171738, 0, 39.92451)
 collision_mask = 6
 
-[node name="@StaticBody3D@20243" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=276864979 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21835" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=722648812 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.809017, 0, -0.5877852, 0, 1, 0, 0.5877852, 0, -0.809017, -44.6871, 0, 32.46708)
 collision_mask = 6
 
-[node name="@StaticBody3D@20244" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=968381391 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21836" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1977816582 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.90096885, 0, -0.43388373, 0, 1, 0, 0.43388373, 0, -0.90096885, -49.766182, 0, 23.96613)
 collision_mask = 6
 
-[node name="@StaticBody3D@20245" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1137411388 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21837" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1050887717 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.96396285, 0, -0.26603678, 0, 1, 0, 0.26603678, 0, -0.96396285, -53.245735, 0, 14.694889)
 collision_mask = 6
 
-[node name="@StaticBody3D@20246" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=700279215 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21838" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=549962261 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.9959743, 0, -0.089639254, 0, 1, 0, 0.089639254, 0, -0.9959743, -55.013927, 0, 4.9513435)
 collision_mask = 6
 
-[node name="@StaticBody3D@20247" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=633330442 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21839" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1197548101 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.9959743, 0, 0.08963931, 0, 1, 0, -0.08963931, 0, -0.9959743, -55.013927, 0, -4.9513435)
 collision_mask = 6
 
-[node name="@StaticBody3D@20248" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=871802151 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21840" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=870914519 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.96396285, 0, 0.2660369, 0, 1, 0, -0.2660369, 0, -0.96396285, -53.245735, 0, -14.694889)
 collision_mask = 6
 
-[node name="@StaticBody3D@20249" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1947688161 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21841" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=309086060 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.9009689, 0, 0.43388364, 0, 1, 0, -0.43388364, 0, -0.9009689, -49.766182, 0, -23.96613)
 collision_mask = 6
 
-[node name="@StaticBody3D@20250" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=657780476 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21842" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1934858334 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.809017, 0, 0.58778524, 0, 1, 0, -0.58778524, 0, -0.809017, -44.6871, 0, -32.467083)
 collision_mask = 6
 
-[node name="@StaticBody3D@20251" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=404983458 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21843" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=824024967 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.69106257, 0, 0.72279495, 0, 1, 0, -0.72279495, 0, -0.69106257, -38.171738, 0, -39.92451)
 collision_mask = 6
 
-[node name="@StaticBody3D@20252" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=2071041044 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21844" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=2000297464 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.5508968, 0, 0.8345733, 0, 1, 0, -0.8345733, 0, -0.5508968, -30.429508, 0, -46.098736)
 collision_mask = 6
 
-[node name="@StaticBody3D@20253" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1012247936 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21845" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=891462333 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.39302507, 0, 0.91952777, 0, 1, 0, -0.91952777, 0, -0.39302507, -21.709246, 0, -50.7913)
 collision_mask = 6
 
-[node name="@StaticBody3D@20254" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=905470422 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21846" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=313509520 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.22252089, 0, 0.9749279, 0, 1, 0, -0.9749279, 0, -0.22252089, -12.291233, 0, -53.851406)
 collision_mask = 6
 
-[node name="@StaticBody3D@20255" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=641674972 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21847" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1934985431 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.044864718, 0, 0.9989931, 0, 1, 0, -0.9989931, 0, -0.044864718, -2.4781685, 0, -55.180676)
 collision_mask = 6
 
-[node name="@StaticBody3D@20256" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1067144644 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21848" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1508541794 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.13423328, 0, 0.99094975, 0, 1, 0, -0.99094975, 0, 0.13423328, 7.414547, 0, -54.736393)
 collision_mask = 6
 
-[node name="@StaticBody3D@20257" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1445362040 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21849" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1046971735 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.30901706, 0, 0.9510565, 0, 1, 0, -0.9510565, 0, 0.30901706, 17.068954, 0, -52.532833)
 collision_mask = 6
 
-[node name="@StaticBody3D@20258" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1435198392 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21850" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=650086770 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.4738688, 0, 0.8805955, 0, 1, 0, -0.8805955, 0, 0.4738688, 26.174751, 0, -48.640835)
 collision_mask = 6
 
-[node name="@StaticBody3D@20259" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1714261352 instance=ExtResource("11_5qq27")]
-transform = Transform3D(0.6234898, 0, 0.7818315, 0, 1, 0, -0.7818315, 0, 0.6234898, 34.43927, 0, -43.185474)
+[node name="@StaticBody3D@21851" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1172016915 instance=ExtResource("11_5qq27")]
+transform = Transform3D(0.62349004, 0, 0.7818314, 0, 1, 0, -0.7818314, 0, 0.62349004, 34.43927, 0, -43.185474)
 collision_mask = 6
 
-[node name="@StaticBody3D@20260" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=705827080 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21852" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1088947907 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.7530715, 0, 0.65793866, 0, 1, 0, -0.65793866, 0, 0.7530715, 41.596878, 0, -36.3421)
 collision_mask = 6
 
-[node name="@StaticBody3D@20261" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1894430873 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21853" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=2143949783 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.85844886, 0, 0.51289916, 0, 1, 0, -0.51289916, 0, 0.85844886, 47.417526, 0, -28.330654)
 collision_mask = 6
 
-[node name="@StaticBody3D@20262" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=608631706 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21854" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=1387564394 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.9362349, 0, 0.35137475, 0, 1, 0, -0.35137475, 0, 0.9362349, 51.71414, 0, -19.408642)
 collision_mask = 6
 
-[node name="@StaticBody3D@20263" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=25478314 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21855" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure1" unique_id=892402662 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.9839296, 0, 0.17855684, 0, 1, 0, -0.17855684, 0, 0.9839296, 54.348625, 0, -9.86282)
 collision_mask = 6
 
@@ -333,195 +333,195 @@ script = ExtResource("13_p8abn")
 [node name="Target" type="Node3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=185874427]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06136322, 0, 76.04597)
 
-[node name="@StaticBody3D@20264" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1110824762 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21856" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1682155203 instance=ExtResource("11_5qq27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.04599, 0, 0)
 collision_mask = 6
 
-[node name="@StaticBody3D@20265" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1693505373 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21857" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1818803829 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.9914448, 0, -0.13052629, 0, 1, 0, 0.13052629, 0, 0.9914448, 75.39541, 0, 9.925995)
 collision_mask = 6
 
-[node name="@StaticBody3D@20266" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1095519842 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21858" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1375245102 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.9659258, 0, -0.2588191, 0, 1, 0, 0.2588191, 0, 0.9659258, 73.45479, 0, 19.682152)
 collision_mask = 6
 
-[node name="@StaticBody3D@20267" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1968715188 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21859" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=949300384 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.9238795, 0, -0.38268346, 0, 1, 0, 0.38268346, 0, 0.9238795, 70.25733, 0, 29.10154)
 collision_mask = 6
 
-[node name="@StaticBody3D@20268" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=502800331 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21860" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=871706900 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.8660254, 0, -0.5000001, 0, 1, 0, 0.5000001, 0, 0.8660254, 65.85776, 0, 38.023003)
 collision_mask = 6
 
-[node name="@StaticBody3D@20269" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1678618807 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21861" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1468892041 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.7933533, 0, -0.6087615, 0, 1, 0, 0.6087615, 0, 0.7933533, 60.331337, 0, 46.29386)
 collision_mask = 6
 
-[node name="@StaticBody3D@20270" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=96418402 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21862" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1647674969 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.7071067, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, 0.7071067, 53.772636, 0, 53.772636)
 collision_mask = 6
 
-[node name="@StaticBody3D@20271" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1813027110 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21863" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1226205128 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.60876137, 0, -0.7933533, 0, 1, 0, 0.7933533, 0, 0.60876137, 46.29386, 0, 60.331337)
 collision_mask = 6
 
-[node name="@StaticBody3D@20272" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1989738280 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21864" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=2138710961 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.5, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, 0.5, 38.022995, 0, 65.85775)
 collision_mask = 6
 
-[node name="@StaticBody3D@20273" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=942061455 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21865" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1327948363 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.38268343, 0, -0.9238795, 0, 1, 0, 0.9238795, 0, 0.38268343, 29.10154, 0, 70.25733)
 collision_mask = 6
 
-[node name="@StaticBody3D@20274" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=2019303207 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21866" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=454481611 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.25881898, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881898, 19.682152, 0, 73.454796)
 collision_mask = 6
 
-[node name="@StaticBody3D@20275" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=677500668 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21867" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1015400571 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.13052617, 0, -0.9914449, 0, 1, 0, 0.9914449, 0, 0.13052617, 9.925995, 0, 75.39541)
 collision_mask = 6
 
-[node name="@StaticBody3D@20276" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1998502884 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21868" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1876649236 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 76.04598)
 collision_mask = 6
 
-[node name="@StaticBody3D@20277" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=2079113969 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21869" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=142826252 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.13052626, 0, -0.9914449, 0, 1, 0, 0.9914449, 0, -0.13052626, -9.925995, 0, 75.39541)
 collision_mask = 6
 
-[node name="@StaticBody3D@20278" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=149242216 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21870" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1221704364 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, -0.258819, -19.68215, 0, 73.454796)
 collision_mask = 6
 
-[node name="@StaticBody3D@20279" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=201825437 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21871" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=2076854165 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.3826835, 0, -0.9238795, 0, 1, 0, 0.9238795, 0, -0.3826835, -29.10154, 0, 70.25733)
 collision_mask = 6
 
-[node name="@StaticBody3D@20280" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1915703687 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21872" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1838172139 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.5000001, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.5000001, -38.022995, 0, 65.85775)
 collision_mask = 6
 
-[node name="@StaticBody3D@20281" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1747810963 instance=ExtResource("11_5qq27")]
-transform = Transform3D(-0.6087615, 0, -0.7933533, 0, 1, 0, 0.7933533, 0, -0.6087615, -46.293865, 0, 60.331337)
+[node name="@StaticBody3D@21873" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1117572018 instance=ExtResource("11_5qq27")]
+transform = Transform3D(-0.60876155, 0, -0.7933533, 0, 1, 0, 0.7933533, 0, -0.60876155, -46.293865, 0, 60.331337)
 collision_mask = 6
 
-[node name="@StaticBody3D@20282" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1526448942 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21874" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=2127646215 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -53.772636, 0, 53.772636)
 collision_mask = 6
 
-[node name="@StaticBody3D@20283" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1810100416 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21875" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=4465136 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.7933533, 0, -0.60876137, 0, 1, 0, 0.60876137, 0, -0.7933533, -60.33134, 0, 46.29386)
 collision_mask = 6
 
-[node name="@StaticBody3D@20284" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=33041207 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21876" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=713303068 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, -0.8660254, -65.85776, 0, 38.023003)
 collision_mask = 6
 
-[node name="@StaticBody3D@20285" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=2141587142 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21877" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1082586631 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.9238795, 0, -0.3826834, 0, 1, 0, 0.3826834, 0, -0.9238795, -70.25733, 0, 29.10154)
 collision_mask = 6
 
-[node name="@StaticBody3D@20286" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=182487813 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21878" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=683226832 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, -0.9659258, -73.45479, 0, 19.682152)
 collision_mask = 6
 
-[node name="@StaticBody3D@20287" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=42440940 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21879" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1415548337 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.9914448, 0, -0.1305262, 0, 1, 0, 0.1305262, 0, -0.9914448, -75.39541, 0, 9.925995)
 collision_mask = 6
 
-[node name="@StaticBody3D@20288" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=918038065 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21880" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1205122006 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -76.04599, 0, 0)
 collision_mask = 6
 
-[node name="@StaticBody3D@20289" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1950294513 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21881" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=272514288 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.9914449, 0, 0.13052626, 0, 1, 0, -0.13052626, 0, -0.9914449, -75.39541, 0, -9.925995)
 collision_mask = 6
 
-[node name="@StaticBody3D@20290" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=712877140 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21882" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=2081616419 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.9659258, 0, 0.25881907, 0, 1, 0, -0.25881907, 0, -0.9659258, -73.45479, 0, -19.682152)
 collision_mask = 6
 
-[node name="@StaticBody3D@20291" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1850668544 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21883" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=142414202 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.9238795, 0, 0.38268355, 0, 1, 0, -0.38268355, 0, -0.9238795, -70.25733, 0, -29.10154)
 collision_mask = 6
 
-[node name="@StaticBody3D@20292" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=267208017 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21884" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1577343018 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.8660254, 0, 0.5000001, 0, 1, 0, -0.5000001, 0, -0.8660254, -65.85776, 0, -38.022995)
 collision_mask = 6
 
-[node name="@StaticBody3D@20293" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=830377085 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21885" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=432115273 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.7933533, 0, 0.6087615, 0, 1, 0, -0.6087615, 0, -0.7933533, -60.33134, 0, -46.293865)
 collision_mask = 6
 
-[node name="@StaticBody3D@20294" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=141820117 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21886" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=54481847 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, -0.7071067, -53.772636, 0, -53.772636)
 collision_mask = 6
 
-[node name="@StaticBody3D@20295" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1803184420 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21887" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=548906911 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.60876137, 0, 0.7933533, 0, 1, 0, -0.7933533, 0, -0.60876137, -46.293865, 0, -60.33134)
 collision_mask = 6
 
-[node name="@StaticBody3D@20296" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=998423767 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21888" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=2139313269 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.5, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.5, -38.022995, 0, -65.85776)
 collision_mask = 6
 
-[node name="@StaticBody3D@20297" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=61270692 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21889" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=252849278 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.38268346, 0, 0.9238795, 0, 1, 0, -0.9238795, 0, -0.38268346, -29.10154, 0, -70.25733)
 collision_mask = 6
 
-[node name="@StaticBody3D@20298" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1598026577 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21890" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=438794154 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.2588191, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.2588191, -19.68215, 0, -73.45479)
 collision_mask = 6
 
-[node name="@StaticBody3D@20299" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1659370379 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21891" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=543744127 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.13052627, 0, 0.9914448, 0, 1, 0, -0.9914448, 0, -0.13052627, -9.925995, 0, -75.39541)
 collision_mask = 6
 
-[node name="@StaticBody3D@20300" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1360144965 instance=ExtResource("11_5qq27")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -76.04599)
+[node name="@StaticBody3D@21892" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=970409141 instance=ExtResource("11_5qq27")]
+transform = Transform3D(1.9470718e-07, 0, 1, 0, 1, 0, -1, 0, 1.9470718e-07, 0, 0, -76.04599)
 collision_mask = 6
 
-[node name="@StaticBody3D@20301" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1462108801 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21893" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1272438797 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.13052636, 0, 0.9914448, 0, 1, 0, -0.9914448, 0, 0.13052636, 9.925995, 0, -75.39541)
 collision_mask = 6
 
-[node name="@StaticBody3D@20302" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1568929497 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21894" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=706169162 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.25881916, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881916, 19.682152, 0, -73.45479)
 collision_mask = 6
 
-[node name="@StaticBody3D@20303" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=2051290551 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21895" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=896208818 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.38268352, 0, 0.9238795, 0, 1, 0, -0.9238795, 0, 0.38268352, 29.10154, 0, -70.25733)
 collision_mask = 6
 
-[node name="@StaticBody3D@20304" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=46178561 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21896" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=911927704 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.5000001, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, 0.5000001, 38.022995, 0, -65.85776)
 collision_mask = 6
 
-[node name="@StaticBody3D@20305" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=2068563354 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21897" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1257175446 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.6087615, 0, 0.7933533, 0, 1, 0, -0.7933533, 0, 0.6087615, 46.29386, 0, -60.33134)
 collision_mask = 6
 
-[node name="@StaticBody3D@20306" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=510309155 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21898" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=589851811 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.7071068, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071068, 53.772636, 0, -53.772636)
 collision_mask = 6
 
-[node name="@StaticBody3D@20307" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1000099428 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21899" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=433002049 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.7933533, 0, 0.60876137, 0, 1, 0, -0.60876137, 0, 0.7933533, 60.331337, 0, -46.293865)
 collision_mask = 6
 
-[node name="@StaticBody3D@20308" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=699582291 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21900" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1257684149 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 65.85776, 0, -38.022995)
 collision_mask = 6
 
-[node name="@StaticBody3D@20309" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=565784824 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21901" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1442041107 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.9238795, 0, 0.3826835, 0, 1, 0, -0.3826835, 0, 0.9238795, 70.25733, 0, -29.10154)
 collision_mask = 6
 
-[node name="@StaticBody3D@20310" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=309830667 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21902" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1087055673 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.9659258, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.9659258, 73.45479, 0, -19.682152)
 collision_mask = 6
 
-[node name="@StaticBody3D@20311" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=2095089006 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21903" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure2" unique_id=1374175957 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.9914449, 0, 0.13052617, 0, 1, 0, -0.13052617, 0, 0.9914449, 75.39541, 0, -9.925995)
 collision_mask = 6
 
@@ -532,95 +532,95 @@ script = ExtResource("13_p8abn")
 [node name="Target" type="Node3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1476452424]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06136322, 0, 37.192352)
 
-[node name="@StaticBody3D@20312" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=673116007 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21904" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1222134047 instance=ExtResource("11_5qq27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.192406, 0, 0)
 collision_mask = 6
 
-[node name="@StaticBody3D@20313" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=554280210 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21905" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=2015784493 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.96291727, 0, -0.26979682, 0, 1, 0, 0.26979682, 0, 0.96291727, 35.81321, 0, 10.034391)
 collision_mask = 6
 
-[node name="@StaticBody3D@20314" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1018618962 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21906" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1863276975 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.8544194, 0, -0.519584, 0, 1, 0, 0.519584, 0, 0.8544194, 31.777914, 0, 19.324577)
 collision_mask = 6
 
-[node name="@StaticBody3D@20315" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=845230843 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21907" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1270347625 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.6825531, 0, -0.73083603, 0, 1, 0, 0.73083603, 0, 0.6825531, 25.385794, 0, 27.18155)
 collision_mask = 6
 
-[node name="@StaticBody3D@20316" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=962808864 instance=ExtResource("11_5qq27")]
-transform = Transform3D(0.46006495, 0, -0.8878853, 0, 1, 0, 0.8878853, 0, 0.46006495, 17.110924, 0, 33.022587)
+[node name="@StaticBody3D@21908" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1607278766 instance=ExtResource("11_5qq27")]
+transform = Transform3D(0.46006498, 0, -0.8878852, 0, 1, 0, 0.8878852, 0, 0.46006498, 17.110924, 0, 33.022587)
 collision_mask = 6
 
-[node name="@StaticBody3D@20317" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=419926644 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21909" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=917077276 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.2034559, 0, -0.9790841, 0, 1, 0, 0.9790841, 0, 0.2034559, 7.5670166, 0, 36.414494)
 collision_mask = 6
 
-[node name="@StaticBody3D@20318" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1912734219 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21910" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1403361676 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.06824251, 0, -0.99766874, 0, 1, 0, 0.99766874, 0, -0.06824251, -2.5381012, 0, 37.1057)
 collision_mask = 6
 
-[node name="@StaticBody3D@20319" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1267913039 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21911" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=463511313 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.33487964, 0, -0.9422609, 0, 1, 0, 0.9422609, 0, -0.33487964, -12.454979, 0, 35.044952)
 collision_mask = 6
 
-[node name="@StaticBody3D@20320" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=2045711964 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21912" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=778594055 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.5766803, 0, -0.81696993, 0, 1, 0, 0.81696993, 0, -0.5766803, -21.448128, 0, 30.385078)
 collision_mask = 6
 
-[node name="@StaticBody3D@20321" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1397141719 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21913" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=2018150408 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.7757113, 0, -0.6310879, 0, 1, 0, 0.6310879, 0, -0.7757113, -28.85057, 0, 23.47168)
 collision_mask = 6
 
-[node name="@StaticBody3D@20322" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1136537274 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21914" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=2063302492 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.9172113, 0, -0.39840105, 0, 1, 0, 0.39840105, 0, -0.9172113, -34.113297, 0, 14.817495)
 collision_mask = 6
 
-[node name="@StaticBody3D@20323" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=2145053580 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21915" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=2136840406 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.99068594, 0, -0.13616665, 0, 1, 0, 0.13616665, 0, -0.99068594, -36.845993, 0, 5.0643654)
 collision_mask = 6
 
-[node name="@StaticBody3D@20324" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=789028660 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21916" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1851930877 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.99068594, 0, 0.1361667, 0, 1, 0, -0.1361667, 0, -0.99068594, -36.845993, 0, -5.0643654)
 collision_mask = 6
 
-[node name="@StaticBody3D@20325" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1582364112 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21917" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=895655682 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.9172113, 0, 0.39840108, 0, 1, 0, -0.39840108, 0, -0.9172113, -34.113297, 0, -14.817495)
 collision_mask = 6
 
-[node name="@StaticBody3D@20326" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=344531696 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21918" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1694975356 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.7757113, 0, 0.631088, 0, 1, 0, -0.631088, 0, -0.7757113, -28.85057, 0, -23.47168)
 collision_mask = 6
 
-[node name="@StaticBody3D@20327" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=561235611 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21919" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=2142808835 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.5766803, 0, 0.8169699, 0, 1, 0, -0.8169699, 0, -0.5766803, -21.448128, 0, -30.385077)
 collision_mask = 6
 
-[node name="@StaticBody3D@20328" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=889530148 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21920" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1696336951 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.33487967, 0, 0.9422609, 0, 1, 0, -0.9422609, 0, -0.33487967, -12.454979, 0, -35.044952)
 collision_mask = 6
 
-[node name="@StaticBody3D@20329" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=319245705 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21921" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=423984445 instance=ExtResource("11_5qq27")]
 transform = Transform3D(-0.068242505, 0, 0.99766874, 0, 1, 0, -0.99766874, 0, -0.068242505, -2.5381012, 0, -37.1057)
 collision_mask = 6
 
-[node name="@StaticBody3D@20330" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=497656300 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21922" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=487926 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.20345592, 0, 0.97908413, 0, 1, 0, -0.97908413, 0, 0.20345592, 7.5670166, 0, -36.414494)
 collision_mask = 6
 
-[node name="@StaticBody3D@20331" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=801405243 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21923" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=2169343 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.46006513, 0, 0.8878852, 0, 1, 0, -0.8878852, 0, 0.46006513, 17.110924, 0, -33.022587)
 collision_mask = 6
 
-[node name="@StaticBody3D@20332" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1435568775 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21924" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1625243519 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.68255323, 0, 0.7308359, 0, 1, 0, -0.7308359, 0, 0.68255323, 25.385794, 0, -27.181547)
 collision_mask = 6
 
-[node name="@StaticBody3D@20333" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1718220294 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21925" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=1483555816 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.85441935, 0, 0.51958394, 0, 1, 0, -0.51958394, 0, 0.85441935, 31.777914, 0, -19.324577)
 collision_mask = 6
 
-[node name="@StaticBody3D@20334" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=415353905 instance=ExtResource("11_5qq27")]
+[node name="@StaticBody3D@21926" type="StaticBody3D" parent="World/NavigationRegion3D/Environment/Enclosure3" unique_id=257174008 instance=ExtResource("11_5qq27")]
 transform = Transform3D(0.96291727, 0, 0.26979673, 0, 1, 0, -0.26979673, 0, 0.96291727, 35.81321, 0, -10.034391)
 collision_mask = 6
 

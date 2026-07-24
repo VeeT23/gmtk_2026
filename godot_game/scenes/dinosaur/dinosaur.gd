@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @export var speed: float = 5.0
-@export var rotation_speed: float = 10.0
+@export var rotation_speed: float = 5.0
 @export var detection_radius: float = 50.0
 @export var path_update_interval: float = 0.25
 
