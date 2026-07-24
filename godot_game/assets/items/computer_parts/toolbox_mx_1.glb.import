@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://pxufmr4j4kuv"
-path="res://.godot/imported/monitor.glb-1c62ee5c0268e00485c253bcc265f76a.scn"
+uid="uid://mvt4fell0q0x"
+path="res://.godot/imported/toolbox_mx_1.glb-e210defe0fada23cd211976af2b5b0f3.scn"
 
 [deps]
 
-source_file="res://assets/structure/props/monitor.glb"
-dest_files=["res://.godot/imported/monitor.glb-1c62ee5c0268e00485c253bcc265f76a.scn"]
+source_file="res://assets/items/computer_parts/toolbox_mx_1.glb"
+dest_files=["res://.godot/imported/toolbox_mx_1.glb-e210defe0fada23cd211976af2b5b0f3.scn"]
 
 [params]
 
@@ -39,15 +39,7 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"materials": {
-"crt_screen_mp_2": {
-"use_external/enabled": false,
-"use_external/fallback_path": "res://assets/structure/props/monitor_screen .tres",
-"use_external/path": "uid://blnrifkptopsn"
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

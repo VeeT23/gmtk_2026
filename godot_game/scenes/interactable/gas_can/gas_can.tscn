@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://djvu10mgnov8c" path="res://scenes/interactable/gas_can/gas_can.gd" id="2_3nwpn"]
 [ext_resource type="Material" uid="uid://x24gqmqc3luj" path="res://resources/shaders/outline_material.tres" id="2_38nhd"]
 [ext_resource type="Script" uid="uid://dhtryvai2ldet" path="res://resources/scripts/interactable.gd" id="2_urhx8"]
+[ext_resource type="AudioStream" uid="uid://cnk4wyh76fb88" path="res://assets/sfx/interaction/jug_clank.wav" id="5_oc04f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_46os7"]
 size = Vector3(0.31861115, 0.4772644, 0.30413818)
@@ -19,8 +20,10 @@ collision_layer = 8
 collision_mask = 8
 script = ExtResource("2_urhx8")
 outlined_meshes = [NodePath("../jerrycan_mx_1")]
+one_shot = true
 tooltip = "Gas Can"
 action = "Press [E] to take"
+interact_sfx = ExtResource("5_oc04f")
 metadata/_custom_type_script = "uid://dhtryvai2ldet"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GasCanInteractable" index="0" unique_id=371582288]

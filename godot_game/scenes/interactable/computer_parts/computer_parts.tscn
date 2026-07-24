@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dn4hd5vmthonv"]
+
+[ext_resource type="PackedScene" uid="uid://mvt4fell0q0x" path="res://assets/items/computer_parts/toolbox_mx_1.glb" id="1_2xq5v"]
+[ext_resource type="Script" uid="uid://bigpivjc8dqgh" path="res://scenes/interactable/computer_parts/computer_parts.gd" id="1_yjli1"]
+[ext_resource type="PackedScene" uid="uid://dgksn6jx68msv" path="res://assets/items/computer_parts/pcb_5.glb" id="2_06448"]
+[ext_resource type="Material" uid="uid://x24gqmqc3luj" path="res://resources/shaders/outline_material.tres" id="3_aubiq"]
+[ext_resource type="PackedScene" uid="uid://4xybh20ruvb0" path="res://assets/items/computer_parts/pcb_4.glb" id="3_b65nj"]
+[ext_resource type="PackedScene" uid="uid://dxqwjd6m5hn4b" path="res://assets/items/computer_parts/pcb_2.glb" id="4_tgyeq"]
+[ext_resource type="PackedScene" uid="uid://chbfmv0p4fcg2" path="res://assets/items/computer_parts/pcb_1.glb" id="5_yjli1"]
+[ext_resource type="PackedScene" uid="uid://c5w01ntnputqg" path="res://assets/items/computer_parts/floppy_disc_4.glb" id="6_aubiq"]
+[ext_resource type="PackedScene" uid="uid://dl8smrsqta2y2" path="res://assets/items/computer_parts/floppy_disc_3.glb" id="7_j6tr7"]
+[ext_resource type="PackedScene" uid="uid://lv3txctq3im6" path="res://assets/items/computer_parts/floppy_disc_2.glb" id="8_np5ii"]
+[ext_resource type="PackedScene" uid="uid://bw48xa4xq07lg" path="res://assets/items/computer_parts/power_supply_1.glb" id="9_6emd7"]
+[ext_resource type="Script" uid="uid://dhtryvai2ldet" path="res://resources/scripts/interactable.gd" id="12_j6tr7"]
+[ext_resource type="AudioStream" uid="uid://cnk4wyh76fb88" path="res://assets/sfx/interaction/jug_clank.wav" id="13_np5ii"]
+[ext_resource type="PackedScene" uid="uid://5i25kuhir2pf" path="res://assets/items/computer_parts/cpu_1.glb" id="14_aubiq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_46os7"]
+size = Vector3(0.6444092, 0.4576416, 0.3633423)
+
+[node name="ComputerParts" type="Node3D" unique_id=1118510295]
+script = ExtResource("1_yjli1")
+
+[node name="toolbox_mx_12" parent="." unique_id=1774689836 instance=ExtResource("1_2xq5v")]
+
+[node name="toolbox_mx_1" parent="toolbox_mx_12" index="0" unique_id=282728]
+material_overlay = ExtResource("3_aubiq")
+
+[node name="pcb_52" parent="." unique_id=747408040 instance=ExtResource("2_06448")]
+transform = Transform3D(0.8280945, 0, 0.56058854, 0, 1, 0, -0.56058854, 0, 0.8280945, 0.1509912, 0.026233286, 0.07862349)
+
+[node name="pcb_42" parent="." unique_id=1510518560 instance=ExtResource("3_b65nj")]
+transform = Transform3D(0.01742677, 0.13109611, -0.99121636, 0.092472754, 0.98690665, 0.13215186, 0.99556273, -0.0939635, 0.0050757765, 0.0031107608, 0.054712325, 0.00010339543)
+
+[node name="pcb_22" parent="." unique_id=353214495 instance=ExtResource("4_tgyeq")]
+transform = Transform3D(0.9920475, 0, 0.1258643, 0, 1, 0, -0.1258643, 0, 0.9920475, -0.004696686, 0.026040755, -0.044973373)
+
+[node name="pcb_12" parent="." unique_id=696902545 instance=ExtResource("5_yjli1")]
+transform = Transform3D(0.48151132, 0, 0.87643987, 0, 1, 0, -0.87643987, 0, 0.48151132, 0.008107558, 0.043487176, 0.051729962)
+
+[node name="floppy_disc_42" parent="." unique_id=1682935985 instance=ExtResource("6_aubiq")]
+transform = Transform3D(1.1542041, -0.020011265, 0.32773867, 0.32834902, 0.07034304, -1.1520585, 1.7881394e-08, 1.1977694, 0.07313409, 0.15485965, 0.117607936, -0.14555718)
+
+[node name="floppy_disc_32" parent="." unique_id=929279391 instance=ExtResource("7_j6tr7")]
+transform = Transform3D(1.1805967, 7.152558e-08, 0.21492232, 0.19913656, 0.45140198, -1.0938834, -0.080847, 1.1118617, 0.44410306, 0.15550333, 0.10363248, -0.10465689)
+
+[node name="floppy_disc_22" parent="." unique_id=48183868 instance=ExtResource("8_np5ii")]
+transform = Transform3D(1.1554015, -1.7881394e-08, -0.32411027, -0.20772476, 0.9211415, -0.7405058, 0.24879287, 0.76908934, 0.88690686, 0.15433493, 0.080556594, -0.044179026)
+
+[node name="power_supply_12" parent="." unique_id=1734002941 instance=ExtResource("9_6emd7")]
+transform = Transform3D(-5.048665e-08, 1.155, 0, -1.155, -5.048665e-08, 0, 0, 0, 1.155, -0.2780456, 0.18092752, 0.007890612)
+
+[node name="PartsInteractable" type="Area3D" parent="." unique_id=399096511 node_paths=PackedStringArray("outlined_meshes")]
+script = ExtResource("12_j6tr7")
+outlined_meshes = [NodePath("../toolbox_mx_12/toolbox_mx_1")]
+one_shot = true
+tooltip = "Spare Computer Parts"
+action = "Press [E] to take"
+interact_sfx = ExtResource("13_np5ii")
+metadata/_custom_type_script = "uid://dhtryvai2ldet"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PartsInteractable" unique_id=521881790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016174316, 0.19415283, 0.0047912598)
+shape = SubResource("BoxShape3D_46os7")
+
+[node name="cpu_12" parent="." unique_id=172991833 instance=ExtResource("14_aubiq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22754827, 0.03095512, 0.08527654)
+
+[editable path="toolbox_mx_12"]

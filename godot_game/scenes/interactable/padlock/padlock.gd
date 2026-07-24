@@ -14,4 +14,4 @@ func _on_use():
 	if GameState.game_state["collected_bolt_cutters"]:
 		GameState.change_state("cut_lock", true)
 		freeze = false
-		interactable.get_node("CollisionShape3D").disabled = true
+		interactable.disable()

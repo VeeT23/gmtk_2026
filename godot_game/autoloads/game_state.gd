@@ -10,7 +10,10 @@ var game_state : Dictionary = {
 	"collected_fuel" : false,
 	"fueled_generator" : false,
 	"collected_bolt_cutters" : false,
-	"cut_lock" : false
+	"cut_lock" : false,
+	"collected_electronics" : false,
+	"repaired_computer" : false,
+	"sent_distress_signal" : false
 }
 
 # Fired every time game_state changes

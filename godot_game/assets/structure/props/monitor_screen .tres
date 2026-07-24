@@ -1,6 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://blnrifkptopsn"]
-
-[ext_resource type="Texture2D" uid="uid://bsviq1v6a6tgy" path="res://assets/structure/props/monitor_crt_screen_mp_2.png" id="1_8pow5"]
-
-[resource]
-albedo_texture = ExtResource("1_8pow5")

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bjkwobdnydtd8" path="res://scenes/interactable/bolt_cutters/bolt_cutters.gd" id="1_ukl81"]
 [ext_resource type="Texture2D" uid="uid://dikqriei5nvsw" path="res://assets/items/Bolt_Cutters_01.PNG" id="2_fur1h"]
 [ext_resource type="Script" uid="uid://dhtryvai2ldet" path="res://resources/scripts/interactable.gd" id="3_ukl81"]
+[ext_resource type="AudioStream" uid="uid://cnk4wyh76fb88" path="res://assets/sfx/interaction/jug_clank.wav" id="6_rc8jh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtg4g"]
 albedo_color = Color(0.6706895, 0.6706895, 0.6706895, 1)
@@ -27,8 +28,10 @@ collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_ukl81")
 outlined_meshes = [NodePath("../BoltCutters")]
+one_shot = true
 tooltip = "Bolt Cutters"
 action = "Press [E] to take"
+interact_sfx = ExtResource("6_rc8jh")
 metadata/_custom_type_script = "uid://dhtryvai2ldet"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BoltCutterInteractable" unique_id=773245253]
