@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://lv3txctq3im6" path="res://assets/items/computer_parts/floppy_disc_2.glb" id="8_np5ii"]
 [ext_resource type="PackedScene" uid="uid://bw48xa4xq07lg" path="res://assets/items/computer_parts/power_supply_1.glb" id="9_6emd7"]
 [ext_resource type="Script" uid="uid://dhtryvai2ldet" path="res://resources/scripts/interactable.gd" id="12_j6tr7"]
-[ext_resource type="AudioStream" uid="uid://cnk4wyh76fb88" path="res://assets/sfx/interaction/jug_clank.wav" id="13_np5ii"]
+[ext_resource type="AudioStream" uid="uid://co6adlcdrs74l" path="res://assets/sfx/interaction/Pc Parts.mp3" id="13_aubiq"]
 [ext_resource type="PackedScene" uid="uid://5i25kuhir2pf" path="res://assets/items/computer_parts/cpu_1.glb" id="14_aubiq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_46os7"]
@@ -23,7 +23,7 @@ script = ExtResource("1_yjli1")
 
 [node name="toolbox_mx_12" parent="." unique_id=1774689836 instance=ExtResource("1_2xq5v")]
 
-[node name="toolbox_mx_1" parent="toolbox_mx_12" index="0" unique_id=282728]
+[node name="toolbox_mx_1" parent="toolbox_mx_12" index="0" unique_id=632399593]
 material_overlay = ExtResource("3_aubiq")
 
 [node name="pcb_52" parent="." unique_id=747408040 instance=ExtResource("2_06448")]
@@ -56,7 +56,7 @@ outlined_meshes = [NodePath("../toolbox_mx_12/toolbox_mx_1")]
 one_shot = true
 tooltip = "Spare Computer Parts"
 action = "Press [E] to take"
-interact_sfx = ExtResource("13_np5ii")
+interact_sfx = ExtResource("13_aubiq")
 metadata/_custom_type_script = "uid://dhtryvai2ldet"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PartsInteractable" unique_id=521881790]

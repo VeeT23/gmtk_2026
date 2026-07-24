@@ -61,6 +61,12 @@ func interact() -> void:
 		_emit_interacted()
 	_play_sfx()
 
+func set_sfx(new_sfx : AudioStream) -> void:
+	if audio_player:
+		audio_player.stream = new_sfx
+	interact_sfx = new_sfx
+
+
 func _emit_interacted():
 	interacted.emit()
 	if !interact_sfx:
