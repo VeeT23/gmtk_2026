@@ -8,6 +8,7 @@ func _ready() -> void:
 
 func _on_collect():
 	GameState.change_state("collected_fuel", true)
+	GameState.queue_dialog("takes_fuel")
 	$jerrycan_mx_1.visible = false
 
 func _sfx_finished():

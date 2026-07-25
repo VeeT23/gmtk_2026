@@ -8,6 +8,7 @@ func _ready() -> void:
 
 func _on_collect():
 	GameState.change_state("collected_electronics", true)
+	GameState.queue_dialog("takes_parts")
 	visible = false
 
 func _sfx_finished():

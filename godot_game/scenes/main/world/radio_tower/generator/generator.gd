@@ -8,12 +8,20 @@ extends Node3D
 @export var hum_loop : AudioStream
 
 var _is_hum_looping := false
+var _looked_at := false
 
 func _ready() -> void:
 	interactable.interacted.connect(_on_interact)
+	interactable.hover_entered.connect(_on_hover)
 	GameState.game_state_changed.connect(_on_state_change)
 	pour_player.finished.connect(_on_pour_finished)
 	hum_player.finished.connect(_on_hum_finished)
+
+
+func _on_hover():
+	if !_looked_at:
+		GameState.queue_dialog("sees_generator")
+		_looked_at = true
 
 func _on_state_change(flag : String, value : Variant):
 	if flag == "collected_fuel" and value == true:
@@ -22,6 +30,7 @@ func _on_state_change(flag : String, value : Variant):
 func _on_interact():
 	if GameState.game_state["collected_fuel"]:
 		GameState.change_state("fueled_generator", true)
+		GameState.queue_dialog("fuels_generator")
 		interactable.disable()
 		$PourSFXPlayer.play()
 

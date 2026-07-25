@@ -85,7 +85,7 @@ shadow_mesh = SubResource("ArrayMesh_ssfu0")
 size = Vector3(0.087272644, 0.12921143, 0.022964478)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w4dpj"]
-size = Vector3(0.78495574, 0.8894572, 0.08234024)
+size = Vector3(1.356, 2.083, 0.305)
 
 [node name="Padlock" type="RigidBody3D" unique_id=571309307]
 collision_mask = 7
@@ -117,5 +117,5 @@ interact_sfx = ExtResource("5_y5qsb")
 metadata/_custom_type_script = "uid://dhtryvai2ldet"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LockInteractable" unique_id=269333707]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0031017065, -0.028555632, 0.0017757416)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05814159, -0.23683143, -0.00027906895)
 shape = SubResource("BoxShape3D_w4dpj")

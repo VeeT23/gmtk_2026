@@ -8,7 +8,9 @@ func _ready() -> void:
 
 func _on_collect():
 	GameState.change_state("collected_bolt_cutters", true)
+	GameState.queue_dialog("takes_bolt_cutters")
 	$BoltCutters.visible = false
+	
 
 func _on_sfx_finished():
 	queue_free()

@@ -192,7 +192,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0581055, 0.81585693, -5.680
 shape = SubResource("BoxShape3D_p4mrb")
 
 [node name="Padlock" parent="." index="3" unique_id=571309307 instance=ExtResource("2_fredv")]
-transform = Transform3D(1, 0, 0, 0, 0.9767058, -0.21458289, 0, 0.21458289, 0.9767058, 1.7155092, 1.1291517, -5.826436)
+transform = Transform3D(1, 0, 0, 0, 0.99566704, -0.092989966, 0, 0.092989966, 0.99566704, 1.7155092, 1.1291517, -5.826436)
 
 [node name="Generator" parent="." index="4" unique_id=833096749 instance=ExtResource("3_5sx5j")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.43825, 0, -2.9159489)
