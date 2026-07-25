@@ -13,7 +13,7 @@ height = 1.8417969
 radius = 0.35058594
 height = 1.1403809
 
-[node name="Player" type="CharacterBody3D" unique_id=602185274]
+[node name="Player" type="CharacterBody3D" unique_id=602185274 groups=["Player"]]
 collision_layer = 2
 collision_mask = 23
 script = ExtResource("1_8afob")

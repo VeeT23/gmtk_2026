@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bg5n4t5na7k8j"]
+
+[ext_resource type="Shader" uid="uid://dttx00uce8vdm" path="res://resources/shaders/blur.gdshader" id="1_etxe0"]
+[ext_resource type="Script" uid="uid://us7jphxote5u" path="res://scenes/ui/menus/map/map_menu.gd" id="1_itm4f"]
+[ext_resource type="Texture2D" uid="uid://da8420qihplbg" path="res://assets/map/map.jpg" id="2_pttn5"]
+[ext_resource type="Shader" uid="uid://cdxiqq6o2faio" path="res://scenes/ui/menus/map/map_menu.gdshader" id="3_kia33"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_46os7"]
+shader = ExtResource("1_etxe0")
+shader_parameter/blur_strength = 3.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_itm4f"]
+shader = ExtResource("3_kia33")
+shader_parameter/circle_position = Vector2(0.315, 0.5)
+shader_parameter/radius = 0.01
+shader_parameter/circle_color = Color(1, 1, 1, 1)
+
+[node name="MapMenu" type="Control" unique_id=1479418954]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_itm4f")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=52688542]
+material = SubResource("ShaderMaterial_46os7")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=365289855]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 80
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer" unique_id=1089107091]
+material = SubResource("ShaderMaterial_itm4f")
+layout_mode = 2
+offset_transform_position = Vector2(-9.185, 0)
+texture = ExtResource("2_pttn5")
+expand_mode = 1
+stretch_mode = 5
