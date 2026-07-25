@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+
 const BASE_SPEED = 3.0
 const SPRINT_SPEED = 6.0
 
@@ -16,9 +17,14 @@ const MOUSE_SENSITIVITY = 0.002
 
 @export var camera_crouch_position = Vector3(0,0.9,0)
 @export var camera_stand_position = Vector3(0,1.7,0)
+@export var footstep_sounds: Array[AudioStream] = []
+@export var step_interval: float = 0.4
+var step_timer: float = 0.0
 
 var camera_pitch := 0.0
 var is_crouching := false 
+var footsteps_can_play:= true 
+var footsteps_landed
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -50,10 +56,20 @@ func _input(event):
 		flashlight.visible = !flashlight.visible
 
 func _physics_process(delta: float) -> void:
+	
+	#footsteps
+	if velocity.length() > 0.1:
+		step_timer -= delta
+		if step_timer <= 0.0:
+			$FootstepSound.stream = footstep_sounds[randi() % footstep_sounds.size()]
+			$FootstepSound.play()
+			step_timer = step_interval
+	
 	# Gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
+	footsteps_landed = is_on_floor()
 	# Jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -76,3 +92,4 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, speed)
 	
 	move_and_slide()
+	
