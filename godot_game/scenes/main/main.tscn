@@ -2956,6 +2956,42 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.552658, 9.536743e-07, 8.56
 [node name="HidingBush10" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=1953991997 instance=ExtResource("24_gkmcc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.56407, 9.536743e-07, 20.790443)
 
+[node name="HidingBush11" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=108835814 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.39207, 9.536743e-07, -29.641106)
+
+[node name="HidingBush12" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=387713619 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.812551, 9.536743e-07, -31.766125)
+
+[node name="HidingBush13" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=1104633834 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6052895, 9.536743e-07, 2.9307594)
+
+[node name="HidingBush14" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=1994784321 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.331163, 9.536743e-07, 25.012514)
+
+[node name="HidingBush15" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=1185515041 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5090933, 9.536743e-07, 42.047047)
+
+[node name="HidingBush16" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=466790493 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.260918, -9.536743e-07, 64.152534)
+
+[node name="HidingBush17" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=477550073 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.35534, -9.536743e-07, 97.3485)
+
+[node name="HidingBush18" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=919443382 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.925865, -9.536743e-07, 70.98925)
+
+[node name="HidingBush19" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=35612328 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.622437, 9.536743e-07, 20.325272)
+
+[node name="HidingBush20" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=804685732 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.00012, 9.536743e-07, 19.446146)
+
+[node name="HidingBush21" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=1376059600 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.826035, 9.536743e-07, 0.7806606)
+
+[node name="HidingBush22" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=1427232480 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.63416, 9.536743e-07, -0.7448983)
+
 [node name="TRex" parent="World" unique_id=1698958939 instance=ExtResource("24_i7in8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.92084, 2.2291203, -93.26782)
 
