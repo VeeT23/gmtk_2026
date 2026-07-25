@@ -23,13 +23,16 @@ var voice_lines = {
 		"God dammit... Those cowards left without me.",
 		"Must've thought I was dead... Can't blame them, I guess.",
 		"Whatever, easy solution: I'll just broadcast them a distress signal.",
-		"Then they'll call off the whole \"Let's nuke the rampant dinosaurs!\" plan till I'm safe.",
 		"First things first: get into the radio equipment shelter."
 	],
 	"sees_door":[
 		"Great... Locked.",
 		"Maintenance probably has something to cut it with.",
-		"Should be on the map. [Press TAB or M to open map]"
+		"Should be on the map. [Press TAB or M to open map]",
+		"...",
+		"The whole \"Let's nuke the rampant dinosaurs!\" plan was stupid anyways.",
+		"Not as stupid as missing the entire evac because of the runs.",
+		"Stupid."
 	],
 	"takes_bolt_cutters":[
 		"Just what the doctor ordered."
@@ -56,7 +59,7 @@ var voice_lines = {
 	],
 	"repairs_computer":[
 		"Time to broadcast..."
-	]
+	],
 }
 
 var narration_label = null

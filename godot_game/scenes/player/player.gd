@@ -7,6 +7,8 @@ const FOV_CHANGE_SPEED = 8.0
 const JUMP_VELOCITY = 4.5
 const MOUSE_SENSITIVITY = 0.002
 
+const MAX_STAMINA = 8.0 # Seconds of sprinting
+
 const BOB_FREQ_WALK = 2.0
 const BOB_FREQ_SPRINT = 3.2
 const BOB_AMP = 0.06
@@ -21,6 +23,7 @@ const FOOTSTEP_SOUNDS : = [
 @onready var camera : Camera3D = $Camera3D
 @onready var flashlight: SpotLight3D = $Camera3D/Flashlight
 @onready var footstep_player : AudioStreamPlayer = $FootstepSound
+@onready var breathing_player : AudioStreamPlayer = $BreathingSound
 @onready var crouch_collider = $Crouching
 @onready var standing_collider = $Standing
 @export var camera_crouch_position = Vector3(0,0.9,0)
@@ -29,7 +32,7 @@ const FOOTSTEP_SOUNDS : = [
 var camera_pitch := 0.0
 var is_crouching := false
 var bob_time := 0.0
-
+var stamina = MAX_STAMINA
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -67,30 +70,41 @@ func _physics_process(delta: float) -> void:
 			footstep_player.stream = FOOTSTEP_SOUNDS[randi_range(0, FOOTSTEP_SOUNDS.size() - 1)]
 			footstep_player.play()
 	
+	breathing_player.volume_db = -25.0 * (stamina / MAX_STAMINA) + 10.0
+	
 	# Gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+	
 	# Jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
+	
 	var input_dir := Input.get_vector("left", "right", "forward", "backward")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-
-	var is_sprinting := Input.is_action_pressed("sprint")
+	
+	var pressing_sprint := Input.is_action_pressed("sprint") 
+	
+	if !pressing_sprint:
+		stamina = min(stamina + delta, MAX_STAMINA)
+	
+	var is_sprinting : bool = pressing_sprint and stamina > 0.0
+	
+	if is_sprinting:
+		stamina -= delta
+	print(stamina)
 	var speed := (SPRINT_SPEED if is_sprinting else BASE_SPEED) * (0.5 if is_crouching else 1.0)
-
+	
 	var target_fov := SPRINT_FOV if is_sprinting else BASE_FOV
 	camera.fov = lerp(camera.fov, target_fov, FOV_CHANGE_SPEED * delta)
-
+	
 	if direction:
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
-
+	
 	# Head bob - only advance the bob cycle while actually moving on the ground
 	var is_moving = direction != Vector3.ZERO and is_on_floor()
 	if is_moving:
@@ -98,10 +112,10 @@ func _physics_process(delta: float) -> void:
 		bob_time += delta * bob_freq
 	else:
 		bob_time = 0.0
-
+	
 	var bob_offset = sin(bob_time * TAU) * BOB_AMP if is_moving else 0.0
 	var base_y = camera_crouch_position.y if is_crouching else camera_stand_position.y
 	camera.position.y = lerp(camera.position.y, base_y + bob_offset, 10.0 * delta)
-
+	
 	move_and_slide()
 	

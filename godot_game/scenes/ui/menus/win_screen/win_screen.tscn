@@ -114,7 +114,7 @@ scale = Vector2(0.43, 0.43)
 texture = ExtResource("2_xenqr")
 
 [node name="Cfd" type="Sprite2D" parent="." unique_id=1618914128]
-position = Vector2(368, 113)
+position = Vector2(370, 115)
 texture = ExtResource("3_xenqr")
 
 [node name="Confetti" type="Node2D" parent="." unique_id=1145029355]

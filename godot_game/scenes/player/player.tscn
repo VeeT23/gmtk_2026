@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cupshsa4n25ew" path="res://scenes/player/player.gd" id="1_8afob"]
 [ext_resource type="Script" uid="uid://dqk3an8tgvfj0" path="res://scenes/player/interact_ray.gd" id="2_dovo2"]
 [ext_resource type="Script" uid="uid://boqtrrdmvn2id" path="res://scenes/player/flashlight.gd" id="3_gmlin"]
+[ext_resource type="AudioStream" uid="uid://vv1imbrtglls" path="res://assets/sfx/heavy_breathing.mp3" id="3_p47bc"]
 [ext_resource type="AudioStream" uid="uid://cmdhu3hchhvvn" path="res://assets/sfx/interaction/Footstep.mp3" id="4_lvxji"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_46os7"]
@@ -20,6 +21,11 @@ script = ExtResource("1_8afob")
 
 [node name="FootstepSound" type="AudioStreamPlayer" parent="." unique_id=1918700575]
 stream = ExtResource("4_lvxji")
+
+[node name="BreathingSound" type="AudioStreamPlayer" parent="." unique_id=632431122]
+stream = ExtResource("3_p47bc")
+volume_db = -80.0
+autoplay = true
 
 [node name="head" type="Node3D" parent="." unique_id=1584690542]
 unique_name_in_owner = true
