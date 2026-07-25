@@ -9611,7 +9611,7 @@ script = ExtResource("1_6coim")
 [node name="dino" parent="." unique_id=416791075 instance=ExtResource("1_7g3hw")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
-[node name="Skeleton3D" parent="dino/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_0/Maip_fbx_1/Object_2_2/RootNode_3/maip_idling_4/MAIP_setup_maip_grp_5/MAIP_setup_BakeSystem_6/Object_7_7/GLTF_created_0" parent_id_path=PackedInt32Array(416791075, 1890689139) index="0" unique_id=379091708]
+[node name="Skeleton3D" parent="dino/Sketchfab_model/root/GLTF_SceneRootNode/Sketchfab_model_0/Maip_fbx_1/Object_2_2/RootNode_3/maip_idling_4/MAIP_setup_maip_grp_5/MAIP_setup_BakeSystem_6/Object_7_7/GLTF_created_0" parent_id_path=PackedInt32Array(416791075, 1752268975) index="0" unique_id=1004976527]
 bones/2/position = Vector3(-0.7168884, 9.93119, 240.49493)
 bones/2/rotation = Quaternion(-0.6949718, 0.022006823, -0.0044801803, 0.71868616)
 bones/2/scale = Vector3(1.0000001, 1.0000001, 0.9999999)
@@ -9864,7 +9864,7 @@ bones/191/scale = Vector3(1.0000001, 1.0000001, 1.0000006)
 bones/192/scale = Vector3(1.0000008, 1.0000001, 0.9999995)
 bones/193/scale = Vector3(1, 1, 0.9999999)
 
-[node name="AnimationPlayer" parent="dino" index="1" unique_id=258743282]
+[node name="AnimationPlayer" parent="dino" index="1" unique_id=619544474]
 libraries/ = SubResource("AnimationLibrary_e6n8e")
 speed_scale = 2.0
 
