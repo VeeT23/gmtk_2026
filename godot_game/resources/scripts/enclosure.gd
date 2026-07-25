@@ -13,7 +13,7 @@ const TREE_SCENES := [
 	preload("res://assets/terrain/foliage/trees/tree_7.glb"),
 ]
 
-const TREE_DENSITY := 0.003
+const TREE_DENSITY := 0.02
 const TREE_MIN_DISTANCE := 8.0
 const BUSH_DENSITY := 0.01 # Bushes per square unit
 const BUSH_MIN_DISTANCE := 4.0
@@ -61,7 +61,8 @@ func create_corral() -> void:
 		fence.look_at(center, Vector3.UP)
 		fence.rotate_y(-PI * 0.5)
 
-	_generate_bushes(radius)
+	_generate_bushes(radius - 5)
+	_generate_trees(radius - 5)
 
 
 func _generate_bushes(radius: float) -> void:
@@ -104,3 +105,50 @@ func _generate_bushes(radius: float) -> void:
 
 		bush.position = Vector3(pos2.x, 0.0, pos2.y)
 		bush.rotation.y = rng.randf() * TAU
+
+
+func _generate_trees(radius: float) -> void:
+	var rng := RandomNumberGenerator.new()
+	rng.randomize()
+
+	var area := PI * radius * radius
+	var tree_count: int = roundi(area * TREE_DENSITY)
+
+	var placed_positions: Array[Vector2] = []
+
+	var attempts := 0
+	var max_attempts := tree_count * 20
+
+	while placed_positions.size() < tree_count and attempts < max_attempts:
+		attempts += 1
+
+		var r := sqrt(rng.randf()) * radius
+		var theta := rng.randf() * TAU
+		var pos2 := Vector2(
+			cos(theta) * r,
+			sin(theta) * r
+		)
+
+		var valid := true
+		for other in placed_positions:
+			if pos2.distance_to(other) < TREE_MIN_DISTANCE:
+				valid = false
+				break
+
+		if !valid:
+			continue
+
+		placed_positions.append(pos2)
+
+		var tree_scene: PackedScene = TREE_SCENES[rng.randi_range(0, TREE_SCENES.size() - 1)]
+		var tree := tree_scene.instantiate()
+
+		add_child(tree)
+		tree.owner = owner
+
+		tree.position = Vector3(pos2.x, 0.0, pos2.y)
+		tree.rotation.y = rng.randf() * TAU
+
+		# Optional random scale variation
+		var scale := rng.randf_range(1.5, 2.5)
+		tree.scale = Vector3.ONE * scale
