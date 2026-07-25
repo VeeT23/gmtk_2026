@@ -18,8 +18,9 @@ func _input(event: InputEvent) -> void:
 			hide()
 			is_shown = false
 		else:
-			show()
-			is_shown = true
+			if !GameState.is_player_dead:
+				show()
+				is_shown = true
 
 func _physics_process(_delta: float) -> void:
 	if !player:

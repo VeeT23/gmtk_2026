@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://bkuedw0qpla55"]
+
+[ext_resource type="Script" uid="uid://c4g2wpf6vdukg" path="res://scenes/ui/menus/death_screen/death_screen.gd" id="1_wg76u"]
+[ext_resource type="PackedScene" uid="uid://dywnjkpljckd7" path="res://scenes/ui/button/custom_button.tscn" id="2_g87w5"]
+
+[sub_resource type="Animation" id="Animation_g87w5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_tnsss"]
+resource_name = "fade_in"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color:a")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.866667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ij8rq"]
+_data = {
+&"RESET": SubResource("Animation_g87w5"),
+&"fade_in": SubResource("Animation_tnsss")
+}
+
+[node name="DeathScreen" type="Control" unique_id=687498599]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wg76u")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=338534264]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.23169473, 0.006952021, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=185001230]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = -21.5
+offset_right = 81.0
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1141242116]
+layout_mode = 2
+text = "You died, tough luck."
+horizontal_alignment = 1
+
+[node name="CustomButton" parent="VBoxContainer" unique_id=1195260148 instance=ExtResource("2_g87w5")]
+layout_mode = 2
+text = "Respawn"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=909554157]
+libraries/ = SubResource("AnimationLibrary_ij8rq")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_tree_animation_finished"]

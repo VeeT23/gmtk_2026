@@ -42,5 +42,5 @@ transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 0.031496346, 0.00080
 [node name="bucket_mx_22" parent="." index="3" unique_id=1140637582 instance=ExtResource("4_gkwnj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04966764, 0, -0.47908658)
 
-[node name="Node3D" type="Node3D" parent="." index="4" unique_id=651483954 groups=["Respawn"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3100884)
+[node name="RespawnPoint" type="Node3D" parent="." index="4" unique_id=651483954 groups=["Respawn"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.42694157)

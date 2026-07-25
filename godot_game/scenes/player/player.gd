@@ -35,6 +35,8 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _input(event):
+	if GameState.is_player_dead:
+		return
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * MOUSE_SENSITIVITY)
 		camera_pitch -= event.relative.y * MOUSE_SENSITIVITY
@@ -57,7 +59,8 @@ func _input(event):
 		flashlight.visible = !flashlight.visible
 
 func _physics_process(delta: float) -> void:
-
+	if GameState.is_player_dead:
+		return
 	#footsteps
 	if velocity.length() > 0.1 and is_on_floor():
 		if !footstep_player.playing and FOOTSTEP_SOUNDS.size():

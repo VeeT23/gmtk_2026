@@ -2,6 +2,7 @@ extends Node
 
 const TIME_SECONDS = 600
 
+var is_player_dead := false
 
 var timer : Timer = null
 var time_remaining : float = 0.0
