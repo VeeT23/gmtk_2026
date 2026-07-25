@@ -6,6 +6,43 @@
 [ext_resource type="Texture2D" uid="uid://tdpr8qjufa2k" path="res://scenes/ui/menus/main/GMTK Game Jam 2026 Full Logo.png" id="3_3ryvj"]
 [ext_resource type="AudioStream" uid="uid://cypr1d71xfmp0" path="res://scenes/ui/menus/main/Title track jungle%3F.mp3" id="4_dbcc7"]
 
+[sub_resource type="Animation" id="Animation_525jy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_60t47"]
+resource_name = "fade_out"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26666668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dg4ce"]
+_data = {
+&"RESET": SubResource("Animation_525jy"),
+&"fade_out": SubResource("Animation_60t47")
+}
+
 [node name="MenuScene" type="Node2D" unique_id=246167340]
 
 [node name="MenuLayer" type="CanvasLayer" parent="." unique_id=157432013]
@@ -19,16 +56,8 @@ grow_vertical = 2
 texture = ExtResource("1_525jy")
 expand_mode = 2
 
-[node name="Control" type="Control" parent="MenuLayer" unique_id=965504917]
+[node name="MainMenu" type="Control" parent="MenuLayer" unique_id=1892871780]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MainMenu" type="CenterContainer" parent="MenuLayer/Control" unique_id=1007049416]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -36,30 +65,40 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_m7rg8")
 
-[node name="Main" type="VBoxContainer" parent="MenuLayer/Control/MainMenu" unique_id=1097241475]
+[node name="CenterContainer" type="CenterContainer" parent="MenuLayer/MainMenu" unique_id=93372504]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Main" type="VBoxContainer" parent="MenuLayer/MainMenu/CenterContainer" unique_id=1097241475]
 layout_mode = 2
 alignment = 1
 
-[node name="Start" parent="MenuLayer/Control/MainMenu/Main" unique_id=1195260148 instance=ExtResource("1_vfyya")]
+[node name="Start" parent="MenuLayer/MainMenu/CenterContainer/Main" unique_id=1195260148 instance=ExtResource("1_vfyya")]
 layout_mode = 2
 text = "Start"
 
-[node name="Settings" parent="MenuLayer/Control/MainMenu/Main" unique_id=500928866 instance=ExtResource("1_vfyya")]
+[node name="Settings" parent="MenuLayer/MainMenu/CenterContainer/Main" unique_id=500928866 instance=ExtResource("1_vfyya")]
+visible = false
 layout_mode = 2
 text = "Settings"
 
-[node name="Credits" parent="MenuLayer/Control/MainMenu/Main" unique_id=908543537 instance=ExtResource("1_vfyya")]
+[node name="Credits" parent="MenuLayer/MainMenu/CenterContainer/Main" unique_id=908543537 instance=ExtResource("1_vfyya")]
 layout_mode = 2
 text = "Credits"
 
-[node name="Quit" parent="MenuLayer/Control/MainMenu/Main" unique_id=26401400 instance=ExtResource("1_vfyya")]
+[node name="Quit" parent="MenuLayer/MainMenu/CenterContainer/Main" unique_id=26401400 instance=ExtResource("1_vfyya")]
 layout_mode = 2
 text = "Quit"
 
-[node name="Credits" type="VBoxContainer" parent="MenuLayer/Control/MainMenu" unique_id=1521468102]
+[node name="Credits" type="VBoxContainer" parent="MenuLayer/MainMenu/CenterContainer" unique_id=1521468102]
+visible = false
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MenuLayer/Control/MainMenu/Credits" unique_id=520215884]
+[node name="Label" type="Label" parent="MenuLayer/MainMenu/CenterContainer/Credits" unique_id=520215884]
 layout_mode = 2
 text = "Lead Designer: Vee
 
@@ -73,25 +112,38 @@ SFX : Alex
 "
 horizontal_alignment = 1
 
-[node name="Back" parent="MenuLayer/Control/MainMenu/Credits" unique_id=1684089308 groups=["Back_Button"] instance=ExtResource("1_vfyya")]
-visible = false
+[node name="Back" parent="MenuLayer/MainMenu/CenterContainer/Credits" unique_id=1684089308 groups=["Back_Button"] instance=ExtResource("1_vfyya")]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Back"
 
-[node name="GameJamLOGO" type="TextureRect" parent="MenuLayer/Control" unique_id=1072748814]
+[node name="GameJamLOGO" type="TextureRect" parent="MenuLayer/MainMenu" unique_id=1072748814]
+custom_maximum_size = Vector2(300, 200)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 14.000008
-offset_top = -216.0
-offset_right = 3004.0
-offset_bottom = 1852.0
+offset_left = 10.0
+offset_top = -206.0
+offset_right = 310.0
+offset_bottom = -6.0
 grow_vertical = 0
-scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_3ryvj")
 stretch_mode = 4
+
+[node name="FadeOut" type="ColorRect" parent="MenuLayer/MainMenu" unique_id=1326935697]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MenuLayer/MainMenu/FadeOut" unique_id=1814751511]
+libraries/ = SubResource("AnimationLibrary_dg4ce")
 
 [node name="TitleScreen" type="AudioStreamPlayer" parent="." unique_id=1628533151]
 stream = ExtResource("4_dbcc7")

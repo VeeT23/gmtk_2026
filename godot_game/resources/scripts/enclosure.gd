@@ -150,5 +150,5 @@ func _generate_trees(radius: float) -> void:
 		tree.rotation.y = rng.randf() * TAU
 
 		# Optional random scale variation
-		var scale := rng.randf_range(1.5, 2.5)
-		tree.scale = Vector3.ONE * scale
+		var scale_factor := rng.randf_range(1.5, 2.5)
+		tree.scale = Vector3.ONE * scale_factor
