@@ -5,6 +5,8 @@
 [ext_resource type="Material" uid="uid://x24gqmqc3luj" path="res://resources/shaders/outline_material.tres" id="3_k4ctd"]
 [ext_resource type="Script" uid="uid://dhtryvai2ldet" path="res://resources/scripts/interactable.gd" id="3_rmji0"]
 [ext_resource type="PackedScene" uid="uid://dudjoec521u7f" path="res://scenes/interactable/bolt_cutters/bolt_cutters.tscn" id="4_e10an"]
+[ext_resource type="AudioStream" uid="uid://dcafsawiy0ryl" path="res://assets/sfx/interaction/DoorCreak.mp3" id="6_h1xkg"]
+[ext_resource type="AudioStream" uid="uid://byporkepyoxpc" path="res://assets/sfx/interaction/GarageDoor.mp3" id="7_rmwlw"]
 
 [sub_resource type="Animation" id="Animation_k4ctd"]
 length = 0.001
@@ -176,23 +178,23 @@ size = Vector3(0.6727905, 4.097107, 3.9980469)
 [node name="MaintenanceGarage" unique_id=497981931 instance=ExtResource("1_7fn1g")]
 script = ExtResource("2_717sx")
 
-[node name="warehouse_mx_4" parent="." index="0" unique_id=400604946]
+[node name="warehouse_mx_4" parent="." index="0" unique_id=299001245]
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
-[node name="door_hm_1_a_piece_1" parent="warehouse_mx_4" index="0" unique_id=635716386]
+[node name="door_hm_1_a_piece_1" parent="warehouse_mx_4" index="0" unique_id=209440376]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1.0072507, -9.793058)
 material_overlay = ExtResource("3_k4ctd")
 
-[node name="door_hm_1_a_piece_2" parent="warehouse_mx_4" index="1" unique_id=1999941062]
+[node name="door_hm_1_a_piece_2" parent="warehouse_mx_4" index="1" unique_id=1345793461]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1, -8.204749)
 material_overlay = ExtResource("3_k4ctd")
 
-[node name="garage_door_hr_4_a_piece_1" parent="warehouse_mx_4" index="2" unique_id=1964572913]
+[node name="garage_door_hr_4_a_piece_1" parent="warehouse_mx_4" index="2" unique_id=1747628234]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1.0172331, 7.023925)
 material_overlay = ExtResource("3_k4ctd")
 
-[node name="garage_door_hr_4_a_piece_2" parent="warehouse_mx_4" index="3" unique_id=269756434]
+[node name="garage_door_hr_4_a_piece_2" parent="warehouse_mx_4" index="3" unique_id=507999116]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1.0195621, 10.949997)
 material_overlay = ExtResource("3_k4ctd")
 
@@ -278,6 +280,7 @@ collision_mask = 8
 script = ExtResource("3_rmji0")
 outlined_meshes = [NodePath("../warehouse_mx_4/door_hm_1_a_piece_1"), NodePath("../warehouse_mx_4/door_hm_1_a_piece_2")]
 one_shot = true
+interact_sfx = ExtResource("6_h1xkg")
 metadata/_custom_type_script = "uid://dhtryvai2ldet"
 metadata/_edit_lock_ = true
 
@@ -291,6 +294,7 @@ collision_mask = 8
 script = ExtResource("3_rmji0")
 outlined_meshes = [NodePath("../warehouse_mx_4/garage_door_hr_4_a_piece_1"), NodePath("../warehouse_mx_4/garage_door_hr_4_a_piece_2")]
 one_shot = true
+interact_sfx = ExtResource("7_rmwlw")
 metadata/_custom_type_script = "uid://dhtryvai2ldet"
 metadata/_edit_lock_ = true
 
