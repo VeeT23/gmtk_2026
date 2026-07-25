@@ -13,11 +13,13 @@ var current_state: State = State.IDLE
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var anim_player: AnimationPlayer = $dino/AnimationPlayer
 
+@onready var kill_box : Area3D = $Killbox
+
 var player: Node3D
 var path_timer: float = 0.0
 
 func _ready() -> void:
-	
+	kill_box.body_entered.connect(_kill_box_entered)
 	player = get_tree().current_scene.find_child("Player", true, false) as Node3D
 	if player == null:
 		push_error("Dinosaur Error: Could not find a node named 'Player' in the scene!")
@@ -25,6 +27,9 @@ func _ready() -> void:
 	
 	nav_agent.path_desired_distance = 0.5
 	nav_agent.target_desired_distance = 1.0
+
+func _kill_box_entered(_body : Node3D):
+	get_tree().current_scene.kill_player()
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
