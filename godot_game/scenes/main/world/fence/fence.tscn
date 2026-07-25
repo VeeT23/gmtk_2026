@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b247srku6llvo" path="res://resources/scripts/grass_spawner.gd" id="2_cwxma"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_46os7"]
-size = Vector3(1.5982666, 7.150879, 0.8565674)
+size = Vector3(1.5982666, 7.150879, 1.1482239)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p4mrb"]
 size = Vector3(0.23925781, 5.4546204, 8.586151)
@@ -13,11 +13,11 @@ size = Vector3(0.23925781, 5.4546204, 8.586151)
 collision_mask = 6
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=636785576]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.64178467, 3.594541, -4.6224365)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.64178467, 3.594541, -4.768265)
 shape = SubResource("BoxShape3D_46os7")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1577115477]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.64178467, 3.594541, 4.3842974)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.64178467, 3.594541, 4.5374103)
 shape = SubResource("BoxShape3D_46os7")
 
 [node name="fence" parent="." unique_id=294346827 instance=ExtResource("1_5eryc")]

@@ -11,21 +11,25 @@ const BOB_FREQ_WALK = 2.0
 const BOB_FREQ_SPRINT = 3.2
 const BOB_AMP = 0.06
 
+const FOOTSTEP_SOUNDS : = [
+	preload("res://assets/sfx/interaction/Footstep.mp3"),
+	preload("res://assets/sfx/interaction/Footstep2.mp3"),
+	preload("res://assets/sfx/interaction/Footstep3.mp3")
+]
+
+
 @onready var camera : Camera3D = $Camera3D
 @onready var flashlight: SpotLight3D = $Camera3D/Flashlight
+@onready var footstep_player : AudioStreamPlayer = $FootstepSound
 @onready var crouch_collider = $Crouching
 @onready var standing_collider = $Standing
 @export var camera_crouch_position = Vector3(0,0.9,0)
 @export var camera_stand_position = Vector3(0,1.7,0)
-@export var footstep_sounds: Array[AudioStream] = []
-@export var step_interval: float = 0.4
-var step_timer: float = 0.0
 
 var camera_pitch := 0.0
 var is_crouching := false
 var bob_time := 0.0
-var footsteps_can_play := true
-var footsteps_landed
+
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -55,18 +59,15 @@ func _input(event):
 func _physics_process(delta: float) -> void:
 
 	#footsteps
-	if velocity.length() > 0.1:
-		step_timer -= delta
-		if step_timer <= 0.0:
-			$FootstepSound.stream = footstep_sounds[randi() % footstep_sounds.size()]
-			$FootstepSound.play()
-			step_timer = step_interval
+	if velocity.length() > 0.1 and is_on_floor():
+		if !footstep_player.playing and FOOTSTEP_SOUNDS.size():
+			footstep_player.stream = FOOTSTEP_SOUNDS[randi_range(0, FOOTSTEP_SOUNDS.size() - 1)]
+			footstep_player.play()
 	
 	# Gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-	
-	footsteps_landed = is_on_floor()
+
 	# Jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY

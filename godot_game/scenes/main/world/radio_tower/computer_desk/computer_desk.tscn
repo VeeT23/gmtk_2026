@@ -66,11 +66,13 @@ size = Vector3(0.49578857, 0.49450684, 0.5266113)
 
 [node name="ComputerDesk" type="StaticBody3D" unique_id=195327822]
 script = ExtResource("1_iisc2")
+computer_interact_sfx = ExtResource("14_8u1s8")
+radio_interact_sfx = ExtResource("15_yhkx1")
 
 [node name="monitor" parent="." unique_id=907716283 instance=ExtResource("1_3i144")]
 transform = Transform3D(0.123296976, 0, -0.9923697, 0, 1, 0, 0.9923697, 0, 0.123296976, 0.48140383, 1.1804179, -0.30105805)
 
-[node name="pc_monitor_mp_1" parent="monitor" index="0" unique_id=1350307541]
+[node name="pc_monitor_mp_1" parent="monitor" index="0" unique_id=1511085213]
 material_overlay = ExtResource("3_0is37")
 
 [node name="pc_keyboard_mp_12" type="Node3D" parent="." unique_id=391247322]
@@ -83,7 +85,7 @@ mesh = SubResource("ArrayMesh_pivhs")
 [node name="pc_mp_12" parent="." unique_id=735290711 instance=ExtResource("3_xy7et")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.23111153, 0.06696835, 0.512898)
 
-[node name="pc_mp_1" parent="pc_mp_12" index="0" unique_id=2081793017]
+[node name="pc_mp_1" parent="pc_mp_12" index="0" unique_id=1677282052]
 material_overlay = ExtResource("3_0is37")
 
 [node name="chair_mp_5_42" parent="." unique_id=1781376758 instance=ExtResource("4_kaidd")]
@@ -92,7 +94,7 @@ transform = Transform3D(-0.5874423, 0, 0.809266, 0, 1, 0, -0.809266, 0, -0.58744
 [node name="pc_mouse_mp_12" parent="." unique_id=545980822 instance=ExtResource("5_wh3je")]
 transform = Transform3D(0.082835704, 0, -0.99656326, 0, 1, 0, 0.99656326, 0, 0.082835704, 0.11484742, 0.9294548, 0.19218995)
 
-[node name="pc_mouse_mp_1" parent="pc_mouse_mp_12" index="0" unique_id=83045002]
+[node name="pc_mouse_mp_1" parent="pc_mouse_mp_12" index="0" unique_id=1002232511]
 material_overlay = ExtResource("3_0is37")
 
 [node name="table" parent="." unique_id=1545812060 instance=ExtResource("6_iisc2")]
@@ -101,19 +103,19 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.26
 [node name="military_radio_22" parent="." unique_id=799785272 instance=ExtResource("7_kaidd")]
 transform = Transform3D(-0.3105804, 0, -0.9505471, 0, 1, 0, 0.9505471, 0, -0.3105804, 0.35957575, 0.9382323, 0.51095515)
 
-[node name="military_radio_2" parent="military_radio_22" index="0" unique_id=386707927]
+[node name="military_radio_2" parent="military_radio_22" index="0" unique_id=1803256018]
 material_overlay = ExtResource("3_0is37")
 
 [node name="military_radio_12" parent="." unique_id=244385715 instance=ExtResource("8_wh3je")]
 transform = Transform3D(-0.5439206, 0, -0.83913666, 0, 1, 0, 0.83913666, 0, -0.5439206, 0.3707831, 1.1134217, 0.55644965)
 
-[node name="military_radio_1" parent="military_radio_12" index="0" unique_id=163181358]
+[node name="military_radio_1" parent="military_radio_12" index="0" unique_id=1164550750]
 material_overlay = ExtResource("3_0is37")
 
 [node name="signal_receiver_etx_12" parent="." unique_id=343882471 instance=ExtResource("9_iisc2")]
 transform = Transform3D(-0.45651925, 0, -0.8897135, 0, 1, 0, 0.8897135, 0, -0.45651925, 0.34539986, 1.2888769, 0.5397084)
 
-[node name="signal_receiver_etx_1" parent="signal_receiver_etx_12" index="0" unique_id=2096953056]
+[node name="signal_receiver_etx_1" parent="signal_receiver_etx_12" index="0" unique_id=810874737]
 material_overlay = ExtResource("3_0is37")
 
 [node name="ashtray_12" parent="." unique_id=585866871 instance=ExtResource("10_wh3je")]
@@ -130,7 +132,6 @@ script = ExtResource("12_88f27")
 outlined_meshes = [NodePath("../monitor/pc_monitor_mp_1"), NodePath("../pc_keyboard_mp_12/pc_keyboard_mp_1"), NodePath("../pc_mp_12/pc_mp_1"), NodePath("../pc_mouse_mp_12/pc_mouse_mp_1")]
 tooltip = "Computer"
 action = "(Needs power)"
-interact_sfx = ExtResource("14_8u1s8")
 metadata/_custom_type_script = "uid://dhtryvai2ldet"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ComputerInteractable" unique_id=519900128]
@@ -144,7 +145,6 @@ script = ExtResource("12_88f27")
 outlined_meshes = [NodePath("../military_radio_22/military_radio_2"), NodePath("../military_radio_12/military_radio_1"), NodePath("../signal_receiver_etx_12/signal_receiver_etx_1")]
 tooltip = "Radio"
 action = "(Needs power)"
-interact_sfx = ExtResource("15_yhkx1")
 metadata/_custom_type_script = "uid://dhtryvai2ldet"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RadioInteractable" unique_id=1393942366]
