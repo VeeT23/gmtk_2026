@@ -6,14 +6,15 @@ const FENCE_SCENE := preload("res://scenes/main/world/fence/fence.tscn")
 
 const BUSH_SCENE := preload("res://scenes/main/world/hiding_spots/hiding_bush.tscn")
 
-const TREE_SCENE_1 := preload("res://assets/terrain/foliage/trees/tree_1.glb")
-const TREE_SCENE_2 := preload("res://assets/terrain/foliage/trees/tree_1.glb")
-const TREE_SCENE_3 := preload("res://assets/terrain/foliage/trees/tree_1.glb")
-const TREE_SCENE_4 := preload("res://assets/terrain/foliage/trees/tree_1.glb")
-const TREE_SCENE_5 := preload("res://assets/terrain/foliage/trees/tree_1.glb")
-const TREE_SCENE_6 := preload("res://assets/terrain/foliage/trees/tree_1.glb")
-const TREE_SCENE_7 := preload("res://assets/terrain/foliage/trees/tree_1.glb")
+const TREE_SCENES := [
+	preload("res://assets/terrain/foliage/trees/tree_1.glb"),
+	preload("res://assets/terrain/foliage/trees/tree_5.glb"),
+	preload("res://assets/terrain/foliage/trees/tree_6.glb"),
+	preload("res://assets/terrain/foliage/trees/tree_7.glb"),
+]
 
+const TREE_DENSITY := 0.003
+const TREE_MIN_DISTANCE := 8.0
 const BUSH_DENSITY := 0.01 # Bushes per square unit
 const BUSH_MIN_DISTANCE := 4.0
 
