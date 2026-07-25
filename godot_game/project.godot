@@ -106,10 +106,12 @@ debug={
 3d_physics/layer_3="Enemy"
 3d_physics/layer_4="Interactable"
 3d_physics/layer_5="PlayerOnly"
+3d_physics/layer_6="Obstruction"
 
 [physics]
 
 3d/physics_engine="Jolt Physics"
+common/physics_interpolation=true
 
 [rendering]
 

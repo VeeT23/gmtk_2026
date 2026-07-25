@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bu02uu1jgwoto"]
+
+[ext_resource type="PackedScene" uid="uid://bn6mo2uijapdk" path="res://assets/terrain/foliage/grass/fern_1.glb" id="1_pvv6j"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_46os7"]
+height = 3.354248
+radius = 1.6577148
+
+[node name="HidingBush" type="StaticBody3D" unique_id=945173586]
+collision_layer = 32
+collision_mask = 32
+
+[node name="fern_12" parent="." unique_id=1084466332 instance=ExtResource("1_pvv6j")]
+transform = Transform3D(3.375, 0, 0, 0, 3.375, 0, 0, 0, 3.375, 0.67008096, 0, -0.45136034)
+
+[node name="fern_13" parent="." unique_id=1351144651 instance=ExtResource("1_pvv6j")]
+transform = Transform3D(3.375, 0, 0, 0, 3.375, 0, 0, 0, 3.375, -0.32698923, 1.1444092e-05, -0.055828035)
+
+[node name="fern_14" parent="." unique_id=2110684440 instance=ExtResource("1_pvv6j")]
+transform = Transform3D(3.375, 0, 0, 0, 3.375, 0, 0, 0, 3.375, 0.50111157, 0, 0.7931039)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=546490838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7071533, 0)
+shape = SubResource("CylinderShape3D_46os7")
+debug_color = Color(3.85046e-06, 0.97965115, 0.41729698, 1)
