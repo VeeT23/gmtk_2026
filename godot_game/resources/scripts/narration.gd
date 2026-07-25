@@ -23,7 +23,7 @@ func _process_buffer() -> void:
 	while !dialogue_buffer.is_empty():
 		var line: String = dialogue_buffer.pop_front()
 		await _type_line(line)
-		await get_tree().create_timer(line_pause).timeout
+		await get_tree().create_timer(line_pause,false, false, false).timeout
 
 	text = ""
 	_processing = false
@@ -38,7 +38,7 @@ func _type_line(line: String) -> void:
 		# Handle ...
 		if i + 2 < line.length() and line.substr(i, 3) == "...":
 			text += "..."
-			await get_tree().create_timer(character_delay + ellipsis_pause).timeout
+			await get_tree().create_timer(character_delay + ellipsis_pause,false, false, false).timeout
 			i += 3
 			continue
 		

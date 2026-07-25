@@ -13,6 +13,7 @@ config_version=5
 config/name="gmtk_2026"
 run/main_scene="uid://ww0nyh5ebnd0"
 config/features=PackedStringArray("4.7", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="uid://olstm8nbohcr"
 
 [audio]
@@ -22,6 +23,10 @@ buses/default_bus_layout="uid://di1ox2jf0qquo"
 [autoload]
 
 GameState="*uid://bxyeyr4wnlaii"
+
+[editor]
+
+movie_writer/movie_file="C:/Users/Joefi/Desktop/win_screen.avi"
 
 [editor_plugins]
 

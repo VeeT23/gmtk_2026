@@ -1,0 +1,248 @@
+[gd_scene format=3 uid="uid://csgqs0itl54yr"]
+
+[ext_resource type="Script" uid="uid://ctl5d4ocgxwyc" path="res://scenes/ui/menus/win_screen/win_screen.gd" id="1_45qil"]
+[ext_resource type="Texture2D" uid="uid://bgy2pcpq8p3cb" path="res://assets/vfx/confetti.png" id="1_pcxnk"]
+[ext_resource type="Texture2D" uid="uid://ddqajqmpe05jf" path="res://assets/vfx/smile.jpg" id="2_xenqr"]
+[ext_resource type="Texture2D" uid="uid://bqkbr0ucrpjel" path="res://assets/vfx/cfd.png" id="3_xenqr"]
+[ext_resource type="PackedScene" uid="uid://dywnjkpljckd7" path="res://scenes/ui/button/custom_button.tscn" id="5_4frtq"]
+[ext_resource type="AudioStream" uid="uid://b1646428ma1tq" path="res://assets/sfx/kids-saying-yay-sound-effect_3.mp3" id="6_2u6si"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hfra2"]
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+angle_min = 209.00002
+angle_max = 327.00003
+direction = Vector3(0.6, -1, 0)
+spread = 26.848
+initial_velocity_min = 259.84
+initial_velocity_max = 503.91998
+angular_velocity_min = 49.99998
+angular_velocity_max = 199.99998
+gravity = Vector3(0, 200, 0)
+scale_min = 0.29999998
+scale_max = 0.39999998
+color = Color(1, 0.3882353, 0.40392157, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_im0a4"]
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+angle_min = 209.00002
+angle_max = 327.00003
+direction = Vector3(0.6, -1, 0)
+spread = 26.848
+initial_velocity_min = 259.84
+initial_velocity_max = 503.91998
+angular_velocity_min = 49.99998
+angular_velocity_max = 199.99998
+gravity = Vector3(0, 200, 0)
+scale_min = 0.29999998
+scale_max = 0.39999998
+color = Color(0.39, 1, 0.47133338, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2u6si"]
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+angle_min = 209.00002
+angle_max = 327.00003
+direction = Vector3(0.6, -1, 0)
+spread = 26.848
+initial_velocity_min = 259.84
+initial_velocity_max = 503.91998
+angular_velocity_min = 49.99998
+angular_velocity_max = 199.99998
+gravity = Vector3(0, 200, 0)
+scale_min = 0.29999998
+scale_max = 0.39999998
+color = Color(0.39, 0.57299995, 1, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_45qil"]
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+angle_min = 209.00002
+angle_max = 327.00003
+direction = Vector3(-0.6, -1, 0)
+spread = 26.848
+initial_velocity_min = 259.84
+initial_velocity_max = 503.91998
+angular_velocity_min = 49.99998
+angular_velocity_max = 199.99998
+gravity = Vector3(0, 200, 0)
+scale_min = 0.29999998
+scale_max = 0.39999998
+color = Color(1, 0.3882353, 0.40392157, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xenqr"]
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+angle_min = 209.00002
+angle_max = 327.00003
+direction = Vector3(-0.6, -1, 0)
+spread = 26.848
+initial_velocity_min = 259.84
+initial_velocity_max = 503.91998
+angular_velocity_min = 49.99998
+angular_velocity_max = 199.99998
+gravity = Vector3(0, 200, 0)
+scale_min = 0.29999998
+scale_max = 0.39999998
+color = Color(0.39, 1, 0.5628333, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4frtq"]
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+angle_min = 209.00002
+angle_max = 327.00003
+direction = Vector3(-0.6, -1, 0)
+spread = 26.848
+initial_velocity_min = 259.84
+initial_velocity_max = 503.91998
+angular_velocity_min = 49.99998
+angular_velocity_max = 199.99998
+gravity = Vector3(0, 200, 0)
+scale_min = 0.29999998
+scale_max = 0.39999998
+color = Color(0.39, 0.62383324, 1, 1)
+
+[node name="WinScreen" type="Node2D" unique_id=648562575]
+script = ExtResource("1_45qil")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=974645198]
+
+[node name="HappyEmojiMeme3891752466" type="Sprite2D" parent="." unique_id=1127305458]
+position = Vector2(-334, 176.00002)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("2_xenqr")
+
+[node name="Cfd" type="Sprite2D" parent="." unique_id=1618914128]
+position = Vector2(368, 113)
+texture = ExtResource("3_xenqr")
+
+[node name="Confetti" type="Node2D" parent="." unique_id=1145029355]
+
+[node name="Red1" type="GPUParticles2D" parent="Confetti" unique_id=236096225]
+position = Vector2(-573, 318)
+emitting = false
+amount = 60
+texture = ExtResource("1_pcxnk")
+lifetime = 5.0
+one_shot = true
+explosiveness = 0.9
+randomness = 0.2
+visibility_rect = Rect2(-500, -500, 1000, 1000)
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_hfra2")
+
+[node name="Green1" type="GPUParticles2D" parent="Confetti" unique_id=639531391]
+position = Vector2(-573, 318)
+emitting = false
+amount = 60
+texture = ExtResource("1_pcxnk")
+lifetime = 5.0
+one_shot = true
+explosiveness = 0.9
+randomness = 0.2
+visibility_rect = Rect2(-500, -500, 1000, 1000)
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_im0a4")
+
+[node name="Blue1" type="GPUParticles2D" parent="Confetti" unique_id=85437160]
+position = Vector2(-573, 318)
+emitting = false
+amount = 60
+texture = ExtResource("1_pcxnk")
+lifetime = 5.0
+one_shot = true
+explosiveness = 0.9
+randomness = 0.2
+visibility_rect = Rect2(-500, -500, 1000, 1000)
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_2u6si")
+
+[node name="Red2" type="GPUParticles2D" parent="Confetti" unique_id=1040134056]
+position = Vector2(577, 322)
+emitting = false
+amount = 60
+texture = ExtResource("1_pcxnk")
+lifetime = 5.0
+one_shot = true
+explosiveness = 0.9
+randomness = 0.2
+visibility_rect = Rect2(-500, -500, 1000, 1000)
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_45qil")
+
+[node name="Green2" type="GPUParticles2D" parent="Confetti" unique_id=1276880007]
+position = Vector2(577, 322)
+emitting = false
+amount = 60
+texture = ExtResource("1_pcxnk")
+lifetime = 5.0
+one_shot = true
+explosiveness = 0.9
+randomness = 0.2
+visibility_rect = Rect2(-500, -500, 1000, 1000)
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_xenqr")
+
+[node name="Blue2" type="GPUParticles2D" parent="Confetti" unique_id=452970155]
+position = Vector2(577, 322)
+emitting = false
+amount = 60
+texture = ExtResource("1_pcxnk")
+lifetime = 5.0
+one_shot = true
+explosiveness = 0.9
+randomness = 0.2
+visibility_rect = Rect2(-500, -500, 1000, 1000)
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_4frtq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1299317527]
+
+[node name="WinMenu" type="Control" parent="CanvasLayer" unique_id=121180463]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/WinMenu" unique_id=1591296863]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -463.0
+offset_top = -44.0
+offset_right = 463.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/WinMenu/VBoxContainer" unique_id=939193128]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 64
+text = "YOU WIN!!!!!!!!!!!!!!!!!!!!!!!!!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/WinMenu/VBoxContainer" unique_id=1980659439]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 16
+text = "Plz vote :3"
+horizontal_alignment = 1
+
+[node name="Control" type="MarginContainer" parent="CanvasLayer/WinMenu/VBoxContainer" unique_id=396374019]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="CustomButton" parent="CanvasLayer/WinMenu/VBoxContainer/Control" unique_id=1195260148 instance=ExtResource("5_4frtq")]
+custom_minimum_size = Vector2(222.28, 16)
+layout_mode = 2
+text = "Click here to vote"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=117453330]
+stream = ExtResource("6_2u6si")

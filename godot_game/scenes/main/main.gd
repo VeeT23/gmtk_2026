@@ -3,6 +3,12 @@ extends Node
 func _ready() -> void:
 	GameState.begin_countdown()
 	$Canvas/UI/Transition.fade_in_finished.connect(_fade_in_finished)
+	$Canvas/UI/Transition.fade_out_finished.connect(_fade_out_finished)
+
+func _fade_out_finished():
+	if GameState.game_state["sent_distress_signal"]:
+		await get_tree().create_timer(2.0,false, false, false).timeout
+		get_tree().change_scene_to_file("res://scenes/ui/menus/win_screen/win_screen.tscn")
 
 func _fade_in_finished():
 	if !GameState.game_state["game_started"]:
