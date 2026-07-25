@@ -24,7 +24,6 @@ stream = ExtResource("4_lvxji")
 
 [node name="BreathingSound" type="AudioStreamPlayer" parent="." unique_id=632431122]
 stream = ExtResource("3_p47bc")
-volume_db = -80.0
 autoplay = true
 
 [node name="head" type="Node3D" parent="." unique_id=1584690542]

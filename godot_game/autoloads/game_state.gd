@@ -1,6 +1,6 @@
 extends Node
 
-const TIME_SECONDS = 600
+const TIME_SECONDS = 900
 
 var is_player_dead := false
 

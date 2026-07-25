@@ -18,7 +18,7 @@ func show_death_screen():
 	show()
 	$AnimationPlayer.play("fade_in")
 
-func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
+func _on_animation_tree_animation_finished(_anim_name: StringName) -> void:
 	$VBoxContainer.show()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 

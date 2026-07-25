@@ -9,6 +9,8 @@ extends Label
 var dialogue_buffer: Array[String] = []
 var _processing := false
 
+func _ready() -> void:
+	text = ""
 
 func queue_dialogue(lines: Array) -> void:
 	dialogue_buffer.append_array(lines)
