@@ -3,6 +3,9 @@ extends Node3D
 @onready var c_interactable : Interactable = $ComputerInteractable
 @onready var r_interactable : Interactable = $RadioInteractable
 
+@export var computer_interact_sfx : AudioStream
+@export var radio_interact_sfx : AudioStream
+
 func _ready() -> void:
 	c_interactable.interacted.connect(_on_computer_interact)
 	r_interactable.interacted.connect(_on_radio_interact)
@@ -15,8 +18,10 @@ func _on_state_change(flag : String, value : Variant):
 		r_interactable.action = "(Repair computer to broadcast)"
 	elif flag == "collected_electronics" and value == true:
 		c_interactable.action = "Press [E] to repair"
+		c_interactable.interact_sfx = computer_interact_sfx
 	elif flag == "repaired_computer" and value == true:
 		r_interactable.action = "Press [E] to broadcast"
+		r_interactable.interact_sfx = radio_interact_sfx
 
 func _on_computer_interact():
 	if GameState.game_state["collected_electronics"] and GameState.game_state["fueled_generator"]:
