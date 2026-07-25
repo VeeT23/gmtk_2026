@@ -92,7 +92,7 @@ func _physics_process(delta: float) -> void:
 	
 	if is_sprinting:
 		stamina -= delta
-	print(stamina)
+	
 	var speed := (SPRINT_SPEED if is_sprinting else BASE_SPEED) * (0.5 if is_crouching else 1.0)
 	
 	var target_fov := SPRINT_FOV if is_sprinting else BASE_FOV
