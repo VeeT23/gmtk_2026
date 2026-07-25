@@ -24,10 +24,6 @@ buses/default_bus_layout="uid://di1ox2jf0qquo"
 
 GameState="*uid://bxyeyr4wnlaii"
 
-[editor]
-
-movie_writer/movie_file="C:/Users/Joefi/Desktop/win_screen.avi"
-
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
