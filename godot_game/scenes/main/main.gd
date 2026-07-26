@@ -19,7 +19,6 @@ func kill_player() -> void:
 	GameState.is_player_dead = true
 	$Canvas/UI/DeathScreen.show_death_screen()
 
-
 func respawn_player() -> void:
 	print("Respawning player")
 	var player : CharacterBody3D = get_tree().get_first_node_in_group("Player")
@@ -30,3 +29,9 @@ func respawn_player() -> void:
 	$Canvas/UI/DeathScreen.hide_death_screen()
 	$Canvas/UI/Transition.fade_in()
 	#TODO: Move dino back in place
+
+func act_trigger(key : String):
+	if key == "dino_spawn":
+		print("Moving dino")
+		var spawn = get_tree().get_first_node_in_group("DinoSpawn")
+		$World/TRex.global_position = spawn.global_position
