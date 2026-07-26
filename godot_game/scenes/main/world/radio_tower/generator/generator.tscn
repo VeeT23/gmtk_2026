@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bqof5kt2454jp" path="res://scenes/main/world/radio_tower/generator/generator.gd" id="2_lqych"]
 [ext_resource type="Material" uid="uid://x24gqmqc3luj" path="res://resources/shaders/outline_material.tres" id="2_vo4af"]
 [ext_resource type="Script" uid="uid://dhtryvai2ldet" path="res://resources/scripts/interactable.gd" id="2_ywgq0"]
-[ext_resource type="AudioStream" uid="uid://dxlwmanw8i1y5" path="res://assets/Generator Start.mp3" id="3_mlfuu"]
+[ext_resource type="AudioStream" uid="uid://dmrjcrh3view1" path="res://assets/sfx/interaction/Generator swoove.wav" id="3_mlfuu"]
 [ext_resource type="AudioStream" uid="uid://7e2yl1cpaa2x" path="res://assets/sfx/interaction/Generator Hummm.mp3" id="4_eunlb"]
 [ext_resource type="AudioStream" uid="uid://cnk4wyh76fb88" path="res://assets/sfx/interaction/jug_clank.wav" id="5_f3hdk"]
 

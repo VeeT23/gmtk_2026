@@ -1,11 +1,53 @@
 extends Node
 
+## Seconds of silence between plays of the main song, picked at random.
+@export var music_gap_min : float = 45.0
+@export var music_gap_max : float = 120.0
+## Wait this long before the first play instead of starting immediately.
+@export var music_first_delay : float = 20.0
+
+const MAIN_SONG := preload("res://assets/sfx/interaction/MAINSong.mp3")
+
 @onready var dino = $World/TRex
+
+var music_player : AudioStreamPlayer
+var music_timer : float = 0.0
 
 func _ready() -> void:
 	GameState.begin_countdown()
 	$Canvas/UI/Transition.fade_in_finished.connect(_fade_in_finished)
 	$Canvas/UI/Transition.fade_out_finished.connect(_fade_out_finished)
+
+	_setup_music_player()
+	music_timer = music_first_delay
+
+## Uses an AudioStreamPlayer from the scene if there is one, otherwise makes its own.
+func _setup_music_player() -> void:
+	music_player = find_child("MusicPlayer", true, false) as AudioStreamPlayer
+	if music_player == null:
+		music_player = AudioStreamPlayer.new()
+		music_player.name = "MusicPlayer"
+		music_player.bus = &"Master"
+		add_child(music_player)
+
+	if music_player.stream == null:
+		music_player.stream = MAIN_SONG
+	# Autoplay would start it before the timer gets a say.
+	music_player.autoplay = false
+	music_player.stop()
+
+func _process(delta: float) -> void:
+	_update_periodic_music(delta)
+
+## Plays the main song every so often rather than on a constant loop.
+func _update_periodic_music(delta: float) -> void:
+	if music_player.playing:
+		return
+
+	music_timer -= delta
+	if music_timer <= 0.0:
+		music_player.play()
+		music_timer = randf_range(music_gap_min, music_gap_max)
 
 func _fade_out_finished():
 	if GameState.game_state["sent_distress_signal"]:
