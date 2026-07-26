@@ -13,8 +13,16 @@ shader_parameter/blur_strength = 3.0
 shader = ExtResource("3_kia33")
 shader_parameter/circle_position = Vector2(0.315, 0.5)
 shader_parameter/radius = 0.005
-shader_parameter/circle_color = Color(0.6056738, 1.6605109e-06, 3.85046e-07, 1)
+shader_parameter/circle_color = Color(0.69245994, 1.8410012e-06, 7.70092e-07, 1)
 shader_parameter/outside_brightness = 0.81200003857
+shader_parameter/pulse_speed = 0.665
+shader_parameter/pulse_start_offset = 0.0
+shader_parameter/pulse_end_offset = 0.07
+shader_parameter/pulse_thickness = 0.01
+shader_parameter/pulse_inner_width = 0.001
+shader_parameter/pulse_outer_width = 0.001
+shader_parameter/pulse_fade_power = 2.0
+shader_parameter/pulse_color = Color(0.28, 0, 0.0373333, 1)
 
 [node name="MapMenu" type="Control" unique_id=1479418954]
 layout_mode = 3

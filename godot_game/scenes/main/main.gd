@@ -7,8 +7,9 @@ extends Node
 @export var music_first_delay : float = 20.0
 
 const MAIN_SONG := preload("res://assets/sfx/interaction/MAINSong.mp3")
+const DINO_SCENE := preload("res://scenes/t_rex/t_rex.tscn")
 
-@onready var dino = $World/TRex
+var dino = null
 
 var music_player : AudioStreamPlayer
 var music_timer : float = 0.0
@@ -79,7 +80,10 @@ func act_trigger(key : String):
 		print("Moving dino")
 		var spawn = get_tree().get_first_node_in_group("DinoSpawn")
 		var target = get_tree().get_first_node_in_group("StartTarget")
-		dino.teleport_to(spawn.global_position)
+		
+		dino = DINO_SCENE.instantiate()
+		dino.global_position = spawn.global_position
+		add_child(dino)
 		dino.clear_target()
 		dino.set_target(target.global_position)
 	if key == "walked_by_bush" and !GameState.game_state["passed_bush"]:

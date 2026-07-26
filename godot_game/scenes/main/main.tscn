@@ -26,7 +26,6 @@
 [ext_resource type="PackedScene" uid="uid://bxvc285dj63oe" path="res://scenes/main/world/out_house/outhouse.tscn" id="21_6llfj"]
 [ext_resource type="PackedScene" uid="uid://b8ta73uw2otfg" path="res://scenes/main/world/radio_tower/shelter.tscn" id="23_p8abn"]
 [ext_resource type="PackedScene" uid="uid://bu02uu1jgwoto" path="res://scenes/main/world/hiding_spots/hiding_bush.tscn" id="24_gkmcc"]
-[ext_resource type="PackedScene" uid="uid://bg4t5shnuayvv" path="res://scenes/t_rex/t_rex.tscn" id="24_i7in8"]
 [ext_resource type="PackedScene" uid="uid://c26gw2igxbgiq" path="res://scenes/ui/menus/pause/pause_menu.tscn" id="24_s17dp"]
 [ext_resource type="Script" uid="uid://xyem3np2x1ob" path="res://resources/scripts/dialogue_trigger.gd" id="25_6w6mm"]
 [ext_resource type="Texture2D" uid="uid://bfuu6w0vqhupc" path="res://assets/map/Map.png" id="27_rofvo"]
@@ -166,9 +165,6 @@ script = ExtResource("1_pg34l")
 
 [node name="Player" parent="World" unique_id=602185274 instance=ExtResource("7_srmg5")]
 transform = Transform3D(-0.63993347, 0, -0.7684303, 0, 1, 0, 0.7684303, 0, -0.63993347, 9.073759, 0, -106.94961)
-
-[node name="TRex" parent="World" unique_id=1698958939 instance=ExtResource("24_i7in8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.692444, 2.2291126, 104.29013)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="World" unique_id=1020118935]
 navigation_mesh = SubResource("NavigationMesh_37hlw")
