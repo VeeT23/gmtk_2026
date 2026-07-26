@@ -21,10 +21,11 @@ script = ExtResource("1_8afob")
 
 [node name="FootstepSound" type="AudioStreamPlayer" parent="." unique_id=1918700575]
 stream = ExtResource("4_lvxji")
-bus = &"Foots"
+bus = &"foots"
 
 [node name="BreathingSound" type="AudioStreamPlayer" parent="." unique_id=632431122]
 stream = ExtResource("3_p47bc")
+volume_db = 7.298
 autoplay = true
 
 [node name="head" type="Node3D" parent="." unique_id=1584690542]
