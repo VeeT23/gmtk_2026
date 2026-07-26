@@ -7,7 +7,7 @@ const FOV_CHANGE_SPEED = 8.0
 const JUMP_VELOCITY = 4.5
 const MOUSE_SENSITIVITY = 0.002
 
-const MAX_STAMINA = 8.0 # Seconds of sprinting
+const MAX_STAMINA = 12.0 # Seconds of sprinting
 
 const BOB_FREQ_WALK = 2.0
 const BOB_FREQ_SPRINT = 3.2
@@ -187,3 +187,8 @@ func _update_shake(delta: float) -> void:
 	camera.rotation.z = deg_to_rad(
 		shake_noise.get_noise_2d(shake_time, 300.0) * shake_max_roll * shake_strength
 	)
+
+func respawn():
+	var respawn_point : Node3D = get_tree().get_first_node_in_group("Respawn")
+	global_position = respawn_point.global_position
+	stamina = MAX_STAMINA

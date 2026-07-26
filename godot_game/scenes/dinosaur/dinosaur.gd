@@ -5,6 +5,13 @@ signal target_reached
 ## Emitted the moment the dino spots the player and begins its roar.
 signal roar_emitted
 
+const STOMP_SFX := [
+	preload("res://assets/sfx/dinosaur/stomp_01.mp3"),
+	preload("res://assets/sfx/dinosaur/stomp_02.mp3"),
+	preload("res://assets/sfx/dinosaur/stomp_03.mp3"),
+	preload("res://assets/sfx/dinosaur/stomp_04.mp3")
+]
+
 @export var speed: float = 5.0
 @export var rotation_speed: float = 5.0
 ## Hard cap on sight distance. The detection Area3D defines the real shape;
@@ -16,7 +23,7 @@ signal roar_emitted
 
 @export_group("Wandering")
 ## Movement speed while patrolling. Usually slower than the chase speed.
-@export var wander_speed : float = 2.5
+@export var wander_speed : float = 3.0
 ## Group name of the Node3Ds to patrol between.
 @export var wander_group : StringName = &"WanderTarget"
 ## Seconds to pause on arrival at a target, randomised between the two.
@@ -435,3 +442,11 @@ func _stomp():
 	var force : float = stomp_shake_run if current_state == State.HUNT else stomp_shake_walk
 
 	player.add_shake(force * falloff)
+	
+	# Stomping sfx
+	var stomp_player := AudioStreamPlayer3D.new()
+	stomp_player.stream = STOMP_SFX[randi_range(0,STOMP_SFX.size() - 1)]
+	add_child(stomp_player)
+	stomp_player.finished.connect(stomp_player.queue_free)
+	stomp_player.volume_db = 2.0
+	stomp_player.play()

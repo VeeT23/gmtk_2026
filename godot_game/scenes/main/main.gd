@@ -67,24 +67,23 @@ func kill_player() -> void:
 func respawn_player() -> void:
 	print("Respawning player")
 	var player : CharacterBody3D = get_tree().get_first_node_in_group("Player")
-	var respawn_point : Node3D = get_tree().get_first_node_in_group("Respawn")
-	player.global_position = respawn_point.global_position
-	player.global_rotation = respawn_point.global_rotation
-	GameState.is_player_dead = false
+	player.respawn()
 	$Canvas/UI/DeathScreen.hide_death_screen()
 	$Canvas/UI/Transition.fade_in()
+	GameState.is_player_dead = false
 
 
 func act_trigger(key : String):
 	if key == "dino_spawn":
-		print("Moving dino")
-		var spawn = get_tree().get_first_node_in_group("DinoSpawn")
-		var target = get_tree().get_first_node_in_group("StartTarget")
-		dino = DINO_SCENE.instantiate()
-		add_child(dino)
-		dino.global_position = spawn.global_position
-		dino.clear_target()
-		dino.set_target(target.global_position)
+		if GameState.game_state["collected_bolt_cutters"]:
+			print("Moving dino")
+			var spawn = get_tree().get_first_node_in_group("DinoSpawn")
+			var target = get_tree().get_first_node_in_group("StartTarget")
+			dino = DINO_SCENE.instantiate()
+			add_child(dino)
+			dino.global_position = spawn.global_position
+			dino.clear_target()
+			dino.set_target(target.global_position)
 	if key == "walked_by_bush" and !GameState.game_state["passed_bush"]:
 		GameState.change_state("passed_bush", true)
 		GameState.queue_dialog("walked_by_bush")
