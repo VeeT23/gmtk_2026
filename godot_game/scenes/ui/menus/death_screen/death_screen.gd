@@ -33,4 +33,5 @@ func _on_press():
 
 
 func _fade_out_finished():
-	get_tree().current_scene.respawn_player()
+	if !GameState.game_state["sent_distress_signal"] and GameState.is_player_dead:
+		get_tree().current_scene.respawn_player()

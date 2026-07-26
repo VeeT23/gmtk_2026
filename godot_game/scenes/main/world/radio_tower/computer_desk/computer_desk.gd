@@ -42,5 +42,5 @@ func _on_computer_interact():
 func _on_radio_interact():
 	if GameState.game_state["repaired_computer"] and GameState.game_state["fueled_generator"]:
 		GameState.change_state("sent_distress_signal", true)
-		get_tree().current_scene.get_node("Canvas/UI/Transition").fade_out()
+		get_tree().get_first_node_in_group("Transition").fade_out()
 		r_interactable.disable()

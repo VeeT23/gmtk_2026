@@ -11,5 +11,5 @@ func _restart():
 	get_tree().change_scene_to_file("res://scenes/main/main.tscn")
 
 func _quit():
-	OS.shell_open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+	OS.shell_open("https://spatial-studio.itch.io/gmtk-2026")
 	get_tree().quit()
