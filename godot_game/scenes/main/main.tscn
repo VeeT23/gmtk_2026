@@ -259,7 +259,7 @@ metadata/_edit_group_ = true
 transform = Transform3D(-0.98236823, 0, -0.18695629, 0, 1, 0, 0.18695629, 0, -0.98236823, -3.4394226, -7.6293945e-06, 1.2681351)
 
 [node name="FuelDepot" parent="World/NavigationRegion3D/Environment" unique_id=1319942395 instance=ExtResource("17_s17dp")]
-transform = Transform3D(-0.86602545, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.86602545, -69.63794, 0, 77.19893)
+transform = Transform3D(-0.86602545, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.86602545, -69.63794, 0.122706175, 77.19893)
 
 [node name="VisitorCenter" parent="World/NavigationRegion3D/Environment" unique_id=639034094 instance=ExtResource("17_37hlw")]
 transform = Transform3D(-0.37063533, 0, -0.9287786, 0, 1, 0, 0.9287786, 0, -0.37063533, 101.57206, 0.046917796, 3.9537735)

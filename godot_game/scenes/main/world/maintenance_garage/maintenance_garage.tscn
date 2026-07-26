@@ -13,7 +13,16 @@
 [ext_resource type="PackedScene" uid="uid://0m0cs6ewoq13" path="res://assets/structure/props/metal_barrel_mp_3.glb" id="9_ssrr3"]
 [ext_resource type="PackedScene" uid="uid://dy7rkhhjvctaj" path="res://assets/structure/props/wooden_crate_6.glb" id="9_weo4h"]
 [ext_resource type="PackedScene" uid="uid://b7qndj3tq6u01" path="res://assets/structure/props/vending_machine_1.glb" id="10_vhqyx"]
+[ext_resource type="PackedScene" uid="uid://vbyla0yfija3" path="res://assets/structure/props/gas_cylinder_mx_1.glb" id="14_ln5ml"]
 [ext_resource type="PackedScene" uid="uid://fq6siq8s5534" path="res://assets/structure/props/van_1.glb" id="14_weo4h"]
+[ext_resource type="PackedScene" uid="uid://c3uujcv8o8mxh" path="res://assets/structure/props/cement_bags_mp_1_pallet_2.glb" id="15_vhqyx"]
+[ext_resource type="PackedScene" uid="uid://frnltmyp5vpi" path="res://assets/structure/props/wooden_crate_2_a.glb" id="17_arcpc"]
+[ext_resource type="PackedScene" uid="uid://cjn6wbt1jbpvb" path="res://assets/structure/props/wooden_crate_hx_2_1.glb" id="18_jsk0i"]
+[ext_resource type="PackedScene" uid="uid://c0t37nxs1s8y5" path="res://assets/structure/props/wooden_crate_hx_2_2.glb" id="19_w80rx"]
+[ext_resource type="PackedScene" uid="uid://ct33tiaxl60ja" path="res://assets/structure/props/wooden_crate_hx_3.glb" id="20_v0pr6"]
+[ext_resource type="PackedScene" uid="uid://ctabgdq55h004" path="res://assets/structure/props/wooden_crate_hx_3_1.glb" id="21_3cvr2"]
+[ext_resource type="PackedScene" uid="uid://d0caj7p4l4hvr" path="res://assets/structure/props/wooden_crate_hx_3_2.glb" id="22_d588t"]
+[ext_resource type="PackedScene" uid="uid://cbrbq237x7v81" path="res://assets/structure/props/wooden_crate_hx_4.glb" id="23_a7g6k"]
 
 [sub_resource type="Animation" id="Animation_k4ctd"]
 length = 0.001
@@ -170,6 +179,21 @@ size = Vector3(0.6008606, 6.341797, 1.485817)
 [sub_resource type="BoxShape3D" id="BoxShape3D_700ex"]
 size = Vector3(0.6779785, 6.038086, 0.6724243)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_uxbff"]
+size = Vector3(0.9561157, 2.071228, 0.6989746)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vhqyx"]
+size = Vector3(1.7955782, 1.9154587, 1.8901253)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_weo4h"]
+size = Vector3(2.4388447, 2.7310638, 6.2467804)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fxcnl"]
+size = Vector3(3.5215454, 0.75891113, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yy65u"]
+size = Vector3(1.6213379, 1.7889404, 1.4550781)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_ejnqi"]
 size = Vector3(0.3729248, 2.993042, 1.7363281)
 
@@ -185,23 +209,26 @@ size = Vector3(0.6727905, 4.097107, 3.9980469)
 [node name="MaintenanceGarage" unique_id=497981931 instance=ExtResource("1_7fn1g")]
 script = ExtResource("2_717sx")
 
-[node name="warehouse_mx_4" parent="." index="0" unique_id=2075404640]
+[node name="BoltCutters" parent="." index="0" unique_id=795448338 instance=ExtResource("4_e10an")]
+transform = Transform3D(-0.511684, 0.050955486, 0.8576615, -0.0006951485, 0.9982149, -0.059720777, -0.8591734, -0.03115437, -0.51073515, -1.8317637, 1.7662439, 11.106472)
+
+[node name="warehouse_mx_4" parent="." index="1" unique_id=400604946]
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
-[node name="door_hm_1_a_piece_1" parent="warehouse_mx_4" index="0" unique_id=1880852683]
+[node name="door_hm_1_a_piece_1" parent="warehouse_mx_4" index="0" unique_id=635716386]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1.0072507, -9.793058)
 material_overlay = ExtResource("3_k4ctd")
 
-[node name="door_hm_1_a_piece_2" parent="warehouse_mx_4" index="1" unique_id=447618517]
+[node name="door_hm_1_a_piece_2" parent="warehouse_mx_4" index="1" unique_id=1999941062]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1, -8.204749)
 material_overlay = ExtResource("3_k4ctd")
 
-[node name="garage_door_hr_4_a_piece_1" parent="warehouse_mx_4" index="2" unique_id=1222461793]
+[node name="garage_door_hr_4_a_piece_1" parent="warehouse_mx_4" index="2" unique_id=1964572913]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1.0172331, 7.023925)
 material_overlay = ExtResource("3_k4ctd")
 
-[node name="garage_door_hr_4_a_piece_2" parent="warehouse_mx_4" index="3" unique_id=1256898979]
+[node name="garage_door_hr_4_a_piece_2" parent="warehouse_mx_4" index="3" unique_id=269756434]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1.0195621, 10.949997)
 material_overlay = ExtResource("3_k4ctd")
 
@@ -211,11 +238,7 @@ libraries/ = SubResource("AnimationLibrary_j5hu7")
 [node name="GarageDoorAnimator" type="AnimationPlayer" parent="warehouse_mx_4" index="5" unique_id=1238096892]
 libraries/ = SubResource("AnimationLibrary_7ohcc")
 
-[node name="BoltCutters" parent="warehouse_mx_4" index="6" unique_id=795448338 instance=ExtResource("4_e10an")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4438541, 1.0946996, -3.1000125)
-
-[node name="Collider" type="StaticBody3D" parent="." index="1" unique_id=986722212]
-visible = false
+[node name="Collider" type="StaticBody3D" parent="." index="2" unique_id=986722212]
 collision_mask = 7
 metadata/_edit_lock_ = true
 
@@ -267,7 +290,27 @@ shape = SubResource("BoxShape3D_h1xkg")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016235352, 4.1601143, -0.009918213)
 shape = SubResource("BoxShape3D_700ex")
 
-[node name="Door" type="StaticBody3D" parent="." index="2" unique_id=604983148]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collider" index="12" unique_id=1226532456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90122586, 2.053698, -11.480916)
+shape = SubResource("BoxShape3D_uxbff")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Collider" index="13" unique_id=1818289741]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.975604, 1.196692, -11.053512)
+shape = SubResource("BoxShape3D_vhqyx")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Collider" index="14" unique_id=335654632]
+transform = Transform3D(0.99482536, 0, -0.10159953, 0, 1, 0, 0.10159953, 0, 0.99482536, 1.2607151, 2.383616, 4.808404)
+shape = SubResource("BoxShape3D_weo4h")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Collider" index="15" unique_id=1032318758]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -1.9009697, 1.365098, 11.090267)
+shape = SubResource("BoxShape3D_fxcnl")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Collider" index="16" unique_id=61554318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.175776, 1.4962637, 11.0735855)
+shape = SubResource("BoxShape3D_yy65u")
+
+[node name="Door" type="StaticBody3D" parent="." index="3" unique_id=604983148]
 visible = false
 collision_mask = 7
 metadata/_edit_lock_ = true
@@ -276,7 +319,7 @@ metadata/_edit_lock_ = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9227815, 2.291081, -8.999671)
 shape = SubResource("BoxShape3D_ejnqi")
 
-[node name="GarageDoor" type="StaticBody3D" parent="." index="3" unique_id=909163802]
+[node name="GarageDoor" type="StaticBody3D" parent="." index="4" unique_id=909163802]
 visible = false
 metadata/_edit_lock_ = true
 
@@ -284,7 +327,7 @@ metadata/_edit_lock_ = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9227815, 2.8431134, 9.005329)
 shape = SubResource("BoxShape3D_rmwlw")
 
-[node name="DoorInteractable" type="Area3D" parent="." index="4" unique_id=1449880962 node_paths=PackedStringArray("outlined_meshes")]
+[node name="DoorInteractable" type="Area3D" parent="." index="5" unique_id=1449880962 node_paths=PackedStringArray("outlined_meshes")]
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_rmji0")
@@ -299,7 +342,7 @@ metadata/_edit_lock_ = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9851232, 2.291081, -8.999671)
 shape = SubResource("BoxShape3D_7ohcc")
 
-[node name="GarageDoorInteractable" type="Area3D" parent="." index="5" unique_id=302618153 node_paths=PackedStringArray("outlined_meshes")]
+[node name="GarageDoorInteractable" type="Area3D" parent="." index="6" unique_id=302618153 node_paths=PackedStringArray("outlined_meshes")]
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_rmji0")
@@ -314,22 +357,22 @@ metadata/_edit_lock_ = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0712013, 2.8431134, 9.005329)
 shape = SubResource("BoxShape3D_ssrr3")
 
-[node name="Props" type="Node3D" parent="." index="6" unique_id=653178892]
+[node name="Props" type="Node3D" parent="." index="7" unique_id=653178892]
 
 [node name="wooden_crate_52" parent="Props" index="0" unique_id=1585949970 instance=ExtResource("8_apvxx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5159554, 1.0209961, 11.003727)
+transform = Transform3D(0.9947528, 0, 0.102308005, 0, 1, 0, -0.102308005, 0, 0.9947528, -2.8572278, 1.0209961, 11.136843)
 
 [node name="wooden_crate_62" parent="Props" index="1" unique_id=1353209767 instance=ExtResource("9_weo4h")]
-transform = Transform3D(0.73510736, 0, 0.6779507, 0, 1, 0, -0.6779507, 0, 0.73510736, -1.2323093, 1.020996, 11.055645)
+transform = Transform3D(0.34427202, 0, 0.9388699, 0, 1, 0, -0.9388699, 0, 0.34427202, -1.7266197, 1.020996, 11.055738)
 
 [node name="wooden_crate_63" parent="Props" index="2" unique_id=1346965942 instance=ExtResource("9_weo4h")]
-transform = Transform3D(0.5002768, 0, 0.8658655, 0, 1, 0, -0.8658655, 0, 0.5002768, -2.8645606, 1.020996, 9.743137)
+transform = Transform3D(0.66623944, 0, 0.7457379, 0, 1, 0, -0.7457379, 0, 0.66623944, -0.63259035, 1.020996, 11.200873)
 
 [node name="vending_machine_12" parent="Props" index="3" unique_id=894979518 instance=ExtResource("10_vhqyx")]
-transform = Transform3D(-0.09478607, 0.12180116, -0.9880183, -0.27183834, 0.95160013, 0.14339057, 0.9576635, 0.28217265, -0.057088207, -4.783618, -0.15180469, -10.968926)
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 1, -0.89908, 1.0526109, -11.490046)
 
 [node name="supply_crate_1_12" parent="Props" index="4" unique_id=1422067858 instance=ExtResource("8_ssrr3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023955107, 1.0209961, 0.58074486)
+transform = Transform3D(0.6794246, 0, -0.73374534, 0, 1, 0, 0.73374534, 0, 0.6794246, -2.6536846, 2.085633, 11.042564)
 
 [node name="carpet_mp_12" parent="Props" index="5" unique_id=484329116 instance=ExtResource("8_7ohcc")]
 transform = Transform3D(0.9024911, 0, -0.4307085, 0, 1, 0, 0.4307085, 0, 0.9024911, -1.9024017, 1.0209961, -8.435656)
@@ -341,7 +384,52 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.359602, 1.0209963, -10.521
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0576491, 1.0209961, -11.336211)
 
 [node name="metal_barrel_mp_34" parent="Props" index="8" unique_id=1214675871 instance=ExtResource("9_ssrr3")]
-transform = Transform3D(0.7024528, 0, 0.71173036, 0, 1, 0, -0.71173036, 0, 0.7024528, -2.4071274, 1.0209963, -10.494979)
+transform = Transform3D(0.7024528, 0, 0.71173036, 0, 1, 0, -0.71173036, 0, 0.7024528, -2.4292426, 1.0209962, -10.5878725)
 
-[node name="van_12" parent="." index="7" unique_id=475423996 instance=ExtResource("14_weo4h")]
-transform = Transform3D(-0.7228621, 0, -0.69099224, 0, 1, 0, 0.69099224, 0, -0.7228621, -0.4726163, 1.0235304, 4.0841527)
+[node name="gas_cylinder_mx_12" parent="Props" index="9" unique_id=1004847699 instance=ExtResource("14_ln5ml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5570657, 1.0220021, -6.791661)
+
+[node name="van_12" parent="Props" index="10" unique_id=475423996 instance=ExtResource("14_weo4h")]
+transform = Transform3D(-0.9938026, 0, 0.1111587, 0, 1, 0, -0.1111587, 0, -0.9938026, 1.2822223, 1.0235304, 4.833904)
+
+[node name="BoltCutters2" parent="Props" index="11" unique_id=1499699300 instance=ExtResource("4_e10an")]
+transform = Transform3D(-1.1313341e-08, 0.9659258, 0.2588191, 4.222196e-08, 0.25881907, -0.96592593, -1, 0, -4.3711392e-08, -0.33553636, 1.3466372, -11.394304)
+
+[node name="cement_bags_mp_1_pallet_22" parent="Props" index="12" unique_id=441910783 instance=ExtResource("15_vhqyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9853213, 1.0209961, 10.979421)
+
+[node name="gas_cylinder_mx_13" parent="Props" index="13" unique_id=1061248225 instance=ExtResource("14_ln5ml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2684915, 1.0220021, -6.462765)
+
+[node name="wooden_crate_2_a2" parent="Props" index="14" unique_id=602607774 instance=ExtResource("17_arcpc")]
+transform = Transform3D(0.44217268, 0, -0.89693, 0, 1, 0, 0.89693, 0, 0.44217268, 3.191184, 2.3431509, -9.393606)
+
+[node name="wooden_crate_52" parent="." index="8" unique_id=503647578 instance=ExtResource("8_apvxx")]
+transform = Transform3D(0.54721427, 0, -0.83699256, 0, 1, 0, 0.83699256, 0, 0.54721427, -7.466093, 0, 3.9423041)
+
+[node name="wooden_crate_62" parent="." index="9" unique_id=922734685 instance=ExtResource("9_weo4h")]
+transform = Transform3D(0.6936218, 0, 0.72033936, 0, 1, 0, -0.72033936, 0, 0.6936218, 3.0311315, 1.0209962, -1.1001682)
+
+[node name="wooden_crate_hx_2_12" parent="." index="10" unique_id=913131945 instance=ExtResource("18_jsk0i")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 3.0272384, 1.6660128, -10.0850525)
+
+[node name="wooden_crate_hx_2_22" parent="." index="11" unique_id=395261330 instance=ExtResource("19_w80rx")]
+transform = Transform3D(-3.7855173e-08, -0.8660254, 0.5, 1, -4.371139e-08, 0, 2.1855694e-08, 0.5, 0.8660254, 2.1259155, 1.7117839, -1.1395329)
+
+[node name="wooden_crate_hx_32" parent="." index="12" unique_id=74811106 instance=ExtResource("20_v0pr6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.932971, 1.0309961, -10.94931)
+
+[node name="wooden_crate_hx_3_12" parent="." index="13" unique_id=2003168210 instance=ExtResource("21_3cvr2")]
+transform = Transform3D(0.9563535, 0, -0.2922123, 0, 1, 0, 0.2922123, 0, 0.9563535, -6.025, 0, 3.152)
+
+[node name="wooden_crate_hx_3_22" parent="." index="14" unique_id=482993229 instance=ExtResource("22_d588t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6338139, 1.0309961, 0.6485251)
+
+[node name="wooden_crate_hx_42" parent="." index="15" unique_id=545335999 instance=ExtResource("23_a7g6k")]
+transform = Transform3D(0.90612143, 0, 0.4230177, 0, 1, 0, -0.4230177, 0, 0.90612143, -6.183, 0, 5.158)
+
+[node name="wooden_crate_63" parent="." index="16" unique_id=1350539200 instance=ExtResource("9_weo4h")]
+transform = Transform3D(0.9168961, 0, -0.3991259, 0, 1, 0, 0.3991259, 0, 0.9168961, 1.186321, 1.0209962, 0.9723816)
+
+[node name="BoltCutters2" parent="." index="17" unique_id=1634612409 instance=ExtResource("4_e10an")]
+transform = Transform3D(-0.511684, 0.050955486, 0.8576615, -0.0006951485, 0.9982149, -0.059720777, -0.8591734, -0.03115437, -0.51073515, 1.0268394, 1.7662439, 0.98948646)
