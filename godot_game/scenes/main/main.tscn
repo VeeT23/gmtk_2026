@@ -1631,7 +1631,7 @@ shape = SubResource("SphereShape3D_p4mrb")
 [node name="DinoNodes" type="Node3D" parent="World" unique_id=580486793]
 
 [node name="InitialSpawn" type="Node3D" parent="World/DinoNodes" unique_id=2070581856 groups=["DinoSpawn"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.063572, 1.9073486e-06, -60.77593)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.063572, 1.9073486e-06, -56.00637)
 
 [node name="Target1" type="Node3D" parent="World/DinoNodes" unique_id=1180310311 groups=["StartTarget"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.914158, 3.8146973e-06, -2.4235811)

@@ -49,7 +49,7 @@ script = ExtResource("2_dovo2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.29600775, -0.22576791)
 light_color = Color(0.99999994, 0.91213745, 0.6631901, 1)
 shadow_enabled = true
-spot_range = 27.314196
+spot_range = 40.16296
 spot_angle = 36.598763
 script = ExtResource("3_gmlin")
 
