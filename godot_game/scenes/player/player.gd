@@ -29,17 +29,15 @@ const FOOTSTEP_SOUNDS : = [
 @export var camera_crouch_position = Vector3(0,0.9,0)
 @export var camera_stand_position = Vector3(0,1.7,0)
 
-@export_group("Dinosaur Shake")
-## Distance at which the screen shake starts being felt.
-@export var shake_start_distance := 35.0
-## Distance at which the shake reaches full strength.
-@export var shake_full_distance := 8.0
-## Maximum camera offset in metres.
-@export var shake_max_offset := 0.09
-## Maximum camera roll in degrees.
-@export var shake_max_roll := 1.4
+@export_group("Screen Shake")
+## Camera offset in metres at full shake strength.
+@export var shake_max_offset := 0.45
+## Camera roll in degrees at full shake strength.
+@export var shake_max_roll := 6.0
 ## How fast the shake vibrates.
-@export var shake_speed := 22.0
+@export var shake_speed := 30.0
+## How quickly a shake impulse dies off. Higher is snappier.
+@export var shake_decay := 2.8
 
 var camera_pitch := 0.0
 var is_crouching := false
@@ -141,22 +139,14 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-## Shakes the camera harder the closer the nearest dinosaur gets.
+## Kicks the camera. Call with 0..1; the strongest active impulse wins so
+## rapid stomps don't stack into nausea.
+func add_shake(amount: float) -> void:
+	shake_strength = max(shake_strength, clampf(amount, 0.0, 1.0))
+
+## Decays whatever shake is currently active and applies it to the camera.
 func _update_shake(delta: float) -> void:
-	var nearest := INF
-	for dino in get_tree().get_nodes_in_group("Dinosaur"):
-		if dino is Node3D:
-			nearest = min(nearest, global_position.distance_to(dino.global_position))
-
-	var target_strength := 0.0
-	if nearest < INF:
-		target_strength = clampf(
-			inverse_lerp(shake_start_distance, shake_full_distance, nearest), 0.0, 1.0
-		)
-		# Ease in so distant rumble stays subtle and close range hits hard.
-		target_strength = target_strength * target_strength
-
-	shake_strength = lerp(shake_strength, target_strength, 4.0 * delta)
+	shake_strength = move_toward(shake_strength, 0.0, shake_decay * delta * max(shake_strength, 0.35))
 	shake_time += delta * shake_speed
 
 	if shake_strength < 0.001:
@@ -164,7 +154,8 @@ func _update_shake(delta: float) -> void:
 		camera.rotation.z = 0.0
 		return
 
-	var amount := shake_strength * shake_max_offset
+	# Simplex noise rarely reaches +-1.0, so scale up to make the export values honest.
+	var amount := shake_strength * shake_max_offset * 1.6
 	var offset := Vector3(
 		shake_noise.get_noise_2d(shake_time, 0.0) * amount,
 		shake_noise.get_noise_2d(shake_time, 100.0) * amount,

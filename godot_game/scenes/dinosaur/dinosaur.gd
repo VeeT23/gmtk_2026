@@ -27,6 +27,16 @@ signal target_reached
 ## If true, spotting the player cancels a target set via set_target().
 @export var hunt_interrupts_set_target : bool = true
 
+@export_group("Stomp Shake")
+## Beyond this distance a footfall doesn't shake the camera at all.
+@export var stomp_shake_distance : float = 40.0
+## Shake strength (0..1) of a footfall while chasing, measured at point blank.
+@export var stomp_shake_run : float = 1.0
+## Shake strength (0..1) of a footfall while patrolling.
+@export var stomp_shake_walk : float = 0.7
+## Falloff curve. 1.0 = linear, below 1.0 carries further, above 1.0 drops off fast.
+@export_range(0.2, 3.0, 0.05) var stomp_falloff_exponent : float = 0.6
+
 @export_group("Line of Sight")
 ## Optional. Assign a node placed at the dino's head to cast sight rays from.
 ## If left empty, head_offset is used instead.
@@ -322,5 +332,20 @@ func _process_hunt(delta: float) -> void:
 	_follow_path(delta, speed)
 
 
+## Called from the walk/run animations on each footfall.
+## Shakes the player's camera based on how far away they are and how fast we're moving.
 func _stomp():
-	print("stomp")
+	if player == null or not player.has_method("add_shake"):
+		return
+
+	var distance := global_position.distance_to(player.global_position)
+	if distance > stomp_shake_distance:
+		return
+
+	# Exponent below 1.0 keeps the shake strong well out into the distance.
+	var falloff := pow(1.0 - (distance / stomp_shake_distance), stomp_falloff_exponent)
+
+	# Running footfalls hit noticeably harder than a slow patrol.
+	var force : float = stomp_shake_run if current_state == State.HUNT else stomp_shake_walk
+
+	player.add_shake(force * falloff)
