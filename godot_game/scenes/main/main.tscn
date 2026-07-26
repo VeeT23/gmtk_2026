@@ -1658,6 +1658,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93.20107, 0, 42.608192)
 [node name="WanderTarget7" type="Node3D" parent="World/DinoNodes" unique_id=23391473 groups=["WanderTarget"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.39344, 0, -73.46311)
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="World" unique_id=1093896915]
+
 [node name="Canvas" type="Node" parent="." unique_id=1795057792]
 
 [node name="Postprocessing" type="CanvasLayer" parent="Canvas" unique_id=1115108708]
