@@ -9,6 +9,19 @@ extends CharacterBody3D
 @export var walk_animation : String = "DinosaurArmature|WalkAnimation"
 @export var run_animation  : String = "DinosaurArmature|RunAnimation"
 
+@export_group("Wandering")
+## Movement speed while patrolling. Usually slower than the chase speed.
+@export var wander_speed : float = 2.5
+## Group name of the Node3Ds to patrol between.
+@export var wander_group : StringName = &"WanderTarget"
+## Seconds to pause on arrival at a target, randomised between the two.
+@export var wander_pause_min : float = 1.5
+@export var wander_pause_max : float = 4.0
+## Degrees per second the dino sweeps its head around while paused.
+@export var scan_speed : float = 35.0
+## Pick the next target at random instead of walking them in order.
+@export var wander_randomly : bool = true
+
 @export_group("Line of Sight")
 ## Optional. Assign a node placed at the dino's head to cast sight rays from.
 ## If left empty, head_offset is used instead.
@@ -28,8 +41,9 @@ extends CharacterBody3D
 	Vector3(0.0, 0.2, 0.0), # feet
 ]
 
-enum State { IDLE, HUNT }
+enum State { IDLE, WANDER, HUNT }
 var current_state: State = State.IDLE
+var previous_state: State = State.IDLE
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var anim_player: AnimationPlayer = $dino/AnimationPlayer
@@ -46,6 +60,11 @@ var has_line_of_sight: bool = false
 var last_seen_timer: float = 0.0
 var last_known_position: Vector3 = Vector3.ZERO
 
+var wander_targets: Array[Node3D] = []
+var wander_index: int = -1
+var wander_pause_timer: float = 0.0
+var scan_direction: float = 1.0
+
 func _ready() -> void:
 	add_to_group("Dinosaur")
 	kill_box.body_entered.connect(_kill_box_entered)
@@ -58,6 +77,48 @@ func _ready() -> void:
 
 	nav_agent.path_desired_distance = 0.5
 	nav_agent.target_desired_distance = 1.0
+
+	_collect_wander_targets()
+
+## Grabs every patrol point in the group and starts with the closest one.
+func _collect_wander_targets() -> void:
+	wander_targets.clear()
+	for node in get_tree().get_nodes_in_group(wander_group):
+		if node is Node3D:
+			wander_targets.append(node)
+
+	if wander_targets.is_empty():
+		push_warning("Dinosaur: no nodes found in group '%s', wandering disabled." % wander_group)
+		return
+
+	var closest := 0
+	var closest_dist := INF
+	for i in wander_targets.size():
+		var d := global_position.distance_to(wander_targets[i].global_position)
+		if d < closest_dist:
+			closest_dist = d
+			closest = i
+	wander_index = closest
+	_set_nav_target(wander_targets[wander_index].global_position)
+
+## Picks the next patrol point, never the one we just left.
+func _advance_wander_target() -> void:
+	if wander_targets.size() <= 1:
+		return
+
+	if wander_randomly:
+		var next := wander_index
+		while next == wander_index:
+			next = randi() % wander_targets.size()
+		wander_index = next
+	else:
+		wander_index = (wander_index + 1) % wander_targets.size()
+
+	_set_nav_target(wander_targets[wander_index].global_position)
+
+func _set_nav_target(target : Vector3) -> void:
+	target.y = global_position.y
+	nav_agent.target_position = target
 
 func _detection_body_entered(body : Node3D) -> void:
 	if body == player:
@@ -79,6 +140,8 @@ func _physics_process(delta: float) -> void:
 	match current_state:
 		State.IDLE:
 			_process_idle(delta)
+		State.WANDER:
+			_process_wander(delta)
 		State.HUNT:
 			_process_hunt(delta)
 	move_and_slide()
@@ -126,44 +189,82 @@ func _update_line_of_sight(delta: float) -> void:
 		last_seen_timer = max(last_seen_timer - delta, 0.0)
 
 func _update_state() -> void:
-	if player == null:
-		current_state = State.IDLE
-		return
+	previous_state = current_state
 
 	# has_line_of_sight is only ever true while the player is inside the cone,
 	# so this covers proximity + FOV + actual visibility.
 	# Keep hunting briefly after losing sight so the dino doesn't stop dead.
-	current_state = State.HUNT if (has_line_of_sight or last_seen_timer > 0.0) else State.IDLE
+	if player != null and (has_line_of_sight or last_seen_timer > 0.0):
+		current_state = State.HUNT
+	elif not wander_targets.is_empty():
+		current_state = State.WANDER
+	else:
+		current_state = State.IDLE
 
-func _process_idle(_delta: float) -> void:
+	# Coming out of a chase, resume the patrol from wherever we ended up.
+	if current_state == State.WANDER and previous_state == State.HUNT:
+		wander_pause_timer = randf_range(wander_pause_min, wander_pause_max)
+		_advance_wander_target()
+
+func _stop_moving() -> void:
 	velocity.x = move_toward(velocity.x, 0, speed)
 	velocity.z = move_toward(velocity.z, 0, speed)
 
+func _play_animation(anim : String) -> void:
+	if anim != "" and anim_player.has_animation(anim) \
+		and anim_player.current_animation != anim:
+		anim_player.play(anim)
+
+## Follows the current nav path. Returns false once there's nowhere left to go.
+func _follow_path(delta: float, move_speed: float) -> bool:
+	if nav_agent.is_navigation_finished():
+		_stop_moving()
+		return false
+
+	var next_point : Vector3 = nav_agent.get_next_path_position()
+	var direction : Vector3 = (next_point - global_transform.origin).normalized()
+
+	if direction.length_squared() > 0.001:
+		velocity.x = direction.x * move_speed
+		velocity.z = direction.z * move_speed
+		var target_rotation := atan2(direction.x, direction.z)
+		rotation.y = rotate_toward(rotation.y, target_rotation, rotation_speed * delta)
+	return true
+
+func _process_idle(delta: float) -> void:
+	_stop_moving()
+	_scan_around(delta)
+
+## Sweeps the vision cone left and right so a stationary dino still feels alert.
+func _scan_around(delta: float) -> void:
+	rotation.y += deg_to_rad(scan_speed) * scan_direction * delta
+	if randf() < 0.4 * delta:
+		scan_direction *= -1.0
+
+func _process_wander(delta: float) -> void:
+	# Pause and look around at each waypoint before moving on.
+	if wander_pause_timer > 0.0:
+		wander_pause_timer -= delta
+		_stop_moving()
+		_scan_around(delta)
+		if wander_pause_timer <= 0.0:
+			_set_nav_target(wander_targets[wander_index].global_position)
+		return
+
+	_play_animation(walk_animation)
+
+	if not _follow_path(delta, wander_speed):
+		# Arrived. Rest here, then head for the next point.
+		wander_pause_timer = randf_range(wander_pause_min, wander_pause_max)
+		_advance_wander_target()
+
 func _process_hunt(delta: float) -> void:
+	wander_pause_timer = 0.0
 	path_timer -= delta
 	if path_timer <= 0.0:
 		# If the player is hidden, head for where they were last seen.
-		var target = player.global_position if has_line_of_sight else last_known_position
-		target.y = global_position.y
-		nav_agent.target_position = target
+		_set_nav_target(player.global_position if has_line_of_sight else last_known_position)
 		path_timer = path_update_interval
 
-	if nav_agent.is_navigation_finished():
-		velocity.x = move_toward(velocity.x, 0, speed)
-		velocity.z = move_toward(velocity.z, 0, speed)
-		#if anim_player.current_animation != "idle":
-		#	anim_player.play("idle")
-		return
-	
-	if anim_player.current_animation != walk_animation:
-		anim_player.play(walk_animation)
-	
-	var next_point = nav_agent.get_next_path_position()
-	
-	var direction = (next_point - global_transform.origin)
-	direction = direction.normalized()
-	
-	if direction.length_squared() > 0.001:
-		velocity = direction * speed
-		var target_rotation = atan2(direction.x, direction.z)
-		rotation.y = rotate_toward(rotation.y, target_rotation, rotation_speed * delta)
+	_play_animation(run_animation if run_animation != "" else walk_animation)
+	_follow_path(delta, speed)
