@@ -12,6 +12,8 @@ func _finished(animation):
 		fade_out_finished.emit()
 
 func _ready() -> void:
+	# Other scripts reach this via get_first_node_in_group("Transition").
+	add_to_group("Transition")
 	$ColorRect.color.a = 1.0
 	animator.animation_finished.connect(_finished)
 	fade_in()
