@@ -373,7 +373,7 @@ func _begin_roar() -> void:
 	roar_emitted.emit()
 	velocity.x = 0.0
 	velocity.z = 0.0
-
+	anim_player.stop()
 	if roar_animation != "":
 		_play_animation(roar_animation)
 
