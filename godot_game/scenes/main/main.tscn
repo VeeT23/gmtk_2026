@@ -177,6 +177,7 @@ metadata/_edit_lock_ = true
 
 [node name="Sun" type="DirectionalLight3D" parent="World/NavigationRegion3D/Environment" unique_id=2059617183]
 transform = Transform3D(1, 0, 0, 0, -0.2801474, 0.959957, 0, -0.959957, -0.2801474, 0, 0, 0)
+visible = false
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="World/NavigationRegion3D/Environment" unique_id=1515843267]
