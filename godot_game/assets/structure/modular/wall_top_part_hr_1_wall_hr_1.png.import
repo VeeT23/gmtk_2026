@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cg6b08u5r57iv"
 path.s3tc="res://.godot/imported/wall_top_part_hr_1_wall_hr_1.png-b76088aca8cdee15255dd25d04f3f1a8.s3tc.ctex"
+path.etc2="res://.godot/imported/wall_top_part_hr_1_wall_hr_1.png-b76088aca8cdee15255dd25d04f3f1a8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/modular/wall_top_part_hr_1_wall_hr_1.png"
-dest_files=["res://.godot/imported/wall_top_part_hr_1_wall_hr_1.png-b76088aca8cdee15255dd25d04f3f1a8.s3tc.ctex"]
+dest_files=["res://.godot/imported/wall_top_part_hr_1_wall_hr_1.png-b76088aca8cdee15255dd25d04f3f1a8.s3tc.ctex", "res://.godot/imported/wall_top_part_hr_1_wall_hr_1.png-b76088aca8cdee15255dd25d04f3f1a8.etc2.ctex"]
 
 [params]
 

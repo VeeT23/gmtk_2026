@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://djuiaib7b27nb"
 path.s3tc="res://.godot/imported/table_large_3_3_wood_5.png-6a7f89866b2743db801eb7b1c8eb7add.s3tc.ctex"
+path.etc2="res://.godot/imported/table_large_3_3_wood_5.png-6a7f89866b2743db801eb7b1c8eb7add.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/props/table_large_3_3_wood_5.png"
-dest_files=["res://.godot/imported/table_large_3_3_wood_5.png-6a7f89866b2743db801eb7b1c8eb7add.s3tc.ctex"]
+dest_files=["res://.godot/imported/table_large_3_3_wood_5.png-6a7f89866b2743db801eb7b1c8eb7add.s3tc.ctex", "res://.godot/imported/table_large_3_3_wood_5.png-6a7f89866b2743db801eb7b1c8eb7add.etc2.ctex"]
 
 [params]
 

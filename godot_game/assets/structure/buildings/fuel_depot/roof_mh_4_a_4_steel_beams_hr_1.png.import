@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dg1ls2i5mud13"
 path.s3tc="res://.godot/imported/roof_mh_4_a_4_steel_beams_hr_1.png-4e1c013ffe25d9479c1bd3f525c20d81.s3tc.ctex"
+path.etc2="res://.godot/imported/roof_mh_4_a_4_steel_beams_hr_1.png-4e1c013ffe25d9479c1bd3f525c20d81.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/buildings/fuel_depot/roof_mh_4_a_4_steel_beams_hr_1.png"
-dest_files=["res://.godot/imported/roof_mh_4_a_4_steel_beams_hr_1.png-4e1c013ffe25d9479c1bd3f525c20d81.s3tc.ctex"]
+dest_files=["res://.godot/imported/roof_mh_4_a_4_steel_beams_hr_1.png-4e1c013ffe25d9479c1bd3f525c20d81.s3tc.ctex", "res://.godot/imported/roof_mh_4_a_4_steel_beams_hr_1.png-4e1c013ffe25d9479c1bd3f525c20d81.etc2.ctex"]
 
 [params]
 

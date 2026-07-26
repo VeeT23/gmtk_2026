@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbcc8b4ctxrda"
 path.s3tc="res://.godot/imported/tree_5_branch_1.png-ed6bd6f2acf0a69c5e51aac7a15e35a2.s3tc.ctex"
+path.etc2="res://.godot/imported/tree_5_branch_1.png-ed6bd6f2acf0a69c5e51aac7a15e35a2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/terrain/foliage/trees/tree_5_branch_1.png"
-dest_files=["res://.godot/imported/tree_5_branch_1.png-ed6bd6f2acf0a69c5e51aac7a15e35a2.s3tc.ctex"]
+dest_files=["res://.godot/imported/tree_5_branch_1.png-ed6bd6f2acf0a69c5e51aac7a15e35a2.s3tc.ctex", "res://.godot/imported/tree_5_branch_1.png-ed6bd6f2acf0a69c5e51aac7a15e35a2.etc2.ctex"]
 
 [params]
 

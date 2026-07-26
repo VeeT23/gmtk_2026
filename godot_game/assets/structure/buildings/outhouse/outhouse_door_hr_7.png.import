@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3c82hpd7mk1c"
 path.s3tc="res://.godot/imported/outhouse_door_hr_7.png-b768b52dd23df55af6a355b1c1c3a70c.s3tc.ctex"
+path.etc2="res://.godot/imported/outhouse_door_hr_7.png-b768b52dd23df55af6a355b1c1c3a70c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/buildings/outhouse/outhouse_door_hr_7.png"
-dest_files=["res://.godot/imported/outhouse_door_hr_7.png-b768b52dd23df55af6a355b1c1c3a70c.s3tc.ctex"]
+dest_files=["res://.godot/imported/outhouse_door_hr_7.png-b768b52dd23df55af6a355b1c1c3a70c.s3tc.ctex", "res://.godot/imported/outhouse_door_hr_7.png-b768b52dd23df55af6a355b1c1c3a70c.etc2.ctex"]
 
 [params]
 

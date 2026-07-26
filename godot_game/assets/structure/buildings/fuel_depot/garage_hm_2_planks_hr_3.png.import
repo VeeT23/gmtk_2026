@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cuq63l6chl7yc"
 path.s3tc="res://.godot/imported/garage_hm_2_planks_hr_3.png-42719480ac5cb42235bb9b89a0bbf657.s3tc.ctex"
+path.etc2="res://.godot/imported/garage_hm_2_planks_hr_3.png-42719480ac5cb42235bb9b89a0bbf657.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/buildings/fuel_depot/garage_hm_2_planks_hr_3.png"
-dest_files=["res://.godot/imported/garage_hm_2_planks_hr_3.png-42719480ac5cb42235bb9b89a0bbf657.s3tc.ctex"]
+dest_files=["res://.godot/imported/garage_hm_2_planks_hr_3.png-42719480ac5cb42235bb9b89a0bbf657.s3tc.ctex", "res://.godot/imported/garage_hm_2_planks_hr_3.png-42719480ac5cb42235bb9b89a0bbf657.etc2.ctex"]
 
 [params]
 

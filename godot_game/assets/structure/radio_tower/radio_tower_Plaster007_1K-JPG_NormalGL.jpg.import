@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cps0whmmkn5d5"
 path.s3tc="res://.godot/imported/radio_tower_Plaster007_1K-JPG_NormalGL.jpg-d8bcf573805f3e49c31b845215bc235e.s3tc.ctex"
+path.etc2="res://.godot/imported/radio_tower_Plaster007_1K-JPG_NormalGL.jpg-d8bcf573805f3e49c31b845215bc235e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/radio_tower/radio_tower_Plaster007_1K-JPG_NormalGL.jpg"
-dest_files=["res://.godot/imported/radio_tower_Plaster007_1K-JPG_NormalGL.jpg-d8bcf573805f3e49c31b845215bc235e.s3tc.ctex"]
+dest_files=["res://.godot/imported/radio_tower_Plaster007_1K-JPG_NormalGL.jpg-d8bcf573805f3e49c31b845215bc235e.s3tc.ctex", "res://.godot/imported/radio_tower_Plaster007_1K-JPG_NormalGL.jpg-d8bcf573805f3e49c31b845215bc235e.etc2.ctex"]
 
 [params]
 

@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdsm5jupsgilm"
 path.s3tc="res://.godot/imported/floppy_disc_3_floppy_disc_3.png-84f25cd8eaacabe6628b8f4134396b0e.s3tc.ctex"
+path.etc2="res://.godot/imported/floppy_disc_3_floppy_disc_3.png-84f25cd8eaacabe6628b8f4134396b0e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/items/computer_parts/floppy_disc_3_floppy_disc_3.png"
-dest_files=["res://.godot/imported/floppy_disc_3_floppy_disc_3.png-84f25cd8eaacabe6628b8f4134396b0e.s3tc.ctex"]
+dest_files=["res://.godot/imported/floppy_disc_3_floppy_disc_3.png-84f25cd8eaacabe6628b8f4134396b0e.s3tc.ctex", "res://.godot/imported/floppy_disc_3_floppy_disc_3.png-84f25cd8eaacabe6628b8f4134396b0e.etc2.ctex"]
 
 [params]
 

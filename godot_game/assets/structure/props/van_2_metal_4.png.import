@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://brbom47hfq110"
 path.s3tc="res://.godot/imported/van_2_metal_4.png-0da486f1494bd6f095e203f2c97956e0.s3tc.ctex"
+path.etc2="res://.godot/imported/van_2_metal_4.png-0da486f1494bd6f095e203f2c97956e0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/props/van_2_metal_4.png"
-dest_files=["res://.godot/imported/van_2_metal_4.png-0da486f1494bd6f095e203f2c97956e0.s3tc.ctex"]
+dest_files=["res://.godot/imported/van_2_metal_4.png-0da486f1494bd6f095e203f2c97956e0.s3tc.ctex", "res://.godot/imported/van_2_metal_4.png-0da486f1494bd6f095e203f2c97956e0.etc2.ctex"]
 
 [params]
 

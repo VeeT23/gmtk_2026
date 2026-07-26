@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2tb1b5nn5nme"
 path.s3tc="res://.godot/imported/macrothorax_0.png-c2dd50628d67ec6766bd089b71959ea4.s3tc.ctex"
+path.etc2="res://.godot/imported/macrothorax_0.png-c2dd50628d67ec6766bd089b71959ea4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/dinosaur/macrothorax_0.png"
-dest_files=["res://.godot/imported/macrothorax_0.png-c2dd50628d67ec6766bd089b71959ea4.s3tc.ctex"]
+dest_files=["res://.godot/imported/macrothorax_0.png-c2dd50628d67ec6766bd089b71959ea4.s3tc.ctex", "res://.godot/imported/macrothorax_0.png-c2dd50628d67ec6766bd089b71959ea4.etc2.ctex"]
 
 [params]
 

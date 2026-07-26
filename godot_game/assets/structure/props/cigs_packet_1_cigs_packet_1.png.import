@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfooloh30twtc"
 path.s3tc="res://.godot/imported/cigs_packet_1_cigs_packet_1.png-14da1bde0b06d5326b2544f3b9d27628.s3tc.ctex"
+path.etc2="res://.godot/imported/cigs_packet_1_cigs_packet_1.png-14da1bde0b06d5326b2544f3b9d27628.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/props/cigs_packet_1_cigs_packet_1.png"
-dest_files=["res://.godot/imported/cigs_packet_1_cigs_packet_1.png-14da1bde0b06d5326b2544f3b9d27628.s3tc.ctex"]
+dest_files=["res://.godot/imported/cigs_packet_1_cigs_packet_1.png-14da1bde0b06d5326b2544f3b9d27628.s3tc.ctex", "res://.godot/imported/cigs_packet_1_cigs_packet_1.png-14da1bde0b06d5326b2544f3b9d27628.etc2.ctex"]
 
 [params]
 

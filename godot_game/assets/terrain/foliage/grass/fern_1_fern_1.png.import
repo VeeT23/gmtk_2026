@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dt5kksauissot"
 path.s3tc="res://.godot/imported/fern_1_fern_1.png-180651ad1c419e2daed33a56a05596a6.s3tc.ctex"
+path.etc2="res://.godot/imported/fern_1_fern_1.png-180651ad1c419e2daed33a56a05596a6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/terrain/foliage/grass/fern_1_fern_1.png"
-dest_files=["res://.godot/imported/fern_1_fern_1.png-180651ad1c419e2daed33a56a05596a6.s3tc.ctex"]
+dest_files=["res://.godot/imported/fern_1_fern_1.png-180651ad1c419e2daed33a56a05596a6.s3tc.ctex", "res://.godot/imported/fern_1_fern_1.png-180651ad1c419e2daed33a56a05596a6.etc2.ctex"]
 
 [params]
 

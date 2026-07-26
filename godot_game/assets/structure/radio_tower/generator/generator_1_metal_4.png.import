@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://4o5w6kvyfdux"
 path.s3tc="res://.godot/imported/generator_1_metal_4.png-f7b6b9822fa65f871268287c7f4a32af.s3tc.ctex"
+path.etc2="res://.godot/imported/generator_1_metal_4.png-f7b6b9822fa65f871268287c7f4a32af.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/radio_tower/generator/generator_1_metal_4.png"
-dest_files=["res://.godot/imported/generator_1_metal_4.png-f7b6b9822fa65f871268287c7f4a32af.s3tc.ctex"]
+dest_files=["res://.godot/imported/generator_1_metal_4.png-f7b6b9822fa65f871268287c7f4a32af.s3tc.ctex", "res://.godot/imported/generator_1_metal_4.png-f7b6b9822fa65f871268287c7f4a32af.etc2.ctex"]
 
 [params]
 

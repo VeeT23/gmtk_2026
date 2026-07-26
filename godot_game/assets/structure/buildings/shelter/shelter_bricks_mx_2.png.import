@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://brev2rvinaeh3"
 path.s3tc="res://.godot/imported/shelter_bricks_mx_2.png-528ae07faaed1fbd624ae62ab412d26c.s3tc.ctex"
+path.etc2="res://.godot/imported/shelter_bricks_mx_2.png-528ae07faaed1fbd624ae62ab412d26c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/buildings/shelter/shelter_bricks_mx_2.png"
-dest_files=["res://.godot/imported/shelter_bricks_mx_2.png-528ae07faaed1fbd624ae62ab412d26c.s3tc.ctex"]
+dest_files=["res://.godot/imported/shelter_bricks_mx_2.png-528ae07faaed1fbd624ae62ab412d26c.s3tc.ctex", "res://.godot/imported/shelter_bricks_mx_2.png-528ae07faaed1fbd624ae62ab412d26c.etc2.ctex"]
 
 [params]
 

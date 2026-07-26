@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bews6vqpvaqw7"
 path.s3tc="res://.godot/imported/radio_tower_Concrete044D_1K-JPG_Metalness-Concrete044D_1K-JPG_Roughness.png-18d8fa80a563435420e7991453ec4998.s3tc.ctex"
+path.etc2="res://.godot/imported/radio_tower_Concrete044D_1K-JPG_Metalness-Concrete044D_1K-JPG_Roughness.png-18d8fa80a563435420e7991453ec4998.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/radio_tower/radio_tower_Concrete044D_1K-JPG_Metalness-Concrete044D_1K-JPG_Roughness.png"
-dest_files=["res://.godot/imported/radio_tower_Concrete044D_1K-JPG_Metalness-Concrete044D_1K-JPG_Roughness.png-18d8fa80a563435420e7991453ec4998.s3tc.ctex"]
+dest_files=["res://.godot/imported/radio_tower_Concrete044D_1K-JPG_Metalness-Concrete044D_1K-JPG_Roughness.png-18d8fa80a563435420e7991453ec4998.s3tc.ctex", "res://.godot/imported/radio_tower_Concrete044D_1K-JPG_Metalness-Concrete044D_1K-JPG_Roughness.png-18d8fa80a563435420e7991453ec4998.etc2.ctex"]
 
 [params]
 

@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3vx6itl6sc3f"
 path.s3tc="res://.godot/imported/ceiling_fan_mp_1_1_light_off_plastic_mp_3.png-6241f55f6145deb735c1b0e2ed2cc29c.s3tc.ctex"
+path.etc2="res://.godot/imported/ceiling_fan_mp_1_1_light_off_plastic_mp_3.png-6241f55f6145deb735c1b0e2ed2cc29c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://scenes/main/world/visitor_center/ceiling_fan_mp_1_1_light_off_plastic_mp_3.png"
-dest_files=["res://.godot/imported/ceiling_fan_mp_1_1_light_off_plastic_mp_3.png-6241f55f6145deb735c1b0e2ed2cc29c.s3tc.ctex"]
+dest_files=["res://.godot/imported/ceiling_fan_mp_1_1_light_off_plastic_mp_3.png-6241f55f6145deb735c1b0e2ed2cc29c.s3tc.ctex", "res://.godot/imported/ceiling_fan_mp_1_1_light_off_plastic_mp_3.png-6241f55f6145deb735c1b0e2ed2cc29c.etc2.ctex"]
 
 [params]
 

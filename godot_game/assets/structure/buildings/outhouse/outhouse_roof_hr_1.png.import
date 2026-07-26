@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bspodqgkvxn11"
 path.s3tc="res://.godot/imported/outhouse_roof_hr_1.png-309a2b32b642a502a42476c9fae421a0.s3tc.ctex"
+path.etc2="res://.godot/imported/outhouse_roof_hr_1.png-309a2b32b642a502a42476c9fae421a0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/buildings/outhouse/outhouse_roof_hr_1.png"
-dest_files=["res://.godot/imported/outhouse_roof_hr_1.png-309a2b32b642a502a42476c9fae421a0.s3tc.ctex"]
+dest_files=["res://.godot/imported/outhouse_roof_hr_1.png-309a2b32b642a502a42476c9fae421a0.s3tc.ctex", "res://.godot/imported/outhouse_roof_hr_1.png-309a2b32b642a502a42476c9fae421a0.etc2.ctex"]
 
 [params]
 

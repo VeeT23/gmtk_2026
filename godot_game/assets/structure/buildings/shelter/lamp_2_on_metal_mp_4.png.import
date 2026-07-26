@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://1ryvofpiqhay"
 path.s3tc="res://.godot/imported/lamp_2_on_metal_mp_4.png-351a0d610a91d9382e3c7a9f113ef5df.s3tc.ctex"
+path.etc2="res://.godot/imported/lamp_2_on_metal_mp_4.png-351a0d610a91d9382e3c7a9f113ef5df.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/buildings/shelter/lamp_2_on_metal_mp_4.png"
-dest_files=["res://.godot/imported/lamp_2_on_metal_mp_4.png-351a0d610a91d9382e3c7a9f113ef5df.s3tc.ctex"]
+dest_files=["res://.godot/imported/lamp_2_on_metal_mp_4.png-351a0d610a91d9382e3c7a9f113ef5df.s3tc.ctex", "res://.godot/imported/lamp_2_on_metal_mp_4.png-351a0d610a91d9382e3c7a9f113ef5df.etc2.ctex"]
 
 [params]
 

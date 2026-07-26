@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cey33h3c4hjcy"
 path.s3tc="res://.godot/imported/maintenance_garage_garage_door_hr_4.png-bf98b1bc2bbe9b0ba6a71d0993fc9ea1.s3tc.ctex"
+path.etc2="res://.godot/imported/maintenance_garage_garage_door_hr_4.png-bf98b1bc2bbe9b0ba6a71d0993fc9ea1.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/buildings/maintenance_garage/maintenance_garage_garage_door_hr_4.png"
-dest_files=["res://.godot/imported/maintenance_garage_garage_door_hr_4.png-bf98b1bc2bbe9b0ba6a71d0993fc9ea1.s3tc.ctex"]
+dest_files=["res://.godot/imported/maintenance_garage_garage_door_hr_4.png-bf98b1bc2bbe9b0ba6a71d0993fc9ea1.s3tc.ctex", "res://.godot/imported/maintenance_garage_garage_door_hr_4.png-bf98b1bc2bbe9b0ba6a71d0993fc9ea1.etc2.ctex"]
 
 [params]
 

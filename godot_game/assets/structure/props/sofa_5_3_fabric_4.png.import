@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckk7xtudu6nfq"
 path.s3tc="res://.godot/imported/sofa_5_3_fabric_4.png-a126c2fbe64b925b050f9eb2ef928096.s3tc.ctex"
+path.etc2="res://.godot/imported/sofa_5_3_fabric_4.png-a126c2fbe64b925b050f9eb2ef928096.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/props/sofa_5_3_fabric_4.png"
-dest_files=["res://.godot/imported/sofa_5_3_fabric_4.png-a126c2fbe64b925b050f9eb2ef928096.s3tc.ctex"]
+dest_files=["res://.godot/imported/sofa_5_3_fabric_4.png-a126c2fbe64b925b050f9eb2ef928096.s3tc.ctex", "res://.godot/imported/sofa_5_3_fabric_4.png-a126c2fbe64b925b050f9eb2ef928096.etc2.ctex"]
 
 [params]
 

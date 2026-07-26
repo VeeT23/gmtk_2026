@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4fmdcarw6hdf"
 path.s3tc="res://.godot/imported/window_hr_2_metal_hr_2.png-daf70dcb098f339a5a180b0da6ddf1a9.s3tc.ctex"
+path.etc2="res://.godot/imported/window_hr_2_metal_hr_2.png-daf70dcb098f339a5a180b0da6ddf1a9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/modular/window_hr_2_metal_hr_2.png"
-dest_files=["res://.godot/imported/window_hr_2_metal_hr_2.png-daf70dcb098f339a5a180b0da6ddf1a9.s3tc.ctex"]
+dest_files=["res://.godot/imported/window_hr_2_metal_hr_2.png-daf70dcb098f339a5a180b0da6ddf1a9.s3tc.ctex", "res://.godot/imported/window_hr_2_metal_hr_2.png-daf70dcb098f339a5a180b0da6ddf1a9.etc2.ctex"]
 
 [params]
 

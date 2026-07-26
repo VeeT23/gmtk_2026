@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dneecyvubu15r"
 path.s3tc="res://.godot/imported/tree_stump_1_log_ends_1.png-d36320122629ab35bb740c31bd75542c.s3tc.ctex"
+path.etc2="res://.godot/imported/tree_stump_1_log_ends_1.png-d36320122629ab35bb740c31bd75542c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/terrain/debris/tree_stump_1_log_ends_1.png"
-dest_files=["res://.godot/imported/tree_stump_1_log_ends_1.png-d36320122629ab35bb740c31bd75542c.s3tc.ctex"]
+dest_files=["res://.godot/imported/tree_stump_1_log_ends_1.png-d36320122629ab35bb740c31bd75542c.s3tc.ctex", "res://.godot/imported/tree_stump_1_log_ends_1.png-d36320122629ab35bb740c31bd75542c.etc2.ctex"]
 
 [params]
 

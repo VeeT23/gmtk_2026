@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvnxs165etio1"
 path.s3tc="res://.godot/imported/floor_ceiling_hr_5_m1a_1_concrete_hr_1.png-c78bcfb31b36b3e339d7a043cb0b3c5b.s3tc.ctex"
+path.etc2="res://.godot/imported/floor_ceiling_hr_5_m1a_1_concrete_hr_1.png-c78bcfb31b36b3e339d7a043cb0b3c5b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/modular/floor_ceiling_hr_5_m1a_1_concrete_hr_1.png"
-dest_files=["res://.godot/imported/floor_ceiling_hr_5_m1a_1_concrete_hr_1.png-c78bcfb31b36b3e339d7a043cb0b3c5b.s3tc.ctex"]
+dest_files=["res://.godot/imported/floor_ceiling_hr_5_m1a_1_concrete_hr_1.png-c78bcfb31b36b3e339d7a043cb0b3c5b.s3tc.ctex", "res://.godot/imported/floor_ceiling_hr_5_m1a_1_concrete_hr_1.png-c78bcfb31b36b3e339d7a043cb0b3c5b.etc2.ctex"]
 
 [params]
 

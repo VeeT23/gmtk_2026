@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfqs7fgbdqosj"
 path.s3tc="res://.godot/imported/pcb_4_pcb_4.png-b6bc9456971117feaad32f8fd4ca13c8.s3tc.ctex"
+path.etc2="res://.godot/imported/pcb_4_pcb_4.png-b6bc9456971117feaad32f8fd4ca13c8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/items/computer_parts/pcb_4_pcb_4.png"
-dest_files=["res://.godot/imported/pcb_4_pcb_4.png-b6bc9456971117feaad32f8fd4ca13c8.s3tc.ctex"]
+dest_files=["res://.godot/imported/pcb_4_pcb_4.png-b6bc9456971117feaad32f8fd4ca13c8.s3tc.ctex", "res://.godot/imported/pcb_4_pcb_4.png-b6bc9456971117feaad32f8fd4ca13c8.etc2.ctex"]
 
 [params]
 

@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://q3ir0bcgvw7a"
 path.s3tc="res://.godot/imported/stone_4_stone_1.png-6b18e4e2317bf86e911d92e9dd1d9067.s3tc.ctex"
+path.etc2="res://.godot/imported/stone_4_stone_1.png-6b18e4e2317bf86e911d92e9dd1d9067.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/terrain/debris/stone_4_stone_1.png"
-dest_files=["res://.godot/imported/stone_4_stone_1.png-6b18e4e2317bf86e911d92e9dd1d9067.s3tc.ctex"]
+dest_files=["res://.godot/imported/stone_4_stone_1.png-6b18e4e2317bf86e911d92e9dd1d9067.s3tc.ctex", "res://.godot/imported/stone_4_stone_1.png-6b18e4e2317bf86e911d92e9dd1d9067.etc2.ctex"]
 
 [params]
 

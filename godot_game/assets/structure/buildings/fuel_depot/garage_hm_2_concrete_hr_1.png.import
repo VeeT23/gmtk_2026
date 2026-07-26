@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bspsv3skb8jdb"
 path.s3tc="res://.godot/imported/garage_hm_2_concrete_hr_1.png-25081f30e1fe8a2fb00723b8e6677ec1.s3tc.ctex"
+path.etc2="res://.godot/imported/garage_hm_2_concrete_hr_1.png-25081f30e1fe8a2fb00723b8e6677ec1.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/buildings/fuel_depot/garage_hm_2_concrete_hr_1.png"
-dest_files=["res://.godot/imported/garage_hm_2_concrete_hr_1.png-25081f30e1fe8a2fb00723b8e6677ec1.s3tc.ctex"]
+dest_files=["res://.godot/imported/garage_hm_2_concrete_hr_1.png-25081f30e1fe8a2fb00723b8e6677ec1.s3tc.ctex", "res://.godot/imported/garage_hm_2_concrete_hr_1.png-25081f30e1fe8a2fb00723b8e6677ec1.etc2.ctex"]
 
 [params]
 

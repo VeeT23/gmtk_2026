@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cs2x0d1n3nr8i"
 path.s3tc="res://.godot/imported/window_hr_2_planks_hr_4.png-e64e17a38a87248968216ee88b0c186b.s3tc.ctex"
+path.etc2="res://.godot/imported/window_hr_2_planks_hr_4.png-e64e17a38a87248968216ee88b0c186b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/modular/window_hr_2_planks_hr_4.png"
-dest_files=["res://.godot/imported/window_hr_2_planks_hr_4.png-e64e17a38a87248968216ee88b0c186b.s3tc.ctex"]
+dest_files=["res://.godot/imported/window_hr_2_planks_hr_4.png-e64e17a38a87248968216ee88b0c186b.s3tc.ctex", "res://.godot/imported/window_hr_2_planks_hr_4.png-e64e17a38a87248968216ee88b0c186b.etc2.ctex"]
 
 [params]
 

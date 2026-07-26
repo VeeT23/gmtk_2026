@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2eamhumn8rjj"
 path.s3tc="res://.godot/imported/military_radio_1_military_radio_1.png-75cdc469e30ffec70b30e8e086f82d84.s3tc.ctex"
+path.etc2="res://.godot/imported/military_radio_1_military_radio_1.png-75cdc469e30ffec70b30e8e086f82d84.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/radio_tower/radio/military_radio_1_military_radio_1.png"
-dest_files=["res://.godot/imported/military_radio_1_military_radio_1.png-75cdc469e30ffec70b30e8e086f82d84.s3tc.ctex"]
+dest_files=["res://.godot/imported/military_radio_1_military_radio_1.png-75cdc469e30ffec70b30e8e086f82d84.s3tc.ctex", "res://.godot/imported/military_radio_1_military_radio_1.png-75cdc469e30ffec70b30e8e086f82d84.etc2.ctex"]
 
 [params]
 

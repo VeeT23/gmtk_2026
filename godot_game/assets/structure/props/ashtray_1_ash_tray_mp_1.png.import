@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhflwlotu5bud"
 path.s3tc="res://.godot/imported/ashtray_1_ash_tray_mp_1.png-9945f7bcd6952f72a00280ea71e648c0.s3tc.ctex"
+path.etc2="res://.godot/imported/ashtray_1_ash_tray_mp_1.png-9945f7bcd6952f72a00280ea71e648c0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/props/ashtray_1_ash_tray_mp_1.png"
-dest_files=["res://.godot/imported/ashtray_1_ash_tray_mp_1.png-9945f7bcd6952f72a00280ea71e648c0.s3tc.ctex"]
+dest_files=["res://.godot/imported/ashtray_1_ash_tray_mp_1.png-9945f7bcd6952f72a00280ea71e648c0.s3tc.ctex", "res://.godot/imported/ashtray_1_ash_tray_mp_1.png-9945f7bcd6952f72a00280ea71e648c0.etc2.ctex"]
 
 [params]
 

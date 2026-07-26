@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://chcvo444y6ufl"
 path.s3tc="res://.godot/imported/floor_ceiling_hs_3_slope_tiles_floor_hr_2.png-6fc02c4995dbef3104ffe3eb9b57b64d.s3tc.ctex"
+path.etc2="res://.godot/imported/floor_ceiling_hs_3_slope_tiles_floor_hr_2.png-6fc02c4995dbef3104ffe3eb9b57b64d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/structure/modular/floor_ceiling_hs_3_slope_tiles_floor_hr_2.png"
-dest_files=["res://.godot/imported/floor_ceiling_hs_3_slope_tiles_floor_hr_2.png-6fc02c4995dbef3104ffe3eb9b57b64d.s3tc.ctex"]
+dest_files=["res://.godot/imported/floor_ceiling_hs_3_slope_tiles_floor_hr_2.png-6fc02c4995dbef3104ffe3eb9b57b64d.s3tc.ctex", "res://.godot/imported/floor_ceiling_hs_3_slope_tiles_floor_hr_2.png-6fc02c4995dbef3104ffe3eb9b57b64d.etc2.ctex"]
 
 [params]
 

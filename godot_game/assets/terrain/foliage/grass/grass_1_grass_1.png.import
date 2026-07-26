@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccqch18ceigfj"
 path.s3tc="res://.godot/imported/grass_1_grass_1.png-6404259f4132fb41a662cfc183ce33ec.s3tc.ctex"
+path.etc2="res://.godot/imported/grass_1_grass_1.png-6404259f4132fb41a662cfc183ce33ec.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/terrain/foliage/grass/grass_1_grass_1.png"
-dest_files=["res://.godot/imported/grass_1_grass_1.png-6404259f4132fb41a662cfc183ce33ec.s3tc.ctex"]
+dest_files=["res://.godot/imported/grass_1_grass_1.png-6404259f4132fb41a662cfc183ce33ec.s3tc.ctex", "res://.godot/imported/grass_1_grass_1.png-6404259f4132fb41a662cfc183ce33ec.etc2.ctex"]
 
 [params]
 
