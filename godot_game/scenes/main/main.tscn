@@ -15,7 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://2xgjn8ac5pn7" path="res://scenes/main/world/fence/fence.tscn" id="11_5qq27"]
 [ext_resource type="Script" uid="uid://dx55046mv248" path="res://resources/scripts/enclosure.gd" id="13_p8abn"]
 [ext_resource type="PackedScene" uid="uid://cl1ybj4mgw7hk" path="res://scenes/main/world/radio_tower/radio_tower.tscn" id="13_srmg5"]
+[ext_resource type="PackedScene" uid="uid://cliu1tkwil784" path="res://assets/terrain/foliage/grass/grass_1.glb" id="14_1k3ck"]
 [ext_resource type="PackedScene" uid="uid://bg1w8h0ea0bf0" path="res://assets/terrain/foliage/trees/tree_5.glb" id="14_r1bmu"]
+[ext_resource type="PackedScene" uid="uid://dfs3mtnghbilb" path="res://assets/terrain/foliage/grass/grass_2.glb" id="15_62f45"]
 [ext_resource type="Shader" uid="uid://dad1lnch6dg1h" path="res://scenes/player/player.gdshader" id="15_mxkvs"]
 [ext_resource type="Shader" uid="uid://dprwvg05f0ku4" path="res://resources/shaders/cross_hair.gdshader" id="16_hxu8e"]
 [ext_resource type="PackedScene" uid="uid://b4kj7jp55hlw7" path="res://scenes/main/world/visitor_center/visitor_center.tscn" id="17_37hlw"]
@@ -104,6 +106,22 @@ last_lod = 0
 last_shadow_lod = 0
 lod0_range = 128.0
 
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_6g32y"]
+name = "grass_1"
+id = 1
+scene_file = ExtResource("14_1k3ck")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_5nwjq"]
+name = "grass_2"
+id = 2
+scene_file = ExtResource("15_62f45")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
 [sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_tytul"]
 name = "Ground037_1K-PNG_Color"
 albedo_texture = ExtResource("1_bq33v")
@@ -131,7 +149,7 @@ normal_depth = 0.0
 uv_scale = 0.738
 
 [sub_resource type="Terrain3DAssets" id="Terrain3DAssets_ues17"]
-mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_6w6mm")])
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_6w6mm"), SubResource("Terrain3DMeshAsset_6g32y"), SubResource("Terrain3DMeshAsset_5nwjq")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_tytul"), SubResource("Terrain3DTextureAsset_t634p"), SubResource("Terrain3DTextureAsset_6hctx"), SubResource("Terrain3DTextureAsset_srmg5")])
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p8abn"]
@@ -174,7 +192,6 @@ metadata/_edit_lock_ = true
 
 [node name="Sun" type="DirectionalLight3D" parent="World/NavigationRegion3D/Environment" unique_id=2059617183]
 transform = Transform3D(1, 0, 0, 0, -0.2801474, 0.959957, 0, -0.959957, -0.2801474, 0, 0, 0)
-visible = false
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="World/NavigationRegion3D/Environment" unique_id=1515843267]
