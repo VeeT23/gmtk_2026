@@ -1,5 +1,8 @@
 extends CharacterBody3D
 
+## Emitted when a position passed to set_target() has been reached.
+signal target_reached
+
 @export var speed: float = 5.0
 @export var rotation_speed: float = 5.0
 ## Hard cap on sight distance. The detection Area3D defines the real shape;
@@ -21,12 +24,8 @@ extends CharacterBody3D
 @export var scan_speed : float = 35.0
 ## Pick the next target at random instead of walking them in order.
 @export var wander_randomly : bool = true
-## Group of the node to teleport to when respawn_dinosaur() is called.
-@export var spawn_group : StringName = &"DinoSpawn"
-## Group of the node to walk to first after spawning, before normal wandering.
-@export var start_target_group : StringName = &"StartTarget"
-## If true, spotting the player cancels the scripted walk to the start target.
-@export var hunt_interrupts_start_walk : bool = true
+## If true, spotting the player cancels a target set via set_target().
+@export var hunt_interrupts_set_target : bool = true
 
 @export_group("Line of Sight")
 ## Optional. Assign a node placed at the dino's head to cast sight rays from.
@@ -47,7 +46,7 @@ extends CharacterBody3D
 	Vector3(0.0, 0.2, 0.0), # feet
 ]
 
-enum State { IDLE, WANDER, HUNT, START_WALK }
+enum State { IDLE, WANDER, HUNT, MOVE_TO_TARGET }
 var current_state: State = State.IDLE
 var previous_state: State = State.IDLE
 
@@ -70,7 +69,7 @@ var wander_targets: Array[Node3D] = []
 var wander_index: int = -1
 var wander_pause_timer: float = 0.0
 var scan_direction: float = 1.0
-var start_walk_active: bool = false
+var has_forced_target: bool = false
 
 func _ready() -> void:
 	add_to_group("Dinosaur")
@@ -127,43 +126,33 @@ func _set_nav_target(target : Vector3) -> void:
 	target.y = global_position.y
 	nav_agent.target_position = target
 
-## Teleports the dino to the InitialSpawn node, sends it walking to Target1,
-## then hands control back to normal wandering once it arrives.
-## Safe to call at any time (game start, player respawn, etc).
-func respawn_dinosaur() -> void:
-	var spawn := get_tree().get_first_node_in_group(spawn_group) as Node3D
-	if spawn == null:
-		push_error("Dinosaur: no node in group '%s' to spawn at." % spawn_group)
-		return
+## Sends the dinosaur to a specific world position, overriding its wandering.
+## Once it arrives it goes back to patrolling on its own.
+func set_target(pos: Vector3) -> void:
+	has_forced_target = true
+	current_state = State.MOVE_TO_TARGET
+	wander_pause_timer = 0.0
+	_set_nav_target(pos)
 
-	# Teleport and face the same way as the spawn marker.
+## Drops a target set by set_target() and returns to normal wandering.
+func clear_target() -> void:
+	has_forced_target = false
+	_collect_wander_targets()
+
+## Instantly moves the dinosaur somewhere and forgets about the player,
+## so it doesn't immediately re-aggro from across the map.
+func teleport_to(pos: Vector3, look_rotation: Vector3 = Vector3.ZERO) -> void:
 	velocity = Vector3.ZERO
-	global_position = spawn.global_position
-	global_rotation = spawn.global_rotation
+	global_position = pos
+	global_rotation = look_rotation
 
-	# Forget everything about the player so it doesn't instantly re-aggro.
 	player_in_area = false
 	has_line_of_sight = false
 	last_seen_timer = 0.0
-	last_known_position = global_position
+	last_known_position = pos
 	wander_pause_timer = 0.0
 	path_timer = 0.0
 	los_timer = los_check_interval
-
-	# The teleport happens outside the physics step, so let the nav agent catch up
-	# before handing it a new destination.
-	await get_tree().physics_frame
-
-	var start_target := get_tree().get_first_node_in_group(start_target_group) as Node3D
-	if start_target != null:
-		start_walk_active = true
-		current_state = State.START_WALK
-		_set_nav_target(start_target.global_position)
-	else:
-		push_warning("Dinosaur: no node in group '%s', going straight to wandering."
-			% start_target_group)
-		start_walk_active = false
-		_collect_wander_targets()
 
 func _detection_body_entered(body : Node3D) -> void:
 	if body == player:
@@ -187,8 +176,8 @@ func _physics_process(delta: float) -> void:
 			_process_idle(delta)
 		State.WANDER:
 			_process_wander(delta)
-		State.START_WALK:
-			_process_start_walk(delta)
+		State.MOVE_TO_TARGET:
+			_process_move_to_target(delta)
 		State.HUNT:
 			_process_hunt(delta)
 	move_and_slide()
@@ -244,11 +233,11 @@ func _update_state() -> void:
 	var wants_to_hunt : bool = player != null \
 		and (has_line_of_sight or last_seen_timer > 0.0)
 
-	if wants_to_hunt and (hunt_interrupts_start_walk or not start_walk_active):
-		start_walk_active = false
+	if wants_to_hunt and (hunt_interrupts_set_target or not has_forced_target):
+		has_forced_target = false
 		current_state = State.HUNT
-	elif start_walk_active:
-		current_state = State.START_WALK
+	elif has_forced_target:
+		current_state = State.MOVE_TO_TARGET
 	elif not wander_targets.is_empty():
 		current_state = State.WANDER
 	else:
@@ -311,12 +300,13 @@ func _process_wander(delta: float) -> void:
 		wander_pause_timer = randf_range(wander_pause_min, wander_pause_max)
 		_advance_wander_target()
 
-## One-off walk from the spawn point to the start target, then back to wandering.
-func _process_start_walk(delta: float) -> void:
+## Walks to a position handed in via set_target(), then resumes wandering.
+func _process_move_to_target(delta: float) -> void:
 	_play_animation(walk_animation)
 
 	if not _follow_path(delta, wander_speed):
-		start_walk_active = false
+		target_reached.emit()
+		has_forced_target = false
 		_collect_wander_targets()
 		wander_pause_timer = randf_range(wander_pause_min, wander_pause_max)
 
