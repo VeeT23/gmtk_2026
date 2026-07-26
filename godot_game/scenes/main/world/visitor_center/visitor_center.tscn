@@ -27,6 +27,8 @@
 [ext_resource type="PackedScene" uid="uid://duaqpvxtw5464" path="res://assets/structure/props/cigs_packet_1.glb" id="25_0avqm"]
 [ext_resource type="PackedScene" uid="uid://c15rci57c3kbq" path="res://assets/structure/props/chair_mp_5_4.glb" id="26_rmxu4"]
 [ext_resource type="PackedScene" uid="uid://du2fgmya3rph1" path="res://assets/structure/props/sofa_5_3.glb" id="27_gwbfe"]
+[ext_resource type="PackedScene" uid="uid://18va3hsfyf8p" path="res://assets/structure/props/tv_mp_1_2.glb" id="28_reda5"]
+[ext_resource type="PackedScene" uid="uid://dhsh7w20ayjid" path="res://assets/structure/props/vent_1.glb" id="29_dhsvl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_46os7"]
 size = Vector3(8.907257, 6.557129, 0.55529785)
@@ -607,6 +609,15 @@ shape = SubResource("BoxShape3D_6buxu")
 
 [node name="Props" type="Node3D" parent="." unique_id=1487539123]
 
+[node name="tv_mp_1_22" parent="Props" unique_id=346791899 instance=ExtResource("28_reda5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.484562, 0.9099555, -15.716473)
+
+[node name="vent_12" parent="Props" unique_id=67444163 instance=ExtResource("29_dhsvl")]
+transform = Transform3D(0.55123353, 0, 0.834351, 0, 1, 0, -0.834351, 0, 0.55123353, 8.737722, 1.1274499, -13.411655)
+
+[node name="sofa_5_32" parent="Props" unique_id=276940497 instance=ExtResource("27_gwbfe")]
+transform = Transform3D(-0.6448601, 0, 0.76430064, 0, 1, 0, -0.76430064, 0, -0.6448601, 12.359512, 0, -11.544104)
+
 [node name="metal_barrel_mp_32" parent="Props" unique_id=304569178 instance=ExtResource("18_n17lk")]
 transform = Transform3D(1, 0, 0, 0, 0.9801223, 0.19839413, 0, -0.19839413, 0.9801223, 6.5955153, 0, -12.344163)
 
@@ -670,13 +681,13 @@ transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.965
 transform = Transform3D(0.5110852, 0, 0.85953003, 0, 1, 0, -0.85953003, 0, 0.5110852, 3.156077, 0, -4.3169947)
 
 [node name="metal_barrel_mp_41" parent="Props" unique_id=272887743 instance=ExtResource("18_n17lk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7664366, 0, -7.0197163)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7664366, 0, -10.6392765)
 
 [node name="metal_barrel_mp_42" parent="Props" unique_id=1759494919 instance=ExtResource("18_n17lk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.157563, 0, -11.323227)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.454668, 0, -11.646992)
 
 [node name="metal_barrel_mp_43" parent="Props" unique_id=790350826 instance=ExtResource("18_n17lk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.093521, 0, -7.274237)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7662396, 0, -8.325478)
 
 [node name="metal_barrel_mp_44" parent="Props" unique_id=1253365298 instance=ExtResource("18_n17lk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3006134, 0, -9.675526)
@@ -688,7 +699,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.773342, 0, -10.204146)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7707443, 0, -8.427469)
 
 [node name="metal_barrel_mp_47" parent="Props" unique_id=1368363751 instance=ExtResource("18_n17lk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.875156, -2.3841858e-07, -6.851323)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.892011, -2.3841858e-07, -7.809085)
 
 [node name="glass_bottle_mx_22" parent="Props" unique_id=5111200 instance=ExtResource("24_54bkj")]
 transform = Transform3D(0.70181036, 0.7123638, 0, -0.13709089, 0.13505994, -0.98130774, -0.6990481, 0.6886919, 0.19244507, 0.8914249, 0, -10.578915)
@@ -701,9 +712,6 @@ transform = Transform3D(0.99496585, -0.10021454, 0, 0.10021454, 0.99496585, 0, 0
 
 [node name="chair_mp_5_42" parent="Props" unique_id=603016431 instance=ExtResource("26_rmxu4")]
 transform = Transform3D(0.74347544, 0.6665382, 0.05450843, -0.6612805, 0.7205521, 0.20859773, 0.09976219, -0.19113263, 0.9764813, 1.2442999, 0, -10.817427)
-
-[node name="sofa_5_32" parent="." unique_id=276940497 instance=ExtResource("27_gwbfe")]
-transform = Transform3D(0.726926, 0, 0.6867158, 0, 1, 0, -0.6867158, 0, 0.726926, 11.189466, 0, -14.591243)
 
 [editable path="Structure/FrontWall/garage_door_frame_hr_22"]
 [editable path="Structure/InteriorWalls/garage_door_frame_hr_22"]

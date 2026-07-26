@@ -198,6 +198,9 @@ func _try_kill(body : Node3D) -> void:
 		return
 	if body != player or GameState.is_player_dead:
 		return
+	# Tucked inside a bush, the dino can't get at them.
+	if player.has_method("is_hiding") and player.is_hiding():
+		return
 	get_tree().current_scene.kill_player()
 
 func _physics_process(delta: float) -> void:

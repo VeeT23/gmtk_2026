@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://0m0cs6ewoq13" path="res://assets/structure/props/metal_barrel_mp_3.glb" id="9_ssrr3"]
 [ext_resource type="PackedScene" uid="uid://dy7rkhhjvctaj" path="res://assets/structure/props/wooden_crate_6.glb" id="9_weo4h"]
 [ext_resource type="PackedScene" uid="uid://b7qndj3tq6u01" path="res://assets/structure/props/vending_machine_1.glb" id="10_vhqyx"]
+[ext_resource type="PackedScene" uid="uid://fq6siq8s5534" path="res://assets/structure/props/van_1.glb" id="14_weo4h"]
 
 [sub_resource type="Animation" id="Animation_k4ctd"]
 length = 0.001
@@ -341,3 +342,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0576491, 1.0209961, -11.33
 
 [node name="metal_barrel_mp_34" parent="Props" index="8" unique_id=1214675871 instance=ExtResource("9_ssrr3")]
 transform = Transform3D(0.7024528, 0, 0.71173036, 0, 1, 0, -0.71173036, 0, 0.7024528, -2.4071274, 1.0209963, -10.494979)
+
+[node name="van_12" parent="." index="7" unique_id=475423996 instance=ExtResource("14_weo4h")]
+transform = Transform3D(-0.7228621, 0, -0.69099224, 0, 1, 0, 0.69099224, 0, -0.7228621, -0.4726163, 1.0235304, 4.0841527)

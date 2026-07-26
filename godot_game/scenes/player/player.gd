@@ -29,6 +29,12 @@ const FOOTSTEP_SOUNDS : = [
 @export var camera_crouch_position = Vector3(0,0.9,0)
 @export var camera_stand_position = Vector3(0,1.7,0)
 
+@export_group("Hiding")
+## Layers that count as a hiding spot. Obstruction (32) by default.
+@export_flags_3d_physics var hiding_spot_mask : int = 32
+## Height above the player's feet to test from.
+@export var hiding_test_height : float = 1.0
+
 @export_group("Screen Shake")
 ## Camera offset in metres at full shake strength.
 @export var shake_max_offset := 0.45
@@ -143,6 +149,16 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+
+## True when the player is standing inside a hiding spot (a bush, etc).
+## Uses the same colliders that block the dinosaur's line of sight.
+func is_hiding() -> bool:
+	var params := PhysicsPointQueryParameters3D.new()
+	params.position = global_position + Vector3.UP * hiding_test_height
+	params.collision_mask = hiding_spot_mask
+	params.collide_with_areas = true
+	params.collide_with_bodies = true
+	return not get_world_3d().direct_space_state.intersect_point(params, 1).is_empty()
 
 ## Kicks the camera. Call with 0..1; the strongest active impulse wins so
 ## rapid stomps don't stack into nausea.

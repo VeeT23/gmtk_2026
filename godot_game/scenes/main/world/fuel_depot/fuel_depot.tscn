@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://dcy1lteosu61g" path="res://assets/structure/buildings/fuel_depot/pillar_hs_7.glb" id="2_0j51i"]
 [ext_resource type="PackedScene" uid="uid://odi5243cc1iw" path="res://assets/structure/buildings/fuel_depot/garage_hm_2.glb" id="3_qsv21"]
 [ext_resource type="PackedScene" uid="uid://oa821clq3i5x" path="res://scenes/interactable/gas_can/gas_can.tscn" id="4_50axg"]
+[ext_resource type="PackedScene" uid="uid://duaqpvxtw5464" path="res://assets/structure/props/cigs_packet_1.glb" id="5_50axg"]
+[ext_resource type="PackedScene" uid="uid://d14drlc13h21x" path="res://assets/structure/props/cardboard_box_1.glb" id="6_5bmme"]
+[ext_resource type="PackedScene" uid="uid://0m0cs6ewoq13" path="res://assets/structure/props/metal_barrel_mp_3.glb" id="7_7q22v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_46os7"]
 size = Vector3(1, 5.4002686, 1)
@@ -73,5 +76,28 @@ shape = SubResource("BoxShape3D_46os7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collider" unique_id=1851172570]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.223303, 2.0018175, -5.2831917)
 shape = SubResource("BoxShape3D_p4mrb")
+
+[node name="Props" type="Node3D" parent="." unique_id=538164306]
+
+[node name="cigs_packet_12" parent="Props" unique_id=1049282444 instance=ExtResource("5_50axg")]
+transform = Transform3D(0.7159047, 0, -0.698198, 0, 1, 0, 0.698198, 0, 0.7159047, -16.506388, 0, -6.2565546)
+
+[node name="cardboard_box_12" parent="Props" unique_id=1739400461 instance=ExtResource("6_5bmme")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0474386, 0, -0.013987929)
+
+[node name="metal_barrel_mp_32" parent="Props" unique_id=304569178 instance=ExtResource("7_7q22v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.932907, 0, -7.37698)
+
+[node name="metal_barrel_mp_33" parent="Props" unique_id=393005038 instance=ExtResource("7_7q22v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.932907, 0, 7.62302)
+
+[node name="metal_barrel_mp_34" parent="Props" unique_id=698633154 instance=ExtResource("7_7q22v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9329071, 0, 7.62302)
+
+[node name="metal_barrel_mp_35" parent="Props" unique_id=1175489238 instance=ExtResource("7_7q22v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9329071, 0, -0.37697983)
+
+[node name="metal_barrel_mp_36" parent="Props" unique_id=46192552 instance=ExtResource("7_7q22v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9329071, 0, -7.37698)
 
 [editable path="garage"]
