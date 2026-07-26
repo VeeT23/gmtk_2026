@@ -2,6 +2,8 @@ extends CharacterBody3D
 class_name Dino
 ## Emitted when a position passed to set_target() has been reached.
 signal target_reached
+## Emitted the moment the dino spots the player and begins its roar.
+signal roar_emitted
 
 @export var speed: float = 5.0
 @export var rotation_speed: float = 5.0
@@ -26,6 +28,16 @@ signal target_reached
 @export var wander_randomly : bool = true
 ## If true, spotting the player cancels a target set via set_target().
 @export var hunt_interrupts_set_target : bool = true
+
+@export_group("Roar")
+## Optional animation to play during the roar. Leave blank to keep the walk pose.
+@export var roar_animation : String = ""
+## Used only if there's no RoarPlayer node to time the roar against.
+@export var roar_fallback_duration : float = 2.0
+## How fast the dino snaps around to face the player while roaring.
+@export var roar_turn_speed : float = 3.0
+## Shake dealt to the player's camera when the roar starts, scaled by distance.
+@export var roar_shake : float = 0.8
 
 @export_group("Stomp Shake")
 ## Beyond this distance a footfall doesn't shake the camera at all.
@@ -56,7 +68,7 @@ signal target_reached
 	Vector3(0.0, 0.2, 0.0), # feet
 ]
 
-enum State { IDLE, WANDER, HUNT, MOVE_TO_TARGET }
+enum State { IDLE, WANDER, HUNT, MOVE_TO_TARGET, ROAR }
 var current_state: State = State.IDLE
 var previous_state: State = State.IDLE
 
@@ -66,6 +78,8 @@ var previous_state: State = State.IDLE
 @onready var kill_box : Area3D = $Killbox
 ## The vision cone. Proximity/FOV comes from this shape, sight comes from the raycasts.
 @onready var detection_area : Area3D = $Area3D
+## Optional. Add an AudioStreamPlayer3D named "RoarPlayer" to time the roar against.
+@onready var roar_player : AudioStreamPlayer3D = get_node_or_null("RoarPlayer")
 
 var player: Node3D
 var path_timer: float = 0.0
@@ -80,6 +94,8 @@ var wander_index: int = -1
 var wander_pause_timer: float = 0.0
 var scan_direction: float = 1.0
 var has_forced_target: bool = false
+var roar_active: bool = false
+var roar_timer: float = 0.0
 
 func _ready() -> void:
 	add_to_group("Dinosaur")
@@ -172,7 +188,16 @@ func _detection_body_exited(body : Node3D) -> void:
 	if body == player:
 		player_in_area = false
 
-func _kill_box_entered(_body : Node3D):
+func _kill_box_entered(body : Node3D):
+	_try_kill(body)
+
+## The killbox is only lethal mid-chase, so a wandering dino can't squash the
+## player by blundering into them.
+func _try_kill(body : Node3D) -> void:
+	if current_state != State.HUNT:
+		return
+	if body != player or GameState.is_player_dead:
+		return
 	get_tree().current_scene.kill_player()
 
 func _physics_process(delta: float) -> void:
@@ -188,6 +213,8 @@ func _physics_process(delta: float) -> void:
 			_process_wander(delta)
 		State.MOVE_TO_TARGET:
 			_process_move_to_target(delta)
+		State.ROAR:
+			_process_roar(delta)
 		State.HUNT:
 			_process_hunt(delta)
 	move_and_slide()
@@ -243,9 +270,18 @@ func _update_state() -> void:
 	var wants_to_hunt : bool = player != null \
 		and (has_line_of_sight or last_seen_timer > 0.0)
 
+	if roar_active:
+		# The roar is never cut short once it's begun.
+		current_state = State.ROAR
+		return
+
 	if wants_to_hunt and (hunt_interrupts_set_target or not has_forced_target):
 		has_forced_target = false
-		current_state = State.HUNT
+		# Every fresh hunt opens with a roar, not just the first one.
+		if previous_state != State.HUNT:
+			_begin_roar()
+		else:
+			current_state = State.HUNT
 	elif has_forced_target:
 		current_state = State.MOVE_TO_TARGET
 	elif not wander_targets.is_empty():
@@ -320,8 +356,55 @@ func _process_move_to_target(delta: float) -> void:
 		_collect_wander_targets()
 		wander_pause_timer = randf_range(wander_pause_min, wander_pause_max)
 
+## Freezes the dino, faces the player and bellows before the chase starts.
+func _begin_roar() -> void:
+	roar_active = true
+	current_state = State.ROAR
+	roar_emitted.emit()
+	velocity.x = 0.0
+	velocity.z = 0.0
+
+	if roar_animation != "":
+		_play_animation(roar_animation)
+
+	if roar_player != null:
+		roar_player.play()
+		# Small guard so the first frame isn't mistaken for "already finished".
+		roar_timer = 0.15
+	else:
+		roar_timer = roar_fallback_duration
+
+	# A jolt to sell the moment, on top of whatever the audio does.
+	if roar_shake > 0.0 and player != null and player.has_method("add_shake"):
+		var falloff : float = clampf(1.0 - (global_position.distance_to(player.global_position)
+			/ max(stomp_shake_distance, 0.001)), 0.0, 1.0)
+		player.add_shake(roar_shake * falloff)
+
+func _process_roar(delta: float) -> void:
+	_stop_moving()
+	roar_timer = max(roar_timer - delta, 0.0)
+
+	# Turn to face the player while roaring.
+	var look_at_pos : Vector3 = player.global_position if player != null else last_known_position
+	var to_player : Vector3 = look_at_pos - global_position
+	to_player.y = 0.0
+	if to_player.length_squared() > 0.001:
+		var target_rotation := atan2(to_player.x, to_player.z)
+		rotation.y = rotate_toward(rotation.y, target_rotation, roar_turn_speed * delta)
+
+	var still_roaring : bool = roar_timer > 0.0 \
+		or (roar_player != null and roar_player.playing)
+	if not still_roaring:
+		roar_active = false
+		current_state = State.HUNT
+		path_timer = 0.0
+
 func _process_hunt(delta: float) -> void:
 	wander_pause_timer = 0.0
+	# body_entered won't fire if the player was already inside the box when the
+	# hunt began (e.g. they walked into a roaring dino), so re-check here.
+	if player != null and kill_box.overlaps_body(player):
+		_try_kill(player)
 	path_timer -= delta
 	if path_timer <= 0.0:
 		# If the player is hidden, head for where they were last seen.
