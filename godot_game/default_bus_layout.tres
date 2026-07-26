@@ -14,7 +14,6 @@ resource_name = "Compressor"
 
 [resource]
 bus/0/volume_db = -2.8413372
-bus/0/send = &"Footstep bus"
 bus/0/effect/0/effect = SubResource("AudioEffectCompressor_j3pel")
 bus/0/effect/0/enabled = true
 bus/0/effect/1/effect = SubResource("AudioEffectFilter_j3pel")
