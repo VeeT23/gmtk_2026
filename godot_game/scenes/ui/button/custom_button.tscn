@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://dywnjkpljckd7"]
 
+[ext_resource type="FontFile" uid="uid://clc16w3kwpe6u" path="res://resources/fonts/LUCKY TYPEWRITER.ttf" id="1_0np4s"]
 [ext_resource type="Script" uid="uid://bkkafy70e4lfx" path="res://scenes/ui/button/custom_button.gd" id="1_uqfsv"]
 [ext_resource type="AudioStream" uid="uid://bdqvx11kmjk3b" path="res://scenes/ui/Hover.wav" id="2_cgswk"]
 [ext_resource type="AudioStream" uid="uid://dkcjtbek61bvg" path="res://scenes/ui/menus/main/click pt2.mp3" id="3_0np4s"]
 
 [node name="CustomButton" type="Button" unique_id=1195260148]
 custom_minimum_size = Vector2(128, 16)
+theme_override_fonts/font = ExtResource("1_0np4s")
+theme_override_font_sizes/font_size = 20
+text = "Hey"
 script = ExtResource("1_uqfsv")
 
 [node name="HoverSound" type="AudioStreamPlayer" parent="." unique_id=575582597]
