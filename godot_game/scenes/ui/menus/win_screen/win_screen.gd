@@ -1,6 +1,6 @@
 extends Node2D
 
-const VOTE_URL := "https://spatial-studio.itch.io/gmtk-2026"
+const VOTE_URL := "https://itch.io/jam/gmtk-jam-2026/rate/4821948"
 
 
 func _ready() -> void:
