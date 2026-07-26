@@ -1,5 +1,7 @@
 extends Node
 
+@onready var dino = $World/TRex
+
 func _ready() -> void:
 	GameState.begin_countdown()
 	$Canvas/UI/Transition.fade_in_finished.connect(_fade_in_finished)
@@ -28,10 +30,13 @@ func respawn_player() -> void:
 	GameState.is_player_dead = false
 	$Canvas/UI/DeathScreen.hide_death_screen()
 	$Canvas/UI/Transition.fade_in()
-	#TODO: Move dino back in place
+
 
 func act_trigger(key : String):
 	if key == "dino_spawn":
 		print("Moving dino")
 		var spawn = get_tree().get_first_node_in_group("DinoSpawn")
-		$World/TRex.global_position = spawn.global_position
+		var target = get_tree().get_first_node_in_group("StartTarget")
+		dino.teleport_to(spawn.global_position)
+		dino.clear_target()
+		dino.set_target(target.global_position)

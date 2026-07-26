@@ -90,6 +90,6 @@ func _process(_delta: float) -> void:
 func queue_dialog(dialog_key: String) -> void:
 	if narration_label == null:
 		narration_label = get_tree().get_first_node_in_group("NarrationLabel")
-	
+	print(dialog_key)
 	if narration_label:
 		narration_label.queue_dialogue(voice_lines[dialog_key])

@@ -1610,6 +1610,7 @@ texture = ExtResource("27_rofvo")
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("25_6w6mm")
+key = "walked_by_bush"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/Triggers/BushTrigger" unique_id=833193995]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.532074, 9.536743e-07, -32.778732)
@@ -1618,6 +1619,8 @@ debug_color = Color(1, 0.5, 0, 1)
 
 [node name="DinosaurTrigger" type="Area3D" parent="World/Triggers" unique_id=1663276109]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111.483734, 0, -12.8863945)
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("25_6w6mm")
 key = "dino_spawn"
 act_trigger = true
