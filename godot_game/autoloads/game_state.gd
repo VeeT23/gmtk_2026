@@ -9,6 +9,7 @@ var time_remaining : float = 0.0
 
 var game_state : Dictionary = {
 	"game_started": false,
+	"passed_bush": false,
 	"collected_fuel" : false,
 	"fueled_generator" : false,
 	"collected_bolt_cutters" : false,

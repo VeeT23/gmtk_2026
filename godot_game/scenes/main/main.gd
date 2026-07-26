@@ -40,3 +40,6 @@ func act_trigger(key : String):
 		dino.teleport_to(spawn.global_position)
 		dino.clear_target()
 		dino.set_target(target.global_position)
+	if key == "walked_by_bush" and !GameState.game_state["passed_bush"]:
+		GameState.change_state("passed_bush", true)
+		GameState.queue_dialog("walked_by_bush")

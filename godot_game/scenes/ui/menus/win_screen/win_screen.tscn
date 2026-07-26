@@ -109,18 +109,19 @@ script = ExtResource("1_45qil")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=974645198]
 
 [node name="HappyEmojiMeme3891752466" type="Sprite2D" parent="." unique_id=1127305458]
-position = Vector2(-334, 176.00002)
-scale = Vector2(0.43, 0.43)
+position = Vector2(-507.955, 219.95499)
+scale = Vector2(0.88588613, 0.6285022)
 texture = ExtResource("2_xenqr")
 
 [node name="Cfd" type="Sprite2D" parent="." unique_id=1618914128]
-position = Vector2(370, 115)
+position = Vector2(602, 223.57407)
+scale = Vector2(1.2037038, 1.2037038)
 texture = ExtResource("3_xenqr")
 
 [node name="Confetti" type="Node2D" parent="." unique_id=1145029355]
 
 [node name="Red1" type="GPUParticles2D" parent="Confetti" unique_id=236096225]
-position = Vector2(-573, 318)
+position = Vector2(-938, 518)
 emitting = false
 amount = 60
 texture = ExtResource("1_pcxnk")
@@ -133,7 +134,7 @@ local_coords = true
 process_material = SubResource("ParticleProcessMaterial_hfra2")
 
 [node name="Green1" type="GPUParticles2D" parent="Confetti" unique_id=639531391]
-position = Vector2(-573, 318)
+position = Vector2(-938, 518)
 emitting = false
 amount = 60
 texture = ExtResource("1_pcxnk")
@@ -146,7 +147,7 @@ local_coords = true
 process_material = SubResource("ParticleProcessMaterial_im0a4")
 
 [node name="Blue1" type="GPUParticles2D" parent="Confetti" unique_id=85437160]
-position = Vector2(-573, 318)
+position = Vector2(-938, 518)
 emitting = false
 amount = 60
 texture = ExtResource("1_pcxnk")
@@ -159,7 +160,7 @@ local_coords = true
 process_material = SubResource("ParticleProcessMaterial_2u6si")
 
 [node name="Red2" type="GPUParticles2D" parent="Confetti" unique_id=1040134056]
-position = Vector2(577, 322)
+position = Vector2(919, 502)
 emitting = false
 amount = 60
 texture = ExtResource("1_pcxnk")
@@ -172,7 +173,7 @@ local_coords = true
 process_material = SubResource("ParticleProcessMaterial_45qil")
 
 [node name="Green2" type="GPUParticles2D" parent="Confetti" unique_id=1276880007]
-position = Vector2(577, 322)
+position = Vector2(919, 502)
 emitting = false
 amount = 60
 texture = ExtResource("1_pcxnk")
@@ -185,7 +186,7 @@ local_coords = true
 process_material = SubResource("ParticleProcessMaterial_xenqr")
 
 [node name="Blue2" type="GPUParticles2D" parent="Confetti" unique_id=452970155]
-position = Vector2(577, 322)
+position = Vector2(919, 502)
 emitting = false
 amount = 60
 texture = ExtResource("1_pcxnk")

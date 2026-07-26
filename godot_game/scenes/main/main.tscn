@@ -168,7 +168,7 @@ script = ExtResource("1_pg34l")
 transform = Transform3D(-0.63993347, 0, -0.7684303, 0, 1, 0, 0.7684303, 0, -0.63993347, 9.073759, 0, -106.94961)
 
 [node name="TRex" parent="World" unique_id=1698958939 instance=ExtResource("24_i7in8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 171.51282, 2.2291126, 177.35309)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.692444, 2.2291126, 104.29013)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="World" unique_id=1020118935]
 navigation_mesh = SubResource("NavigationMesh_37hlw")
@@ -1611,6 +1611,7 @@ collision_layer = 0
 collision_mask = 2
 script = ExtResource("25_6w6mm")
 key = "walked_by_bush"
+act_trigger = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/Triggers/BushTrigger" unique_id=833193995]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.532074, 9.536743e-07, -32.778732)
@@ -1633,7 +1634,7 @@ shape = SubResource("SphereShape3D_p4mrb")
 [node name="DinoNodes" type="Node3D" parent="World" unique_id=580486793]
 
 [node name="InitialSpawn" type="Node3D" parent="World/DinoNodes" unique_id=2070581856 groups=["DinoSpawn"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.063572, 1.9073486e-06, -93.15074)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.063572, 1.9073486e-06, -60.77593)
 
 [node name="Target1" type="Node3D" parent="World/DinoNodes" unique_id=1180310311 groups=["StartTarget"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.914158, 3.8146973e-06, -2.4235811)
@@ -1659,7 +1660,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93.20107, 0, 42.608192)
 [node name="WanderTarget7" type="Node3D" parent="World/DinoNodes" unique_id=23391473 groups=["WanderTarget"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.39344, 0, -73.46311)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="World" unique_id=1285503432]
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="World" unique_id=1285503432]
 stream = ExtResource("37_os81g")
 
 [node name="Canvas" type="Node" parent="." unique_id=1795057792]
@@ -1703,7 +1704,7 @@ layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("31_os81g")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 64
 text = "00:00"
 horizontal_alignment = 1
 script = ExtResource("19_necax")
@@ -1716,7 +1717,7 @@ size_flags_vertical = 8
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("34_1k3ck")
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 32
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("32_tbnf8")
@@ -1725,14 +1726,14 @@ script = ExtResource("32_tbnf8")
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("34_1k3ck")
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 24
 horizontal_alignment = 1
 
 [node name="Action" type="Label" parent="Canvas/UI/HUD/InteractLabel" unique_id=1948645889]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("34_1k3ck")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 16
 horizontal_alignment = 1
 
 [node name="MapMenu" parent="Canvas/UI" unique_id=1479418954 instance=ExtResource("31_ii537")]

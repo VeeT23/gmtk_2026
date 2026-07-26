@@ -11,3 +11,4 @@ func _ready() -> void:
 
 func _on_press():
 	OS.shell_open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+	get_tree().change_scene_to_file("res://scenes/ui/menus/main/menu_scene.tscn")
