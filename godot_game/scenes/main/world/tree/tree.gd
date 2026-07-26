@@ -7,8 +7,8 @@ const TREE_SCENES := [
 ]
 
 const TREE_SHAKE_AMP := 10.0          # Base shake angle (degrees)
-const TREE_SHAKE_TIME := 0.12         # Time to lean
-const TREE_SHAKE_RETURN := 0.25       # Time to spring back
+const TREE_SHAKE_TIME := 0.25         # Time to lean
+const TREE_SHAKE_RETURN := 0.5       # Time to spring back
 const TREE_SHAKE_RANDOM := 2.5        # Random shake variation (degrees)
 
 const TREE_FALL_ANGLE := 85.0         # Maximum fall angle
@@ -65,7 +65,11 @@ func _rustle(body):
 func _break(body):
 	if _is_broken:
 		return
-
+	if body is not Dino:
+		return
+	if body.current_state != Dino.State.HUNT:
+		return
+	
 	_is_broken = true
 	_fall_away(body)
 

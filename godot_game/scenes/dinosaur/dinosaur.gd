@@ -1,5 +1,5 @@
 extends CharacterBody3D
-
+class_name Dino
 ## Emitted when a position passed to set_target() has been reached.
 signal target_reached
 

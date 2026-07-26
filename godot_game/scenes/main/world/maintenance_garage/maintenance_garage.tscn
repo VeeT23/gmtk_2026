@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dudjoec521u7f" path="res://scenes/interactable/bolt_cutters/bolt_cutters.tscn" id="4_e10an"]
 [ext_resource type="AudioStream" uid="uid://dcafsawiy0ryl" path="res://assets/sfx/interaction/DoorCreak.mp3" id="6_h1xkg"]
 [ext_resource type="AudioStream" uid="uid://byporkepyoxpc" path="res://assets/sfx/interaction/GarageDoor.mp3" id="7_rmwlw"]
+[ext_resource type="PackedScene" uid="uid://dmjcsxf5ira12" path="res://assets/structure/props/carpet_mp_1.glb" id="8_7ohcc"]
+[ext_resource type="PackedScene" uid="uid://0m0cs6ewoq13" path="res://assets/structure/props/metal_barrel_mp_3.glb" id="9_ssrr3"]
 
 [sub_resource type="Animation" id="Animation_k4ctd"]
 length = 0.001
@@ -178,23 +180,23 @@ size = Vector3(0.6727905, 4.097107, 3.9980469)
 [node name="MaintenanceGarage" unique_id=497981931 instance=ExtResource("1_7fn1g")]
 script = ExtResource("2_717sx")
 
-[node name="warehouse_mx_4" parent="." index="0" unique_id=299001245]
+[node name="warehouse_mx_4" parent="." index="0" unique_id=400604946]
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
-[node name="door_hm_1_a_piece_1" parent="warehouse_mx_4" index="0" unique_id=209440376]
+[node name="door_hm_1_a_piece_1" parent="warehouse_mx_4" index="0" unique_id=635716386]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1.0072507, -9.793058)
 material_overlay = ExtResource("3_k4ctd")
 
-[node name="door_hm_1_a_piece_2" parent="warehouse_mx_4" index="1" unique_id=1345793461]
+[node name="door_hm_1_a_piece_2" parent="warehouse_mx_4" index="1" unique_id=1999941062]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1, -8.204749)
 material_overlay = ExtResource("3_k4ctd")
 
-[node name="garage_door_hr_4_a_piece_1" parent="warehouse_mx_4" index="2" unique_id=1747628234]
+[node name="garage_door_hr_4_a_piece_1" parent="warehouse_mx_4" index="2" unique_id=1964572913]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1.0172331, 7.023925)
 material_overlay = ExtResource("3_k4ctd")
 
-[node name="garage_door_hr_4_a_piece_2" parent="warehouse_mx_4" index="3" unique_id=507999116]
+[node name="garage_door_hr_4_a_piece_2" parent="warehouse_mx_4" index="3" unique_id=269756434]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1.0195621, 10.949997)
 material_overlay = ExtResource("3_k4ctd")
 
@@ -208,6 +210,7 @@ libraries/ = SubResource("AnimationLibrary_7ohcc")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4438541, 1.0946996, -3.1000125)
 
 [node name="Collider" type="StaticBody3D" parent="." index="1" unique_id=986722212]
+visible = false
 collision_mask = 7
 metadata/_edit_lock_ = true
 
@@ -260,6 +263,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016235352, 4.1601143, -0.0
 shape = SubResource("BoxShape3D_700ex")
 
 [node name="Door" type="StaticBody3D" parent="." index="2" unique_id=604983148]
+visible = false
 collision_mask = 7
 metadata/_edit_lock_ = true
 
@@ -268,6 +272,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9227815, 2.291081, -8.9996
 shape = SubResource("BoxShape3D_ejnqi")
 
 [node name="GarageDoor" type="StaticBody3D" parent="." index="3" unique_id=909163802]
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="Collider" type="CollisionShape3D" parent="GarageDoor" index="0" unique_id=1451612154]
@@ -280,6 +285,7 @@ collision_mask = 8
 script = ExtResource("3_rmji0")
 outlined_meshes = [NodePath("../warehouse_mx_4/door_hm_1_a_piece_1"), NodePath("../warehouse_mx_4/door_hm_1_a_piece_2")]
 one_shot = true
+action = "Press [E] to open"
 interact_sfx = ExtResource("6_h1xkg")
 metadata/_custom_type_script = "uid://dhtryvai2ldet"
 metadata/_edit_lock_ = true
@@ -294,6 +300,7 @@ collision_mask = 8
 script = ExtResource("3_rmji0")
 outlined_meshes = [NodePath("../warehouse_mx_4/garage_door_hr_4_a_piece_1"), NodePath("../warehouse_mx_4/garage_door_hr_4_a_piece_2")]
 one_shot = true
+action = "Press [E] to open"
 interact_sfx = ExtResource("7_rmwlw")
 metadata/_custom_type_script = "uid://dhtryvai2ldet"
 metadata/_edit_lock_ = true
@@ -301,3 +308,17 @@ metadata/_edit_lock_ = true
 [node name="Collider" type="CollisionShape3D" parent="GarageDoorInteractable" index="0" unique_id=198722508]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0712013, 2.8431134, 9.005329)
 shape = SubResource("BoxShape3D_ssrr3")
+
+[node name="Props" type="Node3D" parent="." index="6" unique_id=653178892]
+
+[node name="carpet_mp_12" parent="Props" index="0" unique_id=484329116 instance=ExtResource("8_7ohcc")]
+transform = Transform3D(0.9024911, 0, -0.4307085, 0, 1, 0, 0.4307085, 0, 0.9024911, -1.9024017, 1.0209961, -8.435656)
+
+[node name="metal_barrel_mp_32" parent="Props" index="1" unique_id=1551945764 instance=ExtResource("9_ssrr3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.359602, 1.0209963, -10.521352)
+
+[node name="metal_barrel_mp_33" parent="Props" index="2" unique_id=1103933270 instance=ExtResource("9_ssrr3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0576491, 1.0209961, -11.336211)
+
+[node name="metal_barrel_mp_34" parent="Props" index="3" unique_id=1214675871 instance=ExtResource("9_ssrr3")]
+transform = Transform3D(0.7024528, 0, 0.71173036, 0, 1, 0, -0.71173036, 0, 0.7024528, -2.4071274, 1.0209963, -10.494979)

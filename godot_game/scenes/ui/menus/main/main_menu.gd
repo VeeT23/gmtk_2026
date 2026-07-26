@@ -17,13 +17,12 @@ func select_page(page):
 	for child in $CenterContainer.get_children():
 		child.hide()
 	page.show()
-	$FadeOut/AnimationPlayer.animation_finished.connect(func(_a): get_tree().change_scene_to_file("res://scenes/main/main.tscn"))
 
 func _ready() -> void:
 	
-	quit_button.press_finished.connect(func(): get_tree().quit())
-	credits_button.press_finished.connect(select_page.bind(credits_page))
-	start_button.press_finished.connect(_on_start)
+	quit_button.button_up.connect(func(): get_tree().quit())
+	credits_button.button_up.connect(select_page.bind(credits_page))
+	start_button.button_up.connect(_on_start)
 	
 	
 	for back_button in get_tree().get_nodes_in_group("Back_Button"):
@@ -31,6 +30,8 @@ func _ready() -> void:
 	
 	select_page(main_page)
 
-func _on_start():
+func _on_start() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	$FadeOut/AnimationPlayer.play("fade_out")
+	await $FadeOut/AnimationPlayer.animation_finished
+	get_tree().change_scene_to_file("res://scenes/main/main.tscn")

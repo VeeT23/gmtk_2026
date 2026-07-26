@@ -80,10 +80,9 @@ func act_trigger(key : String):
 		print("Moving dino")
 		var spawn = get_tree().get_first_node_in_group("DinoSpawn")
 		var target = get_tree().get_first_node_in_group("StartTarget")
-		
 		dino = DINO_SCENE.instantiate()
-		dino.global_position = spawn.global_position
 		add_child(dino)
+		dino.global_position = spawn.global_position
 		dino.clear_target()
 		dino.set_target(target.global_position)
 	if key == "walked_by_bush" and !GameState.game_state["passed_bush"]:

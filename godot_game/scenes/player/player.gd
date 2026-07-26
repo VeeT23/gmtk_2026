@@ -43,6 +43,7 @@ var camera_pitch := 0.0
 var is_crouching := false
 var bob_time := 0.0
 var stamina = MAX_STAMINA
+var is_fatigued := false
 
 var camera_base_y := 0.0
 var shake_strength := 0.0
@@ -100,15 +101,19 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("left", "right", "forward", "backward")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
-	var pressing_sprint := Input.is_action_pressed("sprint") 
+	var pressing_sprint := Input.is_action_pressed("sprint") and !is_fatigued
 	
 	if !pressing_sprint:
 		stamina = min(stamina + delta, MAX_STAMINA)
+		if stamina >= MAX_STAMINA * 0.75:
+			is_fatigued = false
 	
 	var is_sprinting : bool = pressing_sprint and stamina > 0.0
 	
 	if is_sprinting:
 		stamina -= delta
+		if stamina <= 0.0:
+			is_fatigued = true
 	
 	var speed := (SPRINT_SPEED if is_sprinting else BASE_SPEED) * (0.5 if is_crouching else 1.0)
 	

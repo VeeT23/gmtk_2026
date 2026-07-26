@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dywnjkpljckd7" path="res://scenes/ui/button/custom_button.tscn" id="1_g7whe"]
 [ext_resource type="Script" uid="uid://3s4f4yrgmcuf" path="res://scenes/ui/menus/lose_screen/lose_screen.gd" id="1_pvvd4"]
+[ext_resource type="FontFile" uid="uid://clc16w3kwpe6u" path="res://resources/fonts/LUCKY TYPEWRITER.ttf" id="2_udiym"]
 
 [sub_resource type="Animation" id="Animation_g7whe"]
 length = 0.001
@@ -64,19 +65,20 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=530675408]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_udiym")
 theme_override_font_sizes/font_size = 48
 text = "You lost dawg"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CustomButton" parent="VBoxContainer" unique_id=1195260148 instance=ExtResource("1_g7whe")]
+[node name="Retry" parent="VBoxContainer" unique_id=1195260148 instance=ExtResource("1_g7whe")]
 layout_mode = 2
 text = "But you can try again"
 
-[node name="CustomButton2" parent="VBoxContainer" unique_id=1186451015 instance=ExtResource("1_g7whe")]
+[node name="Quit" parent="VBoxContainer" unique_id=1186451015 instance=ExtResource("1_g7whe")]
 layout_mode = 2
 text = "Or quit and comment on 
-itch about how we suck at world design"
+itch about what needs improvement"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1388903579]
 visible = false
