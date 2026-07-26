@@ -34,6 +34,10 @@ var voice_lines = {
 		"Not as stupid as missing the entire evac because of the runs.",
 		"Stupid."
 	],
+	"walked_by_bush":[
+		"Groundskeeper really needs to cut back these bushes.",
+		"Eh, Im not complaining. Bushes like these make good hiding spots."
+	],
 	"takes_bolt_cutters":[
 		"Just what the doctor ordered."
 	],

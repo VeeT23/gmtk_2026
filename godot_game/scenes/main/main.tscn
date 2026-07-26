@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://bu02uu1jgwoto" path="res://scenes/main/world/hiding_spots/hiding_bush.tscn" id="24_gkmcc"]
 [ext_resource type="PackedScene" uid="uid://bg4t5shnuayvv" path="res://scenes/t_rex/t_rex.tscn" id="24_i7in8"]
 [ext_resource type="PackedScene" uid="uid://c26gw2igxbgiq" path="res://scenes/ui/menus/pause/pause_menu.tscn" id="24_s17dp"]
+[ext_resource type="Script" uid="uid://xyem3np2x1ob" path="res://resources/scripts/dialogue_trigger.gd" id="25_6w6mm"]
 [ext_resource type="Texture2D" uid="uid://bfuu6w0vqhupc" path="res://assets/map/Map.png" id="27_rofvo"]
 [ext_resource type="PackedScene" uid="uid://bg5n4t5na7k8j" path="res://scenes/ui/menus/map/map_menu.tscn" id="31_ii537"]
 [ext_resource type="FontFile" uid="uid://cofaoptju40bf" path="res://resources/fonts/count_down.ttf" id="31_os81g"]
@@ -142,6 +143,9 @@ size = Vector3(62.163452, 145.86359, 429.99902)
 [sub_resource type="BoxShape3D" id="BoxShape3D_46os7"]
 size = Vector3(120.111, 45.428, 14.075)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_46os7"]
+radius = 9.343474
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m114p"]
 shader = ExtResource("15_mxkvs")
 shader_parameter/pixel_size = 3.0
@@ -158,6 +162,9 @@ script = ExtResource("1_pg34l")
 
 [node name="Player" parent="World" unique_id=602185274 instance=ExtResource("7_srmg5")]
 transform = Transform3D(-0.63993347, 0, -0.7684303, 0, 1, 0, 0.7684303, 0, -0.63993347, 9.073759, 0, -106.94961)
+
+[node name="TRex" parent="World" unique_id=1698958939 instance=ExtResource("24_i7in8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104.72084, 2.2291203, -122.89593)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="World" unique_id=1020118935]
 navigation_mesh = SubResource("NavigationMesh_37hlw")
@@ -181,9 +188,6 @@ metadata/_edit_lock_ = true
 
 [node name="Target" type="Node3D" parent="World/NavigationRegion3D/Environment/Enclosures/Enclosure1" unique_id=819504580]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06136322, 0, 55.23626)
-
-[node name="HidingBush" parent="World/NavigationRegion3D/Environment/Enclosures/Enclosure1" unique_id=945173586 instance=ExtResource("24_gkmcc")]
-transform = Transform3D(-0.30408984, 0, 0.95264333, 0, 1, 0, -0.95264333, 0, -0.30408984, -2.5829337, 0, 5.5139637)
 
 [node name="@StaticBody3D@20429" parent="World/NavigationRegion3D/Environment/Enclosures/Enclosure1" unique_id=2129356612 instance=ExtResource("7_6g32y")]
 transform = Transform3D(-0.81868356, 0, -0.5742449, 0, 1, 0, 0.5742449, 0, -0.81868356, 37.20172, 0, -32.69482)
@@ -340,7 +344,7 @@ debug_color = Color(0.61600006, 0.36, 1, 1)
 metadata/_edit_lock_ = true
 
 [node name="HidingBush1" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=128175237 instance=ExtResource("24_gkmcc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.065773, 9.536743e-07, -92.14758)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.783995, 9.536743e-07, -93.17653)
 
 [node name="HidingBush2" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=330159793 instance=ExtResource("24_gkmcc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.898987, 9.536743e-07, -65.904076)
@@ -405,7 +409,41 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.826035, 9.536743e-07, 0.78
 [node name="HidingBush22" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=1427232480 instance=ExtResource("24_gkmcc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.63416, 9.536743e-07, -0.7448983)
 
+[node name="HidingBush23" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=945173586 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.886942, 1.9073486e-06, -61.56384)
+
+[node name="HidingBush24" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=1090959127 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.932327, -0.035995483, -65.8072)
+
+[node name="HidingBush25" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=32172932 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.565807, 9.536743e-07, -71.27473)
+
+[node name="HidingBush26" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=1159794294 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.441444, 9.536743e-07, -68.35711)
+
+[node name="HidingBush27" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=2028915196 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.003014, 4.7683716e-07, -64.272934)
+
+[node name="HidingBush28" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=1466228678 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.914933, -0.035995483, -63.539463)
+
+[node name="HidingBush29" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=1112706690 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.744762, -0.035995483, -60.32608)
+
+[node name="HidingBush30" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=1004880379 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.82233, -0.03599453, -69.08462)
+
+[node name="HidingBush31" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=522489525 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.544712, -0.035995483, -73.19035)
+
+[node name="HidingBush32" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=1043923023 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.292645, -0.035995483, -62.943466)
+
+[node name="HidingBush33" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=2064715200 instance=ExtResource("24_gkmcc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.179127, -0.035995483, -69.42655)
+
 [node name="Trees" type="Node3D" parent="World/NavigationRegion3D/Environment" unique_id=2138870669]
+metadata/_edit_lock_ = true
 
 [node name="Tree1" parent="World/NavigationRegion3D/Environment/Trees" unique_id=749880799 instance=ExtResource("7_6g32y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.009909987, 0.87029046)
@@ -1553,9 +1591,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.76787, -0.082315445, 34.1
 [node name="Tree382" parent="World/NavigationRegion3D/Environment/Trees" unique_id=1781673733 instance=ExtResource("7_6g32y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.27895, -0.082315445, 40.277588)
 
-[node name="TRex" parent="World" unique_id=1698958939 instance=ExtResource("24_i7in8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104.72084, 2.2291203, -122.89593)
-
 [node name="Map" type="Sprite3D" parent="World" unique_id=561764201]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 19.003845, 30.380005, -0.49985886)
 visible = false
@@ -1563,8 +1598,18 @@ modulate = Color(1, 1, 1, 0.5686275)
 pixel_size = 0.52
 texture = ExtResource("27_rofvo")
 
-[node name="Node3D" type="Node3D" parent="World" unique_id=2041008867]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -253.09756, 0, 0)
+[node name="Triggers" type="Node3D" parent="World" unique_id=1141815334]
+
+[node name="Area3D" type="Area3D" parent="World/Triggers" unique_id=244954408]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("25_6w6mm")
+dialogue_key = "walked_by_bush"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Triggers/Area3D" unique_id=833193995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.021036, 9.536743e-07, -64.13666)
+shape = SubResource("SphereShape3D_46os7")
+debug_color = Color(1, 0.5, 0, 1)
 
 [node name="Canvas" type="Node" parent="." unique_id=1795057792]
 
