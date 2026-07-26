@@ -7,10 +7,7 @@ const FENCE_SCENE := preload("res://scenes/main/world/fence/fence.tscn")
 const BUSH_SCENE := preload("res://scenes/main/world/hiding_spots/hiding_bush.tscn")
 
 const TREE_SCENES := [
-	preload("res://assets/terrain/foliage/trees/tree_1.glb"),
-	preload("res://assets/terrain/foliage/trees/tree_5.glb"),
-	preload("res://assets/terrain/foliage/trees/tree_6.glb"),
-	preload("res://assets/terrain/foliage/trees/tree_7.glb"),
+	preload("res://scenes/main/world/tree/tree.tscn")
 ]
 
 const TREE_DENSITY := 0.02
@@ -148,7 +145,3 @@ func _generate_trees(radius: float) -> void:
 
 		tree.position = Vector3(pos2.x, 0.0, pos2.y)
 		tree.rotation.y = rng.randf() * TAU
-
-		# Optional random scale variation
-		var scale_factor := rng.randf_range(1.5, 2.5)
-		tree.scale = Vector3.ONE * scale_factor
