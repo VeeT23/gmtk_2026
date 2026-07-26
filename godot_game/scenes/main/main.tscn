@@ -164,7 +164,7 @@ script = ExtResource("1_pg34l")
 transform = Transform3D(-0.63993347, 0, -0.7684303, 0, 1, 0, 0.7684303, 0, -0.63993347, 9.073759, 0, -106.94961)
 
 [node name="TRex" parent="World" unique_id=1698958939 instance=ExtResource("24_i7in8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104.72084, 2.2291203, -122.89593)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.01438, 2.2291203, -69.75699)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="World" unique_id=1020118935]
 navigation_mesh = SubResource("NavigationMesh_37hlw")
