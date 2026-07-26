@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b5rx6j5iw5y5l"
+path="res://.godot/imported/Generator Start2.wav-a2b3fdea6c12a09f131e67deb9ba7d0f.sample"
+
+[deps]
+
+source_file="res://assets/sfx/interaction/Generator Start2.wav"
+dest_files=["res://.godot/imported/Generator Start2.wav-a2b3fdea6c12a09f131e67deb9ba7d0f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
