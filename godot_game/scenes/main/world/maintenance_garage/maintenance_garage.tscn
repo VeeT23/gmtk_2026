@@ -8,7 +8,11 @@
 [ext_resource type="AudioStream" uid="uid://dcafsawiy0ryl" path="res://assets/sfx/interaction/DoorCreak.mp3" id="6_h1xkg"]
 [ext_resource type="AudioStream" uid="uid://byporkepyoxpc" path="res://assets/sfx/interaction/GarageDoor.mp3" id="7_rmwlw"]
 [ext_resource type="PackedScene" uid="uid://dmjcsxf5ira12" path="res://assets/structure/props/carpet_mp_1.glb" id="8_7ohcc"]
+[ext_resource type="PackedScene" uid="uid://c7kpxcglcdltc" path="res://assets/structure/props/wooden_crate_5.glb" id="8_apvxx"]
+[ext_resource type="PackedScene" uid="uid://cf72h4ovu3hk6" path="res://assets/structure/props/supply_crate_1_1.glb" id="8_ssrr3"]
 [ext_resource type="PackedScene" uid="uid://0m0cs6ewoq13" path="res://assets/structure/props/metal_barrel_mp_3.glb" id="9_ssrr3"]
+[ext_resource type="PackedScene" uid="uid://dy7rkhhjvctaj" path="res://assets/structure/props/wooden_crate_6.glb" id="9_weo4h"]
+[ext_resource type="PackedScene" uid="uid://b7qndj3tq6u01" path="res://assets/structure/props/vending_machine_1.glb" id="10_vhqyx"]
 
 [sub_resource type="Animation" id="Animation_k4ctd"]
 length = 0.001
@@ -180,23 +184,23 @@ size = Vector3(0.6727905, 4.097107, 3.9980469)
 [node name="MaintenanceGarage" unique_id=497981931 instance=ExtResource("1_7fn1g")]
 script = ExtResource("2_717sx")
 
-[node name="warehouse_mx_4" parent="." index="0" unique_id=400604946]
+[node name="warehouse_mx_4" parent="." index="0" unique_id=2075404640]
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
-[node name="door_hm_1_a_piece_1" parent="warehouse_mx_4" index="0" unique_id=635716386]
+[node name="door_hm_1_a_piece_1" parent="warehouse_mx_4" index="0" unique_id=1880852683]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1.0072507, -9.793058)
 material_overlay = ExtResource("3_k4ctd")
 
-[node name="door_hm_1_a_piece_2" parent="warehouse_mx_4" index="1" unique_id=1999941062]
+[node name="door_hm_1_a_piece_2" parent="warehouse_mx_4" index="1" unique_id=447618517]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1, -8.204749)
 material_overlay = ExtResource("3_k4ctd")
 
-[node name="garage_door_hr_4_a_piece_1" parent="warehouse_mx_4" index="2" unique_id=1964572913]
+[node name="garage_door_hr_4_a_piece_1" parent="warehouse_mx_4" index="2" unique_id=1222461793]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1.0172331, 7.023925)
 material_overlay = ExtResource("3_k4ctd")
 
-[node name="garage_door_hr_4_a_piece_2" parent="warehouse_mx_4" index="3" unique_id=269756434]
+[node name="garage_door_hr_4_a_piece_2" parent="warehouse_mx_4" index="3" unique_id=1256898979]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, -4, 1.0195621, 10.949997)
 material_overlay = ExtResource("3_k4ctd")
 
@@ -311,14 +315,29 @@ shape = SubResource("BoxShape3D_ssrr3")
 
 [node name="Props" type="Node3D" parent="." index="6" unique_id=653178892]
 
-[node name="carpet_mp_12" parent="Props" index="0" unique_id=484329116 instance=ExtResource("8_7ohcc")]
+[node name="wooden_crate_52" parent="Props" index="0" unique_id=1585949970 instance=ExtResource("8_apvxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5159554, 1.0209961, 11.003727)
+
+[node name="wooden_crate_62" parent="Props" index="1" unique_id=1353209767 instance=ExtResource("9_weo4h")]
+transform = Transform3D(0.73510736, 0, 0.6779507, 0, 1, 0, -0.6779507, 0, 0.73510736, -1.2323093, 1.020996, 11.055645)
+
+[node name="wooden_crate_63" parent="Props" index="2" unique_id=1346965942 instance=ExtResource("9_weo4h")]
+transform = Transform3D(0.5002768, 0, 0.8658655, 0, 1, 0, -0.8658655, 0, 0.5002768, -2.8645606, 1.020996, 9.743137)
+
+[node name="vending_machine_12" parent="Props" index="3" unique_id=894979518 instance=ExtResource("10_vhqyx")]
+transform = Transform3D(-0.09478607, 0.12180116, -0.9880183, -0.27183834, 0.95160013, 0.14339057, 0.9576635, 0.28217265, -0.057088207, -4.783618, -0.15180469, -10.968926)
+
+[node name="supply_crate_1_12" parent="Props" index="4" unique_id=1422067858 instance=ExtResource("8_ssrr3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023955107, 1.0209961, 0.58074486)
+
+[node name="carpet_mp_12" parent="Props" index="5" unique_id=484329116 instance=ExtResource("8_7ohcc")]
 transform = Transform3D(0.9024911, 0, -0.4307085, 0, 1, 0, 0.4307085, 0, 0.9024911, -1.9024017, 1.0209961, -8.435656)
 
-[node name="metal_barrel_mp_32" parent="Props" index="1" unique_id=1551945764 instance=ExtResource("9_ssrr3")]
+[node name="metal_barrel_mp_32" parent="Props" index="6" unique_id=1551945764 instance=ExtResource("9_ssrr3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.359602, 1.0209963, -10.521352)
 
-[node name="metal_barrel_mp_33" parent="Props" index="2" unique_id=1103933270 instance=ExtResource("9_ssrr3")]
+[node name="metal_barrel_mp_33" parent="Props" index="7" unique_id=1103933270 instance=ExtResource("9_ssrr3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0576491, 1.0209961, -11.336211)
 
-[node name="metal_barrel_mp_34" parent="Props" index="3" unique_id=1214675871 instance=ExtResource("9_ssrr3")]
+[node name="metal_barrel_mp_34" parent="Props" index="8" unique_id=1214675871 instance=ExtResource("9_ssrr3")]
 transform = Transform3D(0.7024528, 0, 0.71173036, 0, 1, 0, -0.71173036, 0, 0.7024528, -2.4071274, 1.0209963, -10.494979)
