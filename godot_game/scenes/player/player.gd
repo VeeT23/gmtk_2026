@@ -94,7 +94,7 @@ func _physics_process(delta: float) -> void:
 			footstep_player.stream = FOOTSTEP_SOUNDS[randi_range(0, FOOTSTEP_SOUNDS.size() - 1)]
 			footstep_player.play()
 	
-	breathing_player.volume_db = -25.0 * (stamina / MAX_STAMINA) + 10.0
+	breathing_player.volume_db = -25.0 * (stamina / MAX_STAMINA) + 15.0
 	
 	# Gravity
 	if not is_on_floor():

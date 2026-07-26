@@ -162,7 +162,7 @@ size = Vector3(62.163452, 145.86359, 429.99902)
 size = Vector3(120.111, 45.428, 14.075)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_46os7"]
-radius = 7.579576
+radius = 12.198121
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_p4mrb"]
 radius = 29.79996
@@ -192,6 +192,7 @@ metadata/_edit_lock_ = true
 
 [node name="Sun" type="DirectionalLight3D" parent="World/NavigationRegion3D/Environment" unique_id=2059617183]
 transform = Transform3D(1, 0, 0, 0, -0.2801474, 0.959957, 0, -0.959957, -0.2801474, 0, 0, 0)
+visible = false
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="World/NavigationRegion3D/Environment" unique_id=1515843267]
@@ -372,7 +373,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.898987, 9.536743e-07, -65
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.707588, 9.536743e-07, -20.104996)
 
 [node name="HidingBush4" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=44058777 instance=ExtResource("24_gkmcc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.073586, 9.536743e-07, -38.770657)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.073586, 9.536743e-07, -35.812183)
 
 [node name="HidingBush5" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=1369840121 instance=ExtResource("24_gkmcc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102.15555, -2.861023e-06, 0.47322083)
@@ -453,7 +454,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.99946, -0.03599167, -38.3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.78702, -0.03599453, -24.807533)
 
 [node name="HidingBush31" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=522489525 instance=ExtResource("24_gkmcc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.83378, -0.035995483, -27.618246)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.83378, -0.035995483, -28.371475)
 
 [node name="HidingBush32" parent="World/NavigationRegion3D/Environment/Hidingspots" unique_id=1043923023 instance=ExtResource("24_gkmcc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.292645, -0.035995483, -62.943466)

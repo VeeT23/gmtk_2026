@@ -10,6 +10,7 @@ var time_remaining : float = 0.0
 var game_state : Dictionary = {
 	"game_started": false,
 	"passed_bush": false,
+	"dino_spawned": false,
 	"collected_fuel" : false,
 	"fueled_generator" : false,
 	"collected_bolt_cutters" : false,
@@ -82,11 +83,15 @@ func begin_countdown():
 	timer = Timer.new()
 	add_child(timer)
 	timer.one_shot = true
+	timer.timeout.connect(_timeout)
 	timer.start(TIME_SECONDS)
 
 func _process(_delta: float) -> void:
 	if timer:
 		time_remaining = timer.time_left
+
+func _timeout():
+	get_tree().change_scene_to_file("res://scenes/ui/menus/lose_screen/lose_screen.tscn")
 
 func queue_dialog(dialog_key: String) -> void:
 	if narration_label == null:
@@ -94,3 +99,11 @@ func queue_dialog(dialog_key: String) -> void:
 	print(dialog_key)
 	if narration_label:
 		narration_label.queue_dialogue(voice_lines[dialog_key])
+
+
+func _input(event):
+	if event.is_action_pressed("toggle_fullscreen"):
+		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_MAXIMIZED)
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)

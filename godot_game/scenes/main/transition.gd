@@ -18,5 +18,7 @@ func _ready() -> void:
 
 func fade_in():
 	animator.play("fade_in")
+	print("Fading in")
 func fade_out():
 	animator.play("fade_out")
+	print("Fading out")

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://gifge31cejbt" path="res://scenes/dinosaur/dinosaur.gd" id="1_6coim"]
 [ext_resource type="PackedScene" uid="uid://d3m6dasydl8ux" path="res://assets/dinosaur/macrothorax.glb" id="1_7g3hw"]
 [ext_resource type="Animation" uid="uid://dixk2mxe4alsd" path="res://scenes/dinosaur/walk.res" id="3_e6n8e"]
+[ext_resource type="AudioStream" uid="uid://c4crkehf85cby" path="res://assets/sfx/dinosaur/roar.mp3" id="4_twy5r"]
 
 [sub_resource type="Animation" id="Animation_6coim"]
 resource_name = "MAIP_setup_BakeSystem|Skin_MAIP_setup_Root_M_bake_MAIP_setup_BakeSystem"
@@ -9607,6 +9608,7 @@ height = 0.8249512
 collision_layer = 4
 collision_mask = 7
 script = ExtResource("1_6coim")
+head_offset = Vector3(0, 4.4, 4)
 
 [node name="dino" parent="." unique_id=416791075 instance=ExtResource("1_7g3hw")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
@@ -9875,5 +9877,9 @@ shape = SubResource("CapsuleShape3D_7g3hw")
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=502435509]
 avoidance_enabled = true
 debug_enabled = true
+
+[node name="RoarPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1073522337]
+stream = ExtResource("4_twy5r")
+unit_size = 40.0
 
 [editable path="dino"]

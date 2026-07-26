@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://dywnjkpljckd7" path="res://scenes/ui/button/custom_button.tscn" id="1_g7whe"]
 [ext_resource type="Script" uid="uid://3s4f4yrgmcuf" path="res://scenes/ui/menus/lose_screen/lose_screen.gd" id="1_pvvd4"]
 [ext_resource type="FontFile" uid="uid://clc16w3kwpe6u" path="res://resources/fonts/LUCKY TYPEWRITER.ttf" id="2_udiym"]
+[ext_resource type="AudioStream" uid="uid://bsl06idiarvtq" path="res://scenes/ui/menus/lose_screen/ear-ringing.mp3" id="2_ymxv8"]
+[ext_resource type="Texture2D" uid="uid://75clmdra2k3r" path="res://scenes/ui/menus/lose_screen/71hxom-2654875940.jpg" id="4_ulcj2"]
 
 [sub_resource type="Animation" id="Animation_g7whe"]
 length = 0.001
@@ -21,6 +23,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_pvvd4"]
 resource_name = "new_animation"
+length = 2.02
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -28,7 +31,7 @@ tracks/0/path = NodePath(".:color:a")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.96666664),
+"times": PackedFloat32Array(0.6, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [1.0, 0.0]
@@ -48,6 +51,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pvvd4")
+
+[node name="EarRinging" type="AudioStreamPlayer" parent="." unique_id=1911569880]
+stream = ExtResource("2_ymxv8")
+autoplay = true
+
+[node name="71Hxom2654875940" type="Sprite2D" parent="." unique_id=2008138929]
+position = Vector2(1600.0001, 875)
+scale = Vector2(0.46386713, 0.36328125)
+texture = ExtResource("4_ulcj2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1787306792]
 layout_mode = 1
@@ -81,7 +93,6 @@ text = "Or quit and comment on
 itch about what needs improvement"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1388903579]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -89,6 +100,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=1313478655]
 libraries/ = SubResource("AnimationLibrary_udiym")
