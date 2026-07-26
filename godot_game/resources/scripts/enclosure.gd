@@ -1,4 +1,4 @@
-@tool
+#@tool
 extends Node3D
 
 const FENCE_WIDTH := 10.0
@@ -17,13 +17,14 @@ const BUSH_MIN_DISTANCE := 4.0
 
 @onready var target_radius_node: Node3D = $Target
 
-@export_tool_button("Generate Corral")
+#@export_tool_button("Generate Corral")
 var generate_corral_button: Callable = Callable(self, "create_corral")
 
 
 func _ready():
-	if Engine.is_editor_hint():
-		create_corral()
+	
+	#if Engine.is_editor_hint():
+	create_corral()
 
 
 func create_corral() -> void:

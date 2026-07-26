@@ -8,11 +8,12 @@ height = 10.25
 
 [node name="Tree" type="StaticBody3D" unique_id=2129356612]
 collision_layer = 16
-collision_mask = 16
+collision_mask = 2
 script = ExtResource("1_op6qs")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=31465470]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.125, 0)
 shape = SubResource("CylinderShape3D_46os7")
+debug_color = Color(0.88, 0, 0.83600026, 1)
 
 [node name="tree_stump_12" parent="." unique_id=1727776893 instance=ExtResource("2_fxh1v")]
