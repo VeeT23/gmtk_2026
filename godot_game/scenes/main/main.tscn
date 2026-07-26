@@ -164,7 +164,7 @@ script = ExtResource("1_pg34l")
 transform = Transform3D(-0.63993347, 0, -0.7684303, 0, 1, 0, 0.7684303, 0, -0.63993347, 9.073759, 0, -106.94961)
 
 [node name="TRex" parent="World" unique_id=1698958939 instance=ExtResource("24_i7in8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104.72084, 2.2291203, -122.89593)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.01438, 2.2291203, -69.75699)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="World" unique_id=1020118935]
 navigation_mesh = SubResource("NavigationMesh_37hlw")
@@ -1601,8 +1601,8 @@ texture = ExtResource("27_rofvo")
 [node name="Triggers" type="Node3D" parent="World" unique_id=1141815334]
 
 [node name="Area3D" type="Area3D" parent="World/Triggers" unique_id=244954408]
-collision_layer = 2
-collision_mask = 0
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("25_6w6mm")
 dialogue_key = "walked_by_bush"
 
@@ -1610,6 +1610,35 @@ dialogue_key = "walked_by_bush"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.021036, 9.536743e-07, -64.13666)
 shape = SubResource("SphereShape3D_46os7")
 debug_color = Color(1, 0.5, 0, 1)
+
+[node name="DinoNodes" type="Node3D" parent="World" unique_id=580486793]
+
+[node name="InitialSpawn" type="Node3D" parent="World/DinoNodes" unique_id=2070581856 groups=["DinoSpawn"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.464634, 1.9073486e-06, -59.00519)
+
+[node name="Target1" type="Node3D" parent="World/DinoNodes" unique_id=1180310311 groups=["StartTarget"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.914158, 3.8146973e-06, -2.4235811)
+
+[node name="WanderTarget1" type="Node3D" parent="World/DinoNodes" unique_id=1615395084 groups=["WanderTarget"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.859606, 7.6293945e-06, -85.65325)
+
+[node name="WanderTarget2" type="Node3D" parent="World/DinoNodes" unique_id=1783268725 groups=["WanderTarget"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.30922, 7.6293945e-06, -53.120255)
+
+[node name="WanderTarget3" type="Node3D" parent="World/DinoNodes" unique_id=733026025 groups=["WanderTarget"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.450726, -7.6293945e-06, 89.56706)
+
+[node name="WanderTarget4" type="Node3D" parent="World/DinoNodes" unique_id=729274031 groups=["WanderTarget"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.36055, 7.6293945e-06, 103.87278)
+
+[node name="WanderTarget5" type="Node3D" parent="World/DinoNodes" unique_id=85639026 groups=["WanderTarget"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.89226, 1.5258789e-05, -6.557564)
+
+[node name="WanderTarget6" type="Node3D" parent="World/DinoNodes" unique_id=1459105532 groups=["WanderTarget"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93.20107, 0, 42.608192)
+
+[node name="WanderTarget7" type="Node3D" parent="World/DinoNodes" unique_id=23391473 groups=["WanderTarget"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.39344, 0, -73.46311)
 
 [node name="Canvas" type="Node" parent="." unique_id=1795057792]
 
