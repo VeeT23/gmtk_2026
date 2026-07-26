@@ -7,7 +7,7 @@ const FOV_CHANGE_SPEED = 8.0
 const JUMP_VELOCITY = 4.5
 const MOUSE_SENSITIVITY = 0.002
 
-const MAX_STAMINA = 20.0 # Seconds of sprinting
+const MAX_STAMINA = 8.0 # Seconds of sprinting
 
 const BOB_FREQ_WALK = 2.0
 const BOB_FREQ_SPRINT = 3.2

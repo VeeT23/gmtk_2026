@@ -9,8 +9,8 @@ signal target_reached
 ## this just stops absurdly long rays if the area is huge.
 @export var detection_radius: float = 50.0
 @export var path_update_interval: float = 0.25
-@export var walk_animation : String = "DinosaurArmature|WalkAnimation"
-@export var run_animation  : String = "DinosaurArmature|RunAnimation"
+@export var walk_animation : String = "walk_animation"
+@export var run_animation  : String = "run_animation"
 
 @export_group("Wandering")
 ## Movement speed while patrolling. Usually slower than the chase speed.
@@ -320,3 +320,7 @@ func _process_hunt(delta: float) -> void:
 
 	_play_animation(run_animation if run_animation != "" else walk_animation)
 	_follow_path(delta, speed)
+
+
+func _stomp():
+	print("stomp")
