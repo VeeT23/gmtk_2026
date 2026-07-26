@@ -24,6 +24,13 @@ buses/default_bus_layout="uid://di1ox2jf0qquo"
 
 GameState="*uid://bxyeyr4wnlaii"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=2
+window/stretch/mode="viewport"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")

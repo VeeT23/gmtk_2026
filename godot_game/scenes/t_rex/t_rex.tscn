@@ -39,7 +39,7 @@ radius = 8.0
 [node name="dino" parent="." unique_id=623949689 instance=ExtResource("2_ayoup")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 
-[node name="Skeleton3D" parent="dino/DinosaurArmature" parent_id_path=PackedInt32Array(623949689, 1881880787) index="0" unique_id=1238597357]
+[node name="Skeleton3D" parent="dino/DinosaurArmature" parent_id_path=PackedInt32Array(623949689, 1713760564) index="0" unique_id=842375350]
 bones/1/position = Vector3(-0.024225933, -0.021537928, 0.09433155)
 bones/1/rotation = Quaternion(-0.3278557, -0.6170372, 0.646375, -0.30655366)
 bones/2/position = Vector3(-3.696775e-09, 0.06562289, -3.282404e-09)

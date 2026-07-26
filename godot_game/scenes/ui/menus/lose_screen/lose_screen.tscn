@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://dhk7xfpkqqb23"]
+
+[ext_resource type="PackedScene" uid="uid://dywnjkpljckd7" path="res://scenes/ui/button/custom_button.tscn" id="1_g7whe"]
+[ext_resource type="Script" uid="uid://3s4f4yrgmcuf" path="res://scenes/ui/menus/lose_screen/lose_screen.gd" id="1_pvvd4"]
+
+[sub_resource type="Animation" id="Animation_g7whe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_pvvd4"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_udiym"]
+_data = {
+&"RESET": SubResource("Animation_g7whe"),
+&"new_animation": SubResource("Animation_pvvd4")
+}
+
+[node name="Lose Screen" type="Control" unique_id=1222638546]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pvvd4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1787306792]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = -29.0
+offset_right = 86.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=530675408]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "You lost dawg"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CustomButton" parent="VBoxContainer" unique_id=1195260148 instance=ExtResource("1_g7whe")]
+layout_mode = 2
+text = "But you can try again"
+
+[node name="CustomButton2" parent="VBoxContainer" unique_id=1186451015 instance=ExtResource("1_g7whe")]
+layout_mode = 2
+text = "Or quit and comment on 
+itch about how we suck at world design"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1388903579]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=1313478655]
+libraries/ = SubResource("AnimationLibrary_udiym")
